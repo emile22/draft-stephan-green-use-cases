@@ -1,7 +1,7 @@
 ---
-title: "Requirements for Energy Efficiency Management"
-abbrev: "Requirements for Energy Efficiency"
-docname: draft-stephan-green-ucs-and-reqs-02-latest
+title: "Use Cases for Energy Efficiency Management"
+abbrev: "Use Cases for Energy Efficiency"
+docname: draft-stephan-green-use-cases-latest
 category: info
 stand_alone: true
 
@@ -18,7 +18,7 @@ venue:
   mail: "green@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/green/"
   github: "emile22/draft-stephan-green-ucs-and-reqs"
-  latest: "https://emile22.github.io/draft-stephan-green-ucs-and-reqs/draft-stephan-green-ucs-and-reqs.html"
+  latest: "https://emile22.github.io/draft-stephan-green-use-cases/draft-stephan-green-use-cases.html"
 
 v: 3
 
