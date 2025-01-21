@@ -1,7 +1,7 @@
 ---
 title: "Requirements for Energy Efficiency Management"
 abbrev: "Requirements for Energy Efficiency"
-docname: draft-stephan-green-ucs-and-reqs-02
+docname: draft-stephan-green-ucs-and-reqs-02-latest
 category: info
 stand_alone: true
 
