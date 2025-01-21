@@ -1,6 +1,6 @@
-# TODO - Your title
+# draft-stephan-green-use-cases
 
-This is the working area for the individual Internet-Draft, "TODO - Your title".
+This is the working area for the individual Internet-Draft, "draft-stephan-green-use-cases".
 
 * [Editor's Copy](https://emile22.github.io/draft-stephan-green-use-cases/#go.draft-todo-yourname-protocol.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-todo-yourname-protocol)
