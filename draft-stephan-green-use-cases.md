@@ -17,7 +17,7 @@ venue:
   type: "Working Group"
   mail: "green@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/green/"
-  github: "emile22/draft-stephan-green-ucs-and-reqs"
+  github: "emile22/draft-stephan-green-use-cases"
   latest: "https://emile22.github.io/draft-stephan-green-use-cases/draft-stephan-green-use-cases.html"
 
 v: 3
@@ -205,17 +205,6 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 
 - step 4 "network level"
 
-For this use case, the following requirements apply :
-
-|id|category|requirements|note|Pri|
-|:----|:----|:----|:----|:----|
-|Req01-UCINC|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
-|Req02-UCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req03-UCINC|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
-|Req04-UCINC|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
-|Req05-UCINC|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
-|Req06-UCINC|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
-
 (i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)
 
 (ii) the gain must be measurable
@@ -226,16 +215,6 @@ For this use case, the following requirements apply :
 
 Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
 For this use case, the following requirements apply:
-
-|id|category|requirements|note|Pri|
-|:----|:----|:----|:----|:----|
-|Req01-UCRED|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
-|Req02-UCRED|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req03-UCRED|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
-|Req04-UCRED|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
-|Req05-UCRED|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
-|Req06-UCRED|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
-|Req07-UCRED|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
 
 ## Reporting on Lifecycle Management
 
@@ -406,15 +385,6 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
 ~~~~
 {: #wireless-resource-management title="Wireless Resource Management on APs"}
 
-For this use case, the following requirements apply:
-
-|id|category|requirements|note|Pri|
-|:----|:----|:----|:----|:----|
-|Req01-UCWES|Control& Mgmt|Ability to switch on or off to power the L2 network device at specific time period|Network Level Mgmt|1|
-|Req02-UCWES|Control& Mgmt|Ability to reconfigure various different energy saving mode to adapt to network change|Network Level Mgmt|1|
-|Req03-UCWES|Control& Mgmt|Ability to optimize wireless resource management to support dynamic energy saving|Network Level Mgmt|1|
-|Req04-UCWES|Control& Mgmt|Ability to schedule wireless resource management to support dynamic energy saving|Network Level Mgmt|1|
-
 ## Fixed Network Energy Saving
 
 Traffic on the Tidal network has an obvious tidal period, including heavy-traffic periods and light-traffic periods: The time duration of heavy traffic load and light traffic load are clearly distinguished.
@@ -423,13 +393,6 @@ In a tidal network, some network devices can be shut down or sleep during low-tr
 In the metro or backbone network, the routers support various different speed interfaces, e.g., the gigabit level to 10GE/50GE, or 100G to 400G. Routers might choose to adjust speed of the interface or downgrade from high speed interface to low speed interface based on network traffic load changes to save the energy.
 In addition, the routers can adjust the number of working network processor cores and clock frequency of chipsets and the number of SerDes buses based on network traffic load changes to save the energy.
 For this use case, the following requirements apply:
-
-|id|category|requirements|note|Pri|
-|:----|:----|:----|:----|:----|
-|Req01-UCFES|Control& Mgmt|Ability to shutdown devices during low traffic period|Network Level Mgmt|1|
-|Req02-UCFES|Control& Mgmt|Ability to restart devices during high traffic period|Network Level Mgmt|1|
-|Req03-UCFES|Control& Mgmt|Ability to adjust interface speed to adapt to network traffic change|Network Level Mgmt|1|
-|Req04-UCFES|Control& Mgmt|Ability to adjust working component such as SerDes to adapt to network traffic change|Network Level Mgmt|1|
 
 ## Energy Efficiency Network Management
 
@@ -441,67 +404,19 @@ o Energy efficiency changing trend over the time of the day for the whole networ
 With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
 For this use case, the following requirements apply:
 
-|id|category|requirements|note|Pri|
-|:----|:----|:----|:----|:----|
-|Req01-UCEEM|Discovery|Ability to provide observability to Network wide Energy Efficiency Statistics Data|Network Level Mgmt|1|
-|Req02-UCEEM|Observability|Ability to provide observability to Network Wide Energy Consumption Statistics data|Network Level Mgmt|1|
-|Req03-UCEEM|Observability|Ability to discover energy saving capability for each device type|Network Level Mgmt|1|
-
 # Requirements Extracted from Proponents Documents
 
 This section extracts and groups requirements from the documents of the GREEN WG proponents [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
 
 The table below groups the operator'requirements based on the inputs received from operators for the GREEN BoF [charter-refinement],[operators-inputs].
 
-|id|category|requirements|note|Pri|
-|:----|:----|:----|:----|:----|
-|Req01-OP|Observability|Component granularity, e.g., per line-card, per-port|Per component measure|1|
-|Req02-OP|Observability|Availability of information on the power consumption of the device, without needing instrument connected to the infra|Related to connected device case|1|
-|Req03-OP|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1|
-|Req04-OP|Observability|Improvement of metering solutions (finer granularity, control of the energy efficiency and saving, interoperability, exposure)|Standardized metering|1|
-|Req05-OP|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
-|Req06-OP|Analysis|Common methodology of measurements for fair comparison|Standard methodology|2|
-|Req07-OP|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualn|2|
-|Req08-OP|Analysis|Database for decision in case of large data transfer|Information Correlation|3|
-|Req09-OP|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
-|Req10-OP|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
-|Req11-OP|Control& Mgmt|Support of network-wide energy saving and optimization functions|Network Level Mgmt|2|
-|Req12-OP|Control& Mgmt|Support of network-wide control of energy optimization APIs, allowing external applications to optimize consumption|Network Level Mgmt|2|
-|Req13-OP|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
-|Req14-OP|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
-|Req15-OP|Control& Mgmt|Comparison of decision vs optimal case|Intent based Concept|2|
-|Req16-OP|Control& Mgmt|Synchronous query support|Network Level Query|2|
-|Req17-OP|Inventory Management|Inventory of power components (of devices, racks, etc) including together|Component & Device Level|1|
-|Req18-OP|Interaction with other domain|Inclusion of data center networks in the picture|Data Center Case|3|
-|Req19-OP|Interaction with other domain|Inclusion of data center networks in the picture|Mobile Network Case|3|
-|Req20-OP|Sustainability & Carbon Emission|Optimize the overall CO2 footprint (i.e., energy mix based on source type) facilitating the engineering of PoP More renewable energy|More renewable energy|4|
-|Req21-OP|Sustainability & Carbon Emission|Support GHG units|Measurement Units|4|
-|Req22-OP|Sustainability & Carbon Emission|Support Energy units|More renewable energy|2|
-|Req23-OP|Sustainability & Carbon Emission|Accounting of legacy installed based GHG/energy|Accounting Cost|4|
-|Req24-OP|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport (weight, volume, package)|4|
-
 The table below groups requirements from [rf988bis-green] draft Open Issues.
 
 TODO: this table has to be reviewed as it part of it overlaps with the sections above related to rfc6988
 
-|id|category|requirements|note|Pri|
-|:----|:----|:----|:----|:----|
-|Req01-BIS|Control& Mgmt|Distinguish backup from main power sources|rfc6988bis battery(i)| 2|
-|Req02-BIS|Inventory Management|Reporting on Other Entities, typically smart PDU or PoE|Fit in "Inventory of power components (of devices, racks, etc) including together"| 2|
-|Req03-BIS|Observability or Interaction with Other domain|Room sensor (hvac...)|Data Center Case| 4|
-|Req04-BIS|Observability|flexible (future-proof) description of the nature of the sources of the energy used |Standard metric|2 |
-
 (i) It is crucial to know when a device is powered by a backup source for many obvious reasons
 
 The table below groups requirements from [sustainability-insights] uses cases related to energy consumption vs sustainability
-
-|id|category|requirements|note|Pri|
-|:----|:----|:----|:----|:----|
-|Req01-SIS|Observability|Provide near-real-time energy consumption to different device types, service types, and individual users | Helps identify which devices or network functions are consuming more energy. | 2 |
-|Req02-SIS|Migration or Upgrade | Provide KPIs for energy efficiency parameters, enhance accuracy of upgrade decisions | Helps make informed decisions about upgrades based on actual usage data. |   |
-|Req03-SIS|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
-|Req04-SIS|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
-|Req05-SIS|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
 
 # EMAN Requirements from RFC6988bis
 
