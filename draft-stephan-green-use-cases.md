@@ -89,11 +89,6 @@ informative:
     title: "NGMN Alliance, GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN INFRASTRUCTURE"
     target: "https://www.ngmn.org/publications/metering-in-virtualised-ran-infrastructure.html"
 
-  UC_Interim18Dec24:
-    title: "UC_Requirements_GREENWG_v4"
-    target: "https://datatracker.ietf.org/meeting/interim-2024-green-01/materials/slides-interim-2024-green-01-sessa-uses-cases-requirements-presentation-01"
-
-
 --- abstract
 
 This document groups the use cases discussed since the GREEN BoF discussions. The primary objectives of this draft is to define use cases for managing energy-efficient networks.
@@ -112,15 +107,11 @@ The primary objectives of this draft, which are listed in the goals and scope wi
 (1) collecting and updating requirements for the management of energy-efficient networks, and
 (2) defining use cases for managing energy-efficient networks.
 
-This draft replaces the drafts and groups requirements from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path]. 
+This draft groups use cases from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path]. 
 
 Section 2 groups the 'core' use cases. Several of them might not be relevant for the current charter.
 
-Section 3 recalls a set of requirements established after the BoF in [charter-refinement].
-
-Section 4 recalls [rfc6988bis-green] requirements which may fit to the GREEN WG. They still have to be grouped in tables and set with individual priorities.
-
-Section 5 recalls the raw framework discussed during the BoF to illustrate the segmentation of the requirements in three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
+Section 5 raw framework show the use cases in situation using three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
 Terms and definitions, mostly  from RFC6988, related to energy efficiency metrics are recalled in Appendix and will be discussed in later stages for potential integration in another GREEN WG document.
 
