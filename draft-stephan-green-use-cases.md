@@ -59,16 +59,6 @@ informative:
     date: 2024-05-10
     target: "https://github.com/marisolpalmero/GREEN-bof"
 
-  green-bof-reqs:
-    title: "Green BoF requirements collections"
-    date: 2024-09-03
-    target: "https://datatracker.ietf.org/doc/draft-stephan-green-bof-reqs-collections"
-
-  rfc6988bis-green:
-    title: "Requirements for Energy Efficiency Management, 11 years after the EMAN RFC6988"
-    date: 2024-07-21
-    target: "https://datatracker.ietf.org/doc/draft-eman-green-rfc6988bis"
-
   sustainability-insights:
     title: "Sustainability Insights"
     date: 2024-05-07
@@ -106,18 +96,11 @@ informative:
 
 --- abstract
 
-This document delineates the requirements for standards specifications in Energy Efficiency Management, extending the foundational work of RFC6988 and incorporating recent insights from operator requirements and the GREEN BoF discussions. Eleven years after the publication of RFC6988, this document reassesses and updates the requirements to align with contemporary needs.
-
-The primary objectives of this draft, which are listed in the goals and scope with the creation of the GREEN WG charter, is focusing on two main targets:
-(1) collecting and updating requirements for the management of energy-efficient networks, and
-(2) defining use cases for managing energy-efficient networks.
-
-This draft merges the drafts [rfc6988bis-green] and [green-bof-reqs].
+This document groups the use cases discussed since the GREEN BoF discussions. The primary objectives of this draft is to define use cases for managing energy-efficient networks.
 
 Discussion Venues
 
-Source of this draft and an issue tracker can be found at https://github.com/emile22/draft-stephan-green-terms-ucs-and-reqs
-
+Source of this draft and an issue tracker can be found at https://github.com/emile22/draft-stephan-green-use-cases
 
 --- middle
 
@@ -129,9 +112,7 @@ The primary objectives of this draft, which are listed in the goals and scope wi
 (1) collecting and updating requirements for the management of energy-efficient networks, and
 (2) defining use cases for managing energy-efficient networks.
 
-This draft replaces the drafts [rfc6988bis-green] and [green-bof-reqs] and groups requirements from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
-
-Requirements are named and grouped in tables and are set with individual priority (to be) determined by the GREEN WG consensus.
+This draft replaces the drafts and groups requirements from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path]. 
 
 Section 2 groups the 'core' use cases. Several of them might not be relevant for the current charter.
 
