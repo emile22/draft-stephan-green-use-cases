@@ -517,7 +517,7 @@ o	Use case per Domain specific? Meanwhile, they are considered as part of the ne
 o	Energy Metric in E2E view
 
 ## battery-like UC needed ?
-  
+
    o The EMAN requirements and EMAN framework had a lot of emphasis on the "Reporting on Other Entities", typically smart PDU or PoE.
    Is this important? Should this be removed? Should it be addressed in a future charter?
    This is text about "Sections 7 and 8 contain requirements specific to Energy Management. Due to the nature of power supply, some monitoring and control functions are not conducted by interacting with the entity of interest but rather with other entities, for example, entities upstream in a power distribution tree."
@@ -525,7 +525,6 @@ o	Energy Metric in E2E view
    o Discuss the need to support a description of the different nature of the
    sources of the energy used (mix). It should be flexible are the types of sources
    might augment in the future.
-
 
 # References
 
