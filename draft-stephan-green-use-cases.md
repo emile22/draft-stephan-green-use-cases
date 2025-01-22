@@ -91,7 +91,7 @@ informative:
 
 --- abstract
 
-This document groups the use cases discussed since the GREEN BoF discussions. The primary objectives of this draft is to define use cases for managing energy-efficient networks.
+This document groups use cases for managing energy-efficient networks from operators and from discussions since the GREEN BoF discussions. The primary objectives of this draft is to define use cases.
 
 Discussion Venues
 
@@ -101,41 +101,16 @@ Source of this draft and an issue tracker can be found at https://github.com/emi
 
 # Introduction
 
-This document delineates the requirements for standards specifications in Energy Efficiency Management, extending the foundational work of RFC6988 and incorporating recent insights from operator requirements and the GREEN BoF discussions. Eleven years after the publication of RFC6988, this document reassesses and updates the requirements to align with contemporary needs.
-
-The primary objectives of this draft, which are listed in the goals and scope with the creation of the GREEN WG charter, is focusing on two main targets:
-(1) collecting and updating requirements for the management of energy-efficient networks, and
-(2) defining use cases for managing energy-efficient networks.
-
+This document groups use cases for managing energy-efficient networks from operators and from discussions since the GREEN BoF discussions. The primary objectives of this draft is to define use cases.
 Section 2 groups the use cases of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path]. Several of them might not be relevant for the current charter.
 
 Section 3 shows a framework where the use cases can be put in situation using three core functions: discovery, monitoring, and control.
 
 ## Background
 
-   With rising energy costs and an increasing awareness of the
-   environmental impact of running information technology equipment, Energy
-   efficiency Management functions and management interfaces are becoming
-   an additional basic requirement for network management systems and devices
-   connected to a network.
+With rising energy costs and an increasing awareness of the environmental impact of running information technology equipment, Energy efficiency Management functions and management interfaces are becoming an additional basic requirement for network management systems and devices connected to a network.
 
-   This document defines requirements for standards specifications for
-   Energy efficiency Management, including discovery functions, monitoring functions
-   and control functions.
-   Energy efficiency Management functions focus mainly on network devices and
-   their built-in components that receive and provide electrical energy.  Devices such
-   as switches, routers, servers and storage devices should have an IP address providing a
-   management interface for the network device. Alternatively, energy-related devices (for
-   example, in building management, which typically don't support IP) might be connected
-   via a proxy/gateway with an IP address.
-
-   These requirements are concerned with the standards specification
-   process and not the implementation of specified standards.  All
-   requirements in this document must be reflected by standards
-   specifications to be developed.  However, which of the features
-   specified by these standards will be mandatory, recommended, or
-   optional for compliant implementations is to be defined by Standards
-   Track document(s) and not in this document.
+This document provides a set of use cases for Energy efficiency Management, including discovery functions, monitoring functions and control functions of network devices (naively switches, routers, servers and storage devices having an IP address providing a management interface) and their built-in components that receive and provide electrical energy.
 
 # Use Cases
 
@@ -177,12 +152,11 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 
 (ii) the gain must be measurable
 
-(iii) network-wide  energy efficiency solutions must include legacy devices and green-wg ready devices
+(iii) network-wide energy efficiency solutions must include legacy devices and green-wg ready devices
 
 ## Selective reduction of energy consumption in network parts proportional to traffic levels
 
 Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
-For this use case, the following requirements apply:
 
 ## Reporting on Lifecycle Management
 
@@ -221,14 +195,10 @@ Effective metering of virtualized network infrastructure is critical for the eff
 
 ## Indirect Energy Monitoring and control
 
-   While the conventional requirements summarized above seem to be all
-   that would be needed for Energy Management, there are significant
-   differences between Energy Management and most well-known network
-   management functions.  The most significant difference is the need
-   for some devices to report on other entities.  There are two major
+There are cases where Energy Management for some devices need to report on other entities. There are two major
    reasons for this.
 
-   o  For monitoring a particular entity, it is not always sufficient to
+   o  For monitoring energy consumption of a particular entity, it is not always sufficient to
       communicate only with that entity.  When the entity has no
       instrumentation for determining power, it might still be possible
       to obtain power values for the entity via communication with other
@@ -248,15 +218,6 @@ Effective metering of virtualized network infrastructure is critical for the eff
       PDU and a PoE switch are common examples, if they have the
       capability to switch power on or off at their sockets or ports,
       respectively.
-
-   These specific issues of Energy Management, as well as other issues,
-   are covered by requirements specified in Sections 7 and 8.
-
-   The requirements in these sections need a new Energy Management
-   framework that deals with the specific nature of Energy Management.
-   The actual standards documents, such as MIB module specifications,
-   address conformance by specifying which features must, should, or may
-   be implemented by compliant implementations.
 
 ## Consideration of other domains for obtention of end-to-end metrics
 
@@ -471,13 +432,6 @@ The main elements in the framework are as follows:
    actions, so integrity of transmitted information and authentication
    of the origin may be needed.
 
-## Secure Energy Management
-
-   The standard must provide privacy, integrity, and authentication
-   mechanisms for all actions addressed in Sections 5 through 8.  The
-   security mechanisms must meet the security requirements detailed in
-   Section 1.4 of {{?RFC3411}}.
-
 ## Isolation of Insufficiently Secure Entities
 
    The standard must provide means to allow the isolation of entities
@@ -506,25 +460,12 @@ This document has no IANA actions.
 
 The contribution of Luis M. Contreras to this document has been supported by the Smart Networks and Services Joint Undertaking (SNS JU) under the European Union's Horizon Europe research and innovation projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant Agreement no. 101139120).
 
-# Living List
+# Use Cases Living List
 
-## UCs pieces :-)
-
-o	Consider 5g vs network slicing: 3GPP spec describong energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
-o	Connectivity from radio side (trying to control the traffic/related work to CCAMP)
-o	Marisol to add one use case: drift from data specifications... (somehow link to the above)
-o	Use case per Domain specific? Meanwhile, they are considered as part of the network... Servers might be considered outside of scope
-o	Energy Metric in E2E view
-
-## battery-like UC needed ?
-
-   o The EMAN requirements and EMAN framework had a lot of emphasis on the "Reporting on Other Entities", typically smart PDU or PoE.
-   Is this important? Should this be removed? Should it be addressed in a future charter?
-   This is text about "Sections 7 and 8 contain requirements specific to Energy Management. Due to the nature of power supply, some monitoring and control functions are not conducted by interacting with the entity of interest but rather with other entities, for example, entities upstream in a power distribution tree."
-
-   o Discuss the need to support a description of the different nature of the
-   sources of the energy used (mix). It should be flexible are the types of sources
-   might augment in the future.
+   Consider 5g vs network slicing: 3GPP spec describing energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
+   Connectivity from radio side (trying to control the traffic/related work to CCAMP)
+   Marisol to add one use case: drift from data specifications... (somehow link to the above)
+   Energy Metric in E2E view
 
 # References
 
