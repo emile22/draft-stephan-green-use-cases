@@ -11,7 +11,7 @@
 <meta content="Qin Wu" name="author">
 <meta content="Luis M. Contreras" name="author">
 <meta content="
-       This document groups the use cases discussed since the GREEN BoF discussions. The primary objectives of this draft is to define use cases for managing energy-efficient networks. 
+       This document groups use cases for managing energy-efficient networks from operators and from discussions since the GREEN BoF discussions. The primary objectives of this draft is to define use cases. 
        Discussion Venues 
        Source of this draft and an issue tracker can be found at https://github.com/emile22/draft-stephan-green-use-cases 
     " name="description">
@@ -1101,7 +1101,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Use Cases for Energy Efficiency Management</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document groups the use cases discussed since the GREEN BoF discussions. The primary objectives of this draft is to define use cases for managing energy-efficient networks.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document groups use cases for managing energy-efficient networks from operators and from discussions since the GREEN BoF discussions. The primary objectives of this draft is to define use cases.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">Discussion Venues<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 <p id="section-abstract-3">Source of this draft and an issue tracker can be found at https://github.com/emile22/draft-stephan-green-use-cases<a href="#section-abstract-3" class="pilcrow">¶</a></p>
 </section>
@@ -1230,16 +1230,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
-                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-secure-energy-management" class="internal xref">Secure Energy Management</a></p>
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-isolation-of-insufficiently" class="internal xref">Isolation of Insufficiently Secure Entities</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
-                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-isolation-of-insufficiently" class="internal xref">Isolation of Insufficiently Secure Entities</a></p>
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-optional-restriction-of-fun" class="internal xref">Optional Restriction of Functions</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
-                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-optional-restriction-of-fun" class="internal xref">Optional Restriction of Functions</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.4">
-                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-other-aspects" class="internal xref">Other Aspects</a></p>
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-other-aspects" class="internal xref">Other Aspects</a></p>
 </li>
             </ul>
 </li>
@@ -1250,15 +1247,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-living-list" class="internal xref">Living List</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
-                <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="auto internal xref">7.1</a>.  <a href="#name-ucs-pieces-" class="internal xref">UCs pieces :-)</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2">
-                <p id="section-toc.1-1.7.2.2.1"><a href="#section-7.2" class="auto internal xref">7.2</a>.  <a href="#name-battery-like-uc-needed" class="internal xref">battery-like UC needed ?</a></p>
-</li>
-            </ul>
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-use-cases-living-list" class="internal xref">Use Cases Living List</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
             <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-references" class="internal xref">References</a></p>
@@ -1286,38 +1275,16 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">This document delineates the requirements for standards specifications in Energy Efficiency Management, extending the foundational work of RFC6988 and incorporating recent insights from operator requirements and the GREEN BoF discussions. Eleven years after the publication of RFC6988, this document reassesses and updates the requirements to align with contemporary needs.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">The primary objectives of this draft, which are listed in the goals and scope with the creation of the GREEN WG charter, is focusing on two main targets:
-(1) collecting and updating requirements for the management of energy-efficient networks, and
-(2) defining use cases for managing energy-efficient networks.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">Section 2 groups the use cases of the GREEN WG proponents [charter-refinement], <span>[<a href="#operators-inputs" class="cite xref">operators-inputs</a>]</span>, <span>[<a href="#GREEN-BOF" class="cite xref">GREEN-BOF</a>]</span>, <span>[<a href="#sustainability-insights" class="cite xref">sustainability-insights</a>]</span>, <span>[<a href="#legacy-path" class="cite xref">legacy-path</a>]</span>. Several of them might not be relevant for the current charter.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">Section 3 shows a framework where the use cases can be put in situation using three core functions: discovery, monitoring, and control.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-1">This document groups use cases for managing energy-efficient networks from operators and from discussions since the GREEN BoF discussions. The primary objectives of this draft is to define use cases.
+Section 2 groups the use cases of the GREEN WG proponents [charter-refinement], <span>[<a href="#operators-inputs" class="cite xref">operators-inputs</a>]</span>, <span>[<a href="#GREEN-BOF" class="cite xref">GREEN-BOF</a>]</span>, <span>[<a href="#sustainability-insights" class="cite xref">sustainability-insights</a>]</span>, <span>[<a href="#legacy-path" class="cite xref">legacy-path</a>]</span>. Several of them might not be relevant for the current charter.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">Section 3 shows a framework where the use cases can be put in situation using three core functions: discovery, monitoring, and control.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <div id="background">
 <section id="section-1.1">
         <h3 id="name-background">
 <a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-background" class="section-name selfRef">Background</a>
         </h3>
-<p id="section-1.1-1">With rising energy costs and an increasing awareness of the
-   environmental impact of running information technology equipment, Energy
-   efficiency Management functions and management interfaces are becoming
-   an additional basic requirement for network management systems and devices
-   connected to a network.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
-<p id="section-1.1-2">This document defines requirements for standards specifications for
-   Energy efficiency Management, including discovery functions, monitoring functions
-   and control functions.
-   Energy efficiency Management functions focus mainly on network devices and
-   their built-in components that receive and provide electrical energy.  Devices such
-   as switches, routers, servers and storage devices should have an IP address providing a
-   management interface for the network device. Alternatively, energy-related devices (for
-   example, in building management, which typically don't support IP) might be connected
-   via a proxy/gateway with an IP address.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
-<p id="section-1.1-3">These requirements are concerned with the standards specification
-   process and not the implementation of specified standards.  All
-   requirements in this document must be reflected by standards
-   specifications to be developed.  However, which of the features
-   specified by these standards will be mandatory, recommended, or
-   optional for compliant implementations is to be defined by Standards
-   Track document(s) and not in this document.<a href="#section-1.1-3" class="pilcrow">¶</a></p>
+<p id="section-1.1-1">With rising energy costs and an increasing awareness of the environmental impact of running information technology equipment, Energy efficiency Management functions and management interfaces are becoming an additional basic requirement for network management systems and devices connected to a network.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
+<p id="section-1.1-2">This document provides a set of use cases for Energy efficiency Management, including discovery functions, monitoring functions and control functions of network devices (naively switches, routers, servers and storage devices having an IP address providing a management interface) and their built-in components that receive and provide electrical energy.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1372,7 +1339,7 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
         </ul>
 <p id="section-2.1-10">(i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)<a href="#section-2.1-10" class="pilcrow">¶</a></p>
 <p id="section-2.1-11">(ii) the gain must be measurable<a href="#section-2.1-11" class="pilcrow">¶</a></p>
-<p id="section-2.1-12">(iii) network-wide  energy efficiency solutions must include legacy devices and green-wg ready devices<a href="#section-2.1-12" class="pilcrow">¶</a></p>
+<p id="section-2.1-12">(iii) network-wide energy efficiency solutions must include legacy devices and green-wg ready devices<a href="#section-2.1-12" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="selective-reduction-of-energy-consumption-in-network-parts-proportional-to-traffic-levels">
@@ -1380,8 +1347,7 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
         <h3 id="name-selective-reduction-of-ener">
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-selective-reduction-of-ener" class="section-name selfRef">Selective reduction of energy consumption in network parts proportional to traffic levels</a>
         </h3>
-<p id="section-2.2-1">Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
-For this use case, the following requirements apply:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.2-1">Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="reporting-on-lifecycle-management">
@@ -1437,13 +1403,9 @@ For this use case, the following requirements apply:<a href="#section-2.2-1" cla
         <h3 id="name-indirect-energy-monitoring-">
 <a href="#section-2.5" class="section-number selfRef">2.5. </a><a href="#name-indirect-energy-monitoring-" class="section-name selfRef">Indirect Energy Monitoring and control</a>
         </h3>
-<p id="section-2.5-1">While the conventional requirements summarized above seem to be all
-   that would be needed for Energy Management, there are significant
-   differences between Energy Management and most well-known network
-   management functions.  The most significant difference is the need
-   for some devices to report on other entities.  There are two major
+<p id="section-2.5-1">There are cases where Energy Management for some devices need to report on other entities. There are two major
    reasons for this.<a href="#section-2.5-1" class="pilcrow">¶</a></p>
-<p id="section-2.5-2">o  For monitoring a particular entity, it is not always sufficient to
+<p id="section-2.5-2">o  For monitoring energy consumption of a particular entity, it is not always sufficient to
       communicate only with that entity.  When the entity has no
       instrumentation for determining power, it might still be possible
       to obtain power values for the entity via communication with other
@@ -1462,13 +1424,6 @@ For this use case, the following requirements apply:<a href="#section-2.2-1" cla
       PDU and a PoE switch are common examples, if they have the
       capability to switch power on or off at their sockets or ports,
       respectively.<a href="#section-2.5-3" class="pilcrow">¶</a></p>
-<p id="section-2.5-4">These specific issues of Energy Management, as well as other issues,
-   are covered by requirements specified in Sections 7 and 8.<a href="#section-2.5-4" class="pilcrow">¶</a></p>
-<p id="section-2.5-5">The requirements in these sections need a new Energy Management
-   framework that deals with the specific nature of Energy Management.
-   The actual standards documents, such as MIB module specifications,
-   address conformance by specifying which features must, should, or may
-   be implemented by compliant implementations.<a href="#section-2.5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="consideration-of-other-domains-for-obtention-of-end-to-end-metrics">
@@ -1717,47 +1672,36 @@ device or in a controller
    Monitored data may be used as input to control, accounting, and other
    actions, so integrity of transmitted information and authentication
    of the origin may be needed.<a href="#section-4-3" class="pilcrow">¶</a></p>
-<div id="secure-energy-management">
-<section id="section-4.1">
-        <h3 id="name-secure-energy-management">
-<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-secure-energy-management" class="section-name selfRef">Secure Energy Management</a>
-        </h3>
-<p id="section-4.1-1">The standard must provide privacy, integrity, and authentication
-   mechanisms for all actions addressed in Sections 5 through 8.  The
-   security mechanisms must meet the security requirements detailed in
-   Section 1.4 of <span>[<a href="#RFC3411" class="cite xref">RFC3411</a>]</span>.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
-</section>
-</div>
 <div id="isolation-of-insufficiently-secure-entities">
-<section id="section-4.2">
+<section id="section-4.1">
         <h3 id="name-isolation-of-insufficiently">
-<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-isolation-of-insufficiently" class="section-name selfRef">Isolation of Insufficiently Secure Entities</a>
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-isolation-of-insufficiently" class="section-name selfRef">Isolation of Insufficiently Secure Entities</a>
         </h3>
-<p id="section-4.2-1">The standard must provide means to allow the isolation of entities
+<p id="section-4.1-1">The standard must provide means to allow the isolation of entities
    that are not sufficiently secure to operate on the public Internet,
    e.g., behind a gateway that implements sufficient security that the
-   vulnerable entities are not directly exposed to the Internet.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+   vulnerable entities are not directly exposed to the Internet.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="optional-restriction-of-functions">
-<section id="section-4.3">
+<section id="section-4.2">
         <h3 id="name-optional-restriction-of-fun">
-<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-optional-restriction-of-fun" class="section-name selfRef">Optional Restriction of Functions</a>
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-optional-restriction-of-fun" class="section-name selfRef">Optional Restriction of Functions</a>
         </h3>
-<p id="section-4.3-1">The standard must allow compliant implementations to disable
+<p id="section-4.2-1">The standard must allow compliant implementations to disable
    sensitive functions, or to not implement such functions at all, when
    operating in environments that are not sufficiently secured.  This
    applies particularly to the control functions described in Sections 6
-   and 8.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+   and 8.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="other-aspects">
-<section id="section-4.4">
+<section id="section-4.3">
         <h3 id="name-other-aspects">
-<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-other-aspects" class="section-name selfRef">Other Aspects</a>
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-other-aspects" class="section-name selfRef">Other Aspects</a>
         </h3>
-<p id="section-4.4-1">Adding new interfaces on devices increase attack surfaces.
-Devices have brief variation of power consumption due their internal works. Reducing the power available may reduce their routing capacity which may reduce network performance and resiliency.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.3-1">Adding new interfaces on devices increase attack surfaces.
+Devices have brief variation of power consumption due their internal works. Reducing the power available may reduce their routing capacity which may reduce network performance and resiliency.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1778,36 +1722,15 @@ Devices have brief variation of power consumption due their internal works. Redu
 <p id="section-6-1">The contribution of Luis M. Contreras to this document has been supported by the Smart Networks and Services Joint Undertaking (SNS JU) under the European Union's Horizon Europe research and innovation projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant Agreement no. 101139120).<a href="#section-6-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="living-list">
+<div id="use-cases-living-list">
 <section id="section-7">
-      <h2 id="name-living-list">
-<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-living-list" class="section-name selfRef">Living List</a>
+      <h2 id="name-use-cases-living-list">
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-use-cases-living-list" class="section-name selfRef">Use Cases Living List</a>
       </h2>
-<div id="ucs-pieces-">
-<section id="section-7.1">
-        <h3 id="name-ucs-pieces-">
-<a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-ucs-pieces-" class="section-name selfRef">UCs pieces :-)</a>
-        </h3>
-<p id="section-7.1-1">o       Consider 5g vs network slicing: 3GPP spec describong energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
-o       Connectivity from radio side (trying to control the traffic/related work to CCAMP)
-o       Marisol to add one use case: drift from data specifications... (somehow link to the above)
-o       Use case per Domain specific? Meanwhile, they are considered as part of the network... Servers might be considered outside of scope
-o       Energy Metric in E2E view<a href="#section-7.1-1" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="battery-like-uc-needed-">
-<section id="section-7.2">
-        <h3 id="name-battery-like-uc-needed">
-<a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-battery-like-uc-needed" class="section-name selfRef">battery-like UC needed ?</a>
-        </h3>
-<p id="section-7.2-1">o The EMAN requirements and EMAN framework had a lot of emphasis on the "Reporting on Other Entities", typically smart PDU or PoE.
-   Is this important? Should this be removed? Should it be addressed in a future charter?
-   This is text about "Sections 7 and 8 contain requirements specific to Energy Management. Due to the nature of power supply, some monitoring and control functions are not conducted by interacting with the entity of interest but rather with other entities, for example, entities upstream in a power distribution tree."<a href="#section-7.2-1" class="pilcrow">¶</a></p>
-<p id="section-7.2-2">o Discuss the need to support a description of the different nature of the
-   sources of the energy used (mix). It should be flexible are the types of sources
-   might augment in the future.<a href="#section-7.2-2" class="pilcrow">¶</a></p>
-</section>
-</div>
+<p id="section-7-1">Consider 5g vs network slicing: 3GPP spec describing energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
+   Connectivity from radio side (trying to control the traffic/related work to CCAMP)
+   Marisol to add one use case: drift from data specifications... (somehow link to the above)
+   Energy Metric in E2E view<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="references">
@@ -1905,10 +1828,6 @@ o       Energy Metric in E2E view<a href="#section-7.1-1" class="pilcrow">¶</a>
 <dt id="operators-inputs">[operators-inputs]</dt>
       <dd>
 <span class="refTitle">"Input from Operators to GREEN BoF"</span>, <time datetime="2024-07-20" class="refDate">20 July 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/meeting/120/materials/slides-120-green-input-from-operators-to-green-bof-01">https://datatracker.ietf.org/meeting/120/materials/slides-120-green-input-from-operators-to-green-bof-01</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC3411">[RFC3411]</dt>
-      <dd>
-<span class="refAuthor">Harrington, D.</span>, <span class="refAuthor">Presuhn, R.</span>, and <span class="refAuthor">B. Wijnen</span>, <span class="refTitle">"An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks"</span>, <span class="seriesInfo">STD 62</span>, <span class="seriesInfo">RFC 3411</span>, <span class="seriesInfo">DOI 10.17487/RFC3411</span>, <time datetime="2002-12" class="refDate">December 2002</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3411">https://www.rfc-editor.org/rfc/rfc3411</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8432">[RFC8432]</dt>
       <dd>

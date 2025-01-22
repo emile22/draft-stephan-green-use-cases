@@ -19,9 +19,9 @@ Expires: 26 July 2025                                Cisco Systems, Inc.
 
 Abstract
 
-   This document groups the use cases discussed since the GREEN BoF
-   discussions.  The primary objectives of this draft is to define use
-   cases for managing energy-efficient networks.
+   This document groups use cases for managing energy-efficient networks
+   from operators and from discussions since the GREEN BoF discussions.
+   The primary objectives of this draft is to define use cases.
 
    Discussion Venues
 
@@ -102,15 +102,12 @@ Table of Contents
      2.11. Energy Efficiency Network Management
    3.  Framework Discussed During the BoF
    4.  Security Considerations
-     4.1.  Secure Energy Management
-     4.2.  Isolation of Insufficiently Secure Entities
-     4.3.  Optional Restriction of Functions
-     4.4.  Other Aspects
+     4.1.  Isolation of Insufficiently Secure Entities
+     4.2.  Optional Restriction of Functions
+     4.3.  Other Aspects
    5.  IANA Considerations
    6.  Acknowledgments
-   7.  Living List
-     7.1.  UCs pieces :-)
-     7.2.  battery-like UC needed ?
+   7.  Use Cases Living List
    8.  References
      8.1.  Normative References
      8.2.  Informative References
@@ -119,19 +116,9 @@ Table of Contents
 
 1.  Introduction
 
-   This document delineates the requirements for standards
-   specifications in Energy Efficiency Management, extending the
-   foundational work of RFC6988 and incorporating recent insights from
-   operator requirements and the GREEN BoF discussions.  Eleven years
-   after the publication of RFC6988, this document reassesses and
-   updates the requirements to align with contemporary needs.
-
-   The primary objectives of this draft, which are listed in the goals
-   and scope with the creation of the GREEN WG charter, is focusing on
-   two main targets: (1) collecting and updating requirements for the
-   management of energy-efficient networks, and (2) defining use cases
-   for managing energy-efficient networks.
-
+   This document groups use cases for managing energy-efficient networks
+   from operators and from discussions since the GREEN BoF discussions.
+   The primary objectives of this draft is to define use cases.
    Section 2 groups the use cases of the GREEN WG proponents [charter-
    refinement], [operators-inputs], [GREEN-BOF],
    [sustainability-insights], [legacy-path].  Several of them might not
@@ -149,24 +136,12 @@ Table of Contents
    becoming an additional basic requirement for network management
    systems and devices connected to a network.
 
-   This document defines requirements for standards specifications for
-   Energy efficiency Management, including discovery functions,
-   monitoring functions and control functions.  Energy efficiency
-   Management functions focus mainly on network devices and their built-
-   in components that receive and provide electrical energy.  Devices
-   such as switches, routers, servers and storage devices should have an
-   IP address providing a management interface for the network device.
-   Alternatively, energy-related devices (for example, in building
-   management, which typically don't support IP) might be connected via
-   a proxy/gateway with an IP address.
-
-   These requirements are concerned with the standards specification
-   process and not the implementation of specified standards.  All
-   requirements in this document must be reflected by standards
-   specifications to be developed.  However, which of the features
-   specified by these standards will be mandatory, recommended, or
-   optional for compliant implementations is to be defined by Standards
-   Track document(s) and not in this document.
+   This document provides a set of use cases for Energy efficiency
+   Management, including discovery functions, monitoring functions and
+   control functions of network devices (naively switches, routers,
+   servers and storage devices having an IP address providing a
+   management interface) and their built-in components that receive and
+   provide electrical energy.
 
 2.  Use Cases
 
@@ -256,8 +231,7 @@ Table of Contents
    extreme actions such as switching off network components or modules.
    Such decisions are expected to no impact on the service delivered to
    customers, and could be accompanied by traffic relocation and / or
-   concentration in the network.  For this use case, the following
-   requirements apply:
+   concentration in the network.
 
 2.3.  Reporting on Lifecycle Management
 
@@ -307,21 +281,17 @@ Table of Contents
 
 2.5.  Indirect Energy Monitoring and control
 
-   While the conventional requirements summarized above seem to be all
-   that would be needed for Energy Management, there are significant
-   differences between Energy Management and most well-known network
-   management functions.  The most significant difference is the need
-   for some devices to report on other entities.  There are two major
-   reasons for this.
+   There are cases where Energy Management for some devices need to
+   report on other entities.  There are two major reasons for this.
 
-   o For monitoring a particular entity, it is not always sufficient to
-   communicate only with that entity.  When the entity has no
-   instrumentation for determining power, it might still be possible to
-   obtain power values for the entity via communication with other
-   entities in its power distribution tree.  A simple example of this
-   would be the retrieval of power values from a power meter at the
-   power line into the entity.  A Power Distribution Unit (PDU) and a
-   Power over Ethernet (PoE) switch are common examples.  Both supply
+   o For monitoring energy consumption of a particular entity, it is not
+   always sufficient to communicate only with that entity.  When the
+   entity has no instrumentation for determining power, it might still
+   be possible to obtain power values for the entity via communication
+   with other entities in its power distribution tree.  A simple example
+   of this would be the retrieval of power values from a power meter at
+   the power line into the entity.  A Power Distribution Unit (PDU) and
+   a Power over Ethernet (PoE) switch are common examples.  Both supply
    power to other entities at sockets or ports, respectively, and are
    often instrumented to measure power per socket or port.  Also it
    could be considered to obtain power values for the entity via
@@ -333,15 +303,6 @@ Table of Contents
    another entity upstream in the power distribution tree.  Again, a PDU
    and a PoE switch are common examples, if they have the capability to
    switch power on or off at their sockets or ports, respectively.
-
-   These specific issues of Energy Management, as well as other issues,
-   are covered by requirements specified in Sections 7 and 8.
-
-   The requirements in these sections need a new Energy Management
-   framework that deals with the specific nature of Energy Management.
-   The actual standards documents, such as MIB module specifications,
-   address conformance by specifying which features must, should, or may
-   be implemented by compliant implementations.
 
 2.6.  Consideration of other domains for obtention of end-to-end metrics
 
@@ -643,21 +604,14 @@ Table of Contents
    actions, so integrity of transmitted information and authentication
    of the origin may be needed.
 
-4.1.  Secure Energy Management
-
-   The standard must provide privacy, integrity, and authentication
-   mechanisms for all actions addressed in Sections 5 through 8.  The
-   security mechanisms must meet the security requirements detailed in
-   Section 1.4 of [RFC3411].
-
-4.2.  Isolation of Insufficiently Secure Entities
+4.1.  Isolation of Insufficiently Secure Entities
 
    The standard must provide means to allow the isolation of entities
    that are not sufficiently secure to operate on the public Internet,
    e.g., behind a gateway that implements sufficient security that the
    vulnerable entities are not directly exposed to the Internet.
 
-4.3.  Optional Restriction of Functions
+4.2.  Optional Restriction of Functions
 
    The standard must allow compliant implementations to disable
    sensitive functions, or to not implement such functions at all, when
@@ -665,7 +619,7 @@ Table of Contents
    applies particularly to the control functions described in Sections 6
    and 8.
 
-4.4.  Other Aspects
+4.3.  Other Aspects
 
    Adding new interfaces on devices increase attack surfaces.  Devices
    have brief variation of power consumption due their internal works.
@@ -684,34 +638,14 @@ Table of Contents
    projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant
    Agreement no. 101139120).
 
-7.  Living List
+7.  Use Cases Living List
 
-7.1.  UCs pieces :-)
-
-   o Consider 5g vs network slicing: 3GPP spec describong energy
+   Consider 5g vs network slicing: 3GPP spec describing energy
    efficiency KPIs. 3GPP TS 28.554.
-   Reference:https://datatracker.ietf.org/doc/rfc9543/ o Connectivity
-   from radio side (trying to control the traffic/related work to CCAMP)
-   o Marisol to add one use case: drift from data specifications...
-   (somehow link to the above) o Use case per Domain specific?
-   Meanwhile, they are considered as part of the network... Servers
-   might be considered outside of scope o Energy Metric in E2E view
-
-7.2.  battery-like UC needed ?
-
-   o The EMAN requirements and EMAN framework had a lot of emphasis on
-   the "Reporting on Other Entities", typically smart PDU or PoE.  Is
-   this important?  Should this be removed?  Should it be addressed in a
-   future charter?  This is text about "Sections 7 and 8 contain
-   requirements specific to Energy Management.  Due to the nature of
-   power supply, some monitoring and control functions are not conducted
-   by interacting with the entity of interest but rather with other
-   entities, for example, entities upstream in a power distribution
-   tree."
-
-   o Discuss the need to support a description of the different nature
-   of the sources of the energy used (mix).  It should be flexible are
-   the types of sources might augment in the future.
+   Reference:https://datatracker.ietf.org/doc/rfc9543/ Connectivity from
+   radio side (trying to control the traffic/related work to CCAMP)
+   Marisol to add one use case: drift from data specifications...
+   (somehow link to the above) Energy Metric in E2E view
 
 8.  References
 
@@ -794,12 +728,6 @@ Table of Contents
               "Input from Operators to GREEN BoF", 20 July 2024,
               <https://datatracker.ietf.org/meeting/120/materials/
               slides-120-green-input-from-operators-to-green-bof-01>.
-
-   [RFC3411]  Harrington, D., Presuhn, R., and B. Wijnen, "An
-              Architecture for Describing Simple Network Management
-              Protocol (SNMP) Management Frameworks", STD 62, RFC 3411,
-              DOI 10.17487/RFC3411, December 2002,
-              <https://www.rfc-editor.org/rfc/rfc3411>.
 
    [RFC8432]  Ahlberg, J., Ed., Ye, M., Ed., Li, X., Contreras, LM., and
               CJ. Bernardos, "A Framework for Management and Control of
