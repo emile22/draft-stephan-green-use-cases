@@ -333,7 +333,7 @@ With the better observability to energy consumption statistics data and energy e
 
 # Framework Discussed During the BoF {#framework}
 
-The framework is maintainded in this version of the draft. It will be removed when the use cases descriptions will be mature. 
+The framework is maintainded in this version of the draft. It will be removed when the use cases descriptions will be mature.
 
 Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
