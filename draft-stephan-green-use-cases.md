@@ -107,13 +107,9 @@ The primary objectives of this draft, which are listed in the goals and scope wi
 (1) collecting and updating requirements for the management of energy-efficient networks, and
 (2) defining use cases for managing energy-efficient networks.
 
-This draft groups use cases from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path]. 
+Section 2 groups the use cases of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path]. Several of them might not be relevant for the current charter.
 
-Section 2 groups the 'core' use cases. Several of them might not be relevant for the current charter.
-
-Section 5 raw framework show the use cases in situation using three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
-
-Terms and definitions, mostly  from RFC6988, related to energy efficiency metrics are recalled in Appendix and will be discussed in later stages for potential integration in another GREEN WG document.
+Section 3 shows a framework where the use cases can be put in situation using three core functions: discovery, monitoring, and control.
 
 ## Background
 
@@ -364,7 +360,6 @@ The switching time between the heavy-traffic period and the light-traffic period
 In a tidal network, some network devices can be shut down or sleep during low-traffic periods to save energy.
 In the metro or backbone network, the routers support various different speed interfaces, e.g., the gigabit level to 10GE/50GE, or 100G to 400G. Routers might choose to adjust speed of the interface or downgrade from high speed interface to low speed interface based on network traffic load changes to save the energy.
 In addition, the routers can adjust the number of working network processor cores and clock frequency of chipsets and the number of SerDes buses based on network traffic load changes to save the energy.
-For this use case, the following requirements apply:
 
 ## Energy Efficiency Network Management
 
@@ -374,11 +369,10 @@ o which network devices enable energy saving, which devices not,which are legacy
 o The total energy consumption changing trend over the time of the day, for all network devices,
 o Energy efficiency changing trend over the time of the day for the whole network.
 With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
-For this use case, the following requirements apply:
-
-
 
 # Framework Discussed During the BoF {#framework}
+
+Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
 The overall framework is shown in {{green-framework}}.
 
@@ -512,19 +506,17 @@ This document has no IANA actions.
 
 The contribution of Luis M. Contreras to this document has been supported by the Smart Networks and Services Joint Undertaking (SNS JU) under the European Union's Horizon Europe research and innovation projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant Agreement no. 101139120).
 
-# living list
+# Living List
 
 ## UCs pieces :-)
 
 o	Consider 5g vs network slicing: 3GPP spec describong energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
-
 o	Connectivity from radio side (trying to control the traffic/related work to CCAMP)
 o	Marisol to add one use case: drift from data specifications... (somehow link to the above)
 o	Use case per Domain specific? Meanwhile, they are considered as part of the network... Servers might be considered outside of scope
 o	Energy Metric in E2E view
 
-## battery like UC needed ?
-
+## battery-like UC needed ?
   
    o The EMAN requirements and EMAN framework had a lot of emphasis on the "Reporting on Other Entities", typically smart PDU or PoE.
    Is this important? Should this be removed? Should it be addressed in a future charter?
@@ -589,167 +581,10 @@ o	Energy Metric in E2E view
 
    [IEC.60050] International Electrotechnical Commission, "Electropedia:
    The World's Online Electrotechnical Vocabulary", 2013,
-   <http://www.electropedia.org/iev/iev.nsf/ welcome?openform>.
+   <http://www.electropedia.org/iev/iev.nsf/welcome?openform>.
 
    [ITU-M.3400] International Telecommunication Union, "ITU-T
    Recommendation M.3400 -- Series M: TMN and Network Maintenance:
    International Transmission Systems, Telephone Circuits, Telegraphy,
    Facsimile and Leased Circuits -- Telecommunications Management
    Network - TMN management functions", February 2000.
-
-# Appendix
-
-This appendix should be removed when the initial set of GREEN WG documents will be stable
-
-## Terminology
-
-This section is excepted to move in the GREEN WG draft in charge of terms.
-The terms below are a sub set of the whole terminology. There are many other drafts giving additionnal definitions.
-
-   The terms specified in the terminology section are capitalized
-   throughout the document; the exceptions are the well-known terms
-   "energy" and "power".  These terms are generic and are used in
-   generated terms such as "energy-saving", "low-power", etc.
-
-   Embedded carbon (or embodied carbon)
-
-      The total amount of greenhouse gas emissions, measured in tonnes
-      of CO2 equivalent (tCO2e), associated with the entire lifecycle
-      of a product or material, from raw material extraction through
-      manufacturing, transportation, use, and end-of-life disposal or
-      recycling.
-
-   Embodied energy
-
-      The total amount of energy consumed in all processes associated
-      with the production of a building material or product, from the
-      extraction and processing of raw materials, through manufacturing,
-      transportation, and installation, to the end of its useful life,
-      including disposal or recycling.
-
-   Energy
-
-      Energy is the capacity of a system to do work.  As used by
-      electric utilities, it is generally a reference to electrical
-      energy and is measured in kilowatt-hours (kWh) [IEEE-100].
-
-   Power
-
-      Power is the time rate at which energy is emitted, transferred, or
-      received; power is usually expressed in watts (or in joules per
-      second) [IEEE-100].  (The term "power" does not refer to the
-      concept of demand, which is an averaged power value.)
-
-   Power Attributes
-
-      Power Attributes are measurements of electric current, voltage,
-      phase, and frequencies at a given point in an electrical power
-      system (adapted from [IEC.60050]).
-
-      NOTE: Power Attributes are not intended to be "judgmental" with
-      respect to a reference or technical value and are independent of
-      any usage context.
-
-   Energy Management
-
-      Energy Management is a set of functions for measuring, modeling,
-      planning, and optimizing networks to ensure that the network
-      elements and attached devices use energy efficiently and in a
-      manner appropriate to the nature of the application and the cost
-      constraints of the organization [ITU-M.3400].
-
-   Energy Efficiency Management
-
-     Involves deploying and managing network infrastructures with the
-     goal of optimizing energy use on network devices while improving
-     the overall network utilization.
-
-   Energy Management System
-
-      An Energy Management System is a combination of hardware and
-      software used to administer a network with the primary purpose
-      being Energy Management.
-
-   Energy Monitoring
-
-      Energy Monitoring is a part of Energy Efficiency Management that
-      deals with collecting or reading information from network elements
-      and their components to aid in Energy Efficiency Management.
-
-   Energy Control
-
-      Energy Control is a part of Energy Management that deals with
-      controlling energy supply and Power State of network elements, as
-      well as their components.
-
-   Power Interface
-
-      A Power Interface is an interface at which a device is connected
-      to a power transmission medium, at which it can in turn receive
-      power, provide power, or both.
-
-   Power Inlet
-
-      A Power Inlet is a Power Interface at which a device can receive
-      power from other devices.
-
-   Power Outlet
-
-      A Power Outlet is a Power Interface at which a device can provide
-      power to other devices.
-
-   Power State
-
-      A Power State is a condition or mode of a device that broadly
-      characterizes its capabilities, power consumption, and
-      responsiveness to input [IEEE-1621].
-
-## In Preparation of the GREEN BoF at IETF 120
-
-   The EMAN (Energy MANagement) working group (WG), created in 2010 and now concluded, has produced multiples RFCs
-
-      * RFC7603, Energy Management (EMAN) Applicability Statement
-
-      * RFC7577, Definition of Managed Objects for Battery Monitoring
-
-      * RFC7460, Monitoring and Control MIB for Power and Energy
-
-      * RFC7461, Energy Object Context MIB
-
-      * RFC7326, Energy Management Framework
-
-      * RFC6988, Requirements for Energy Management
-
-      * RFC6933, Entity MIB (Version 4)
-
-   Note also that some other energy-related MIB modules have been created, but not by the EMAN Working Group
-
-      * RFC3433, Entity Sensor MIB module
-
-      * RFC3621, Power Ethernet MIB modules
-
-      * RFC1628, UPS Power Monitoring MIB module
-
-      * LLDP MIB module and LLDP MED MIB module
-
-   Due to limitations regarding Writeable MIB module, one IESG statement published in 2014 encourages the use the NETCONF/YANG standards for configuration. Based on the YANG modules    developments, three MIB  modules (Entity MIB module, Entity Sensor MIB module, Entity State MIB module) have been converted into the "YANG Data Model for Hardware Management" RFC8348.
-
-   However, Power and Energy Monitoring and Control MIB modules has not been converted yet into YANG modules.
-
-   Eleven years after the EMAN requirements RFC 6988 publication, this document re-evaluates the energy-related requirements, as a preparation for the GREEN BoF at IETF 120.
-
-## High-level Differences with RFC6988
-
-The following section will delve into the specific details but from a high level point of view, the differences between this document and the RFC6988 are:
-
-- New definition for "Energy Efficiency Management"
-
-- A focus towards YANG, and not any longer on MIB modules
-
-- As a consequence from the previous point, the ENTITY-MIB v4 RFC6933 is replaced by the Hardware YANG module RFC8348
-
-- battery management is removed (as batteries haves some self-optimization features these days). Nevertheless 'Battery' will appear as a source of power of a type of backup
-
-- Less focus on the Power over Ethernet management, Nevertheless Reporting on Other Entities remains an open issue
-
-- A focus on reporting lifecycle management, considering energy and transformation towards carbon awareness
