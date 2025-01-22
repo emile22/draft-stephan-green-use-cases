@@ -333,6 +333,8 @@ With the better observability to energy consumption statistics data and energy e
 
 # Framework Discussed During the BoF {#framework}
 
+The framework is maintainded in this version of the draft. It will be removed when the use cases descriptions will be mature. 
+
 Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
 The overall framework is shown in {{green-framework}}.
@@ -404,25 +406,21 @@ The main elements in the framework are as follows:
 
 # Security Considerations
 
+Resiliency is an implicit use case of energy efficiency management which comes with numerous security considerations :
+
    Controlling Power State and power supply of entities are considered
    highly sensitive actions, since they can significantly affect the
    operation of directly and indirectly connected devices.  Therefore,
-   all control actions addressed in Sections 6 and 8 must be
+   all control actions must be
    sufficiently protected through authentication, authorization, and
    integrity protection mechanisms.
 
    Entities that are not sufficiently secure to operate directly on the
    public Internet do exist and can be a significant cause of risk, for
-   example, if the remote control functions described in Sections 6 and
-   8 can be exercised on those devices from anywhere on the Internet.
-   The standard needs to provide means for dealing with such cases.  One
-   solution is providing means that allow the isolation of such devices,
-   e.g., behind a sufficiently secured gateway.  Another solution is to
-   allow compliant implementations to disable sensitive functions, or to
-   not implement such functions at all.
+   example, if the remote control functions can be exercised on those devices from anywhere on the Internet.
 
    The monitoring of energy-related quantities of an entity as addressed
-   in Sections 5 through 8 can be used to derive more information than
+   can be used to derive more information than
    just the received and provided energy; therefore, monitored data
    requires protection.  This protection includes authentication and
    authorization of entities requesting access to monitored data as well
@@ -431,26 +429,6 @@ The main elements in the framework are as follows:
    Monitored data may be used as input to control, accounting, and other
    actions, so integrity of transmitted information and authentication
    of the origin may be needed.
-
-## Isolation of Insufficiently Secure Entities
-
-   The standard must provide means to allow the isolation of entities
-   that are not sufficiently secure to operate on the public Internet,
-   e.g., behind a gateway that implements sufficient security that the
-   vulnerable entities are not directly exposed to the Internet.
-
-## Optional Restriction of Functions
-
-   The standard must allow compliant implementations to disable
-   sensitive functions, or to not implement such functions at all, when
-   operating in environments that are not sufficiently secured.  This
-   applies particularly to the control functions described in Sections 6
-   and 8.
-
-## Other Aspects
-
-Adding new interfaces on devices increase attack surfaces.
-Devices have brief variation of power consumption due their internal works. Reducing the power available may reduce their routing capacity which may reduce network performance and resiliency.
 
 # IANA Considerations
 
