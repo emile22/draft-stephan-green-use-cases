@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 26 July 2025                                Cisco Systems, Inc.
+Expires: 27 July 2025                                Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                         22 January 2025
+                                                         23 January 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -19,9 +19,8 @@ Expires: 26 July 2025                                Cisco Systems, Inc.
 
 Abstract
 
-   This document groups use cases for managing energy-efficient networks
-   from operators and from discussions since the GREEN BoF discussions.
-   The primary objectives of this draft is to define use cases.
+   This document groups use cases for Energy efficiency Management of
+   network devices.
 
    Discussion Venues
 
@@ -62,7 +61,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 July 2025.
+   This Internet-Draft will expire on 27 July 2025.
 
 Copyright Notice
 
@@ -81,7 +80,6 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-     1.1.  Background
    2.  Use Cases
      2.1.  Incremental Application of the GREEN Framework
      2.2.  Selective reduction of energy consumption in network parts
@@ -100,45 +98,32 @@ Table of Contents
      2.9.  WLAN Network Energy Saving
      2.10. Fixed Network Energy Saving
      2.11. Energy Efficiency Network Management
-   3.  Framework Discussed During the BoF
-   4.  Security Considerations
-   5.  IANA Considerations
-   6.  Acknowledgments
-   7.  Use Cases Living List
-   8.  References
-     8.1.  Normative References
-     8.2.  Informative References
+   3.  Security Considerations
+   4.  IANA Considerations
+   5.  Acknowledgments
+   6.  Use Cases Living List
+   7.  References
+     7.1.  Normative References
+     7.2.  Informative References
+   8.  Appendix
+     8.1.  Framework Discussed During the BoF
    9.  Informative References
    Authors' Addresses
 
 1.  Introduction
 
-   This document groups use cases for managing energy-efficient networks
-   from operators and from discussions since the GREEN BoF discussions.
-   The primary objectives of this draft is to define use cases.
-   Section 2 groups the use cases of the GREEN WG proponents [charter-
-   refinement], [operators-inputs], [GREEN-BOF],
-   [sustainability-insights], [legacy-path].  Several of them might not
-   be relevant for the current charter.
+   This document groups use cases collected from operators and from
+   discussions since the GREEN WG preparations.
 
-   Section 3 shows a framework where the use cases can be put in
+   It provides a set of use cases for Energy efficiency Management of
+   network devices.  The scope is devices like switches, routers,
+   servers and storage devices having an IP address providing a
+   management interface.  It includes their built-in components that
+   receive and provide electrical energy.
+
+   In annex we recall the framework where the use cases can be put in
    situation using three core functions: discovery, monitoring, and
    control.
-
-1.1.  Background
-
-   With rising energy costs and an increasing awareness of the
-   environmental impact of running information technology equipment,
-   Energy efficiency Management functions and management interfaces are
-   becoming an additional basic requirement for network management
-   systems and devices connected to a network.
-
-   This document provides a set of use cases for Energy efficiency
-   Management, including discovery functions, monitoring functions and
-   control functions of network devices (naively switches, routers,
-   servers and storage devices having an IP address providing a
-   management interface) and their built-in components that receive and
-   provide electrical energy.
 
 2.  Use Cases
 
@@ -495,7 +480,114 @@ Table of Contents
    the network operators can know which part of the network need to be
    adjusted or optimized based on network status change.
 
-3.  Framework Discussed During the BoF
+3.  Security Considerations
+
+   Resiliency is an implicit use case of energy efficiency management
+   which comes with numerous security considerations :
+
+   Controlling Power State and power supply of entities are considered
+   highly sensitive actions, since they can significantly affect the
+   operation of directly and indirectly connected devices.  Therefore,
+   all control actions must be sufficiently protected through
+   authentication, authorization, and integrity protection mechanisms.
+
+   Entities that are not sufficiently secure to operate directly on the
+   public Internet do exist and can be a significant cause of risk, for
+   example, if the remote control functions can be exercised on those
+   devices from anywhere on the Internet.
+
+   The monitoring of energy-related quantities of an entity as addressed
+   can be used to derive more information than just the received and
+   provided energy; therefore, monitored data requires protection.  This
+   protection includes authentication and authorization of entities
+   requesting access to monitored data as well as confidentiality
+   protection during transmission of monitored data.  Privacy of stored
+   data in an entity must be taken into account.  Monitored data may be
+   used as input to control, accounting, and other actions, so integrity
+   of transmitted information and authentication of the origin may be
+   needed.
+
+4.  IANA Considerations
+
+   This document has no IANA actions.
+
+5.  Acknowledgments
+
+   The contribution of Luis M.  Contreras to this document has been
+   supported by the Smart Networks and Services Joint Undertaking (SNS
+   JU) under the European Union's Horizon Europe research and innovation
+   projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant
+   Agreement no. 101139120).
+
+6.  Use Cases Living List
+
+   Consider 5g vs network slicing: 3GPP spec describing energy
+   efficiency KPIs. 3GPP TS 28.554.
+   Reference:https://datatracker.ietf.org/doc/rfc9543/ Connectivity from
+   radio side (trying to control the traffic/related work to CCAMP)
+   Marisol to add one use case: drift from data specifications...
+   (somehow link to the above) Energy Metric in E2E view
+
+7.  References
+
+7.1.  Normative References
+
+   [IEC.61850-7-4] International Electrotechnical Commission,
+   "Communication networks and systems for power utility automation --
+   Part 7-4: Basic communication structure -- Compatible logical node
+   classes and data object classes", March 2010.
+
+   [IEC.62053-21] International Electrotechnical Commission,
+   "Electricity metering equipment (a.c.) -- Particular requirements --
+   Part 21: Static meters for active energy (classes 1 and 2)", January
+   2003.
+
+   [IEC.62053-22] International Electrotechnical Commission,
+   "Electricity metering equipment (a.c.) -- Particular requirements --
+   Part 22: Static meters for active energy (classes 0,2 S and 0,5 S)",
+   January 2003.
+
+   [IEEE-100] IEEE, "The Authoritative Dictionary of IEEE Standards
+   Terms, IEEE 100, Seventh Edition", December 2000.
+
+   [IEEE-1621] Institute of Electrical and Electronics Engineers, "IEEE
+   1621-2004 - IEEE Standard for User Interface Elements in Power
+   Control of Electronic Devices Employed in Office/Consumer
+   Environments", 2004.
+
+   [ATIS-0600015.03.2013] ATIS, "ATIS-0600015.03.2013: Energy Efficiency
+   for Telecommunication Equipment: Methodology for Measurement and
+   Reporting for Router and Ethernet Switch Products", 2013.
+
+   [ETSI-ES-203-136] ETSI, "ETSI ES 203 136: Environmental Engineering
+   (EE); Measurement methods for energy efficiency of router and switch
+   equipment", 2017, <https://www.etsi.org/deliver/
+   etsi_es/203100_203199/203136/01.02.00_50/ es_203136v010200m.pdf>.
+
+   [ITUT-L.1310] ITU-T, "L.1310 : Energy efficiency metrics and
+   measurement methods for telecommunication equipment", 2020,
+   https://www.itu.int/rec/T-REC-L.1310/en (https://www.itu.int/rec/T-
+   REC-L.1310/en).
+
+7.2.  Informative References
+
+   [IEC.60050] International Electrotechnical Commission, "Electropedia:
+   The World's Online Electrotechnical Vocabulary", 2013,
+   http://www.electropedia.org/iev/iev.nsf/welcome?openform
+   (http://www.electropedia.org/iev/iev.nsf/welcome?openform).
+
+   [ITU-M.3400] International Telecommunication Union, "ITU-T
+   Recommendation M.3400 -- Series M: TMN and Network Maintenance:
+   International Transmission Systems, Telephone Circuits, Telegraphy,
+   Facsimile and Leased Circuits -- Telecommunications Management
+   Network - TMN management functions", February 2000.
+
+8.  Appendix
+
+   This appendix should be removed when the initial set of GREEN WG
+   documents will be stable
+
+8.1.  Framework Discussed During the BoF
 
    The framework is maintainded in this version of the draft.  It will
    be removed when the use cases descriptions will be mature.
@@ -573,108 +665,6 @@ Table of Contents
    traffic load, etc)
 
    (g) Control Energy Saving
-
-4.  Security Considerations
-
-   Resiliency is an implicit use case of energy efficiency management
-   which comes with numerous security considerations :
-
-   Controlling Power State and power supply of entities are considered
-   highly sensitive actions, since they can significantly affect the
-   operation of directly and indirectly connected devices.  Therefore,
-   all control actions must be sufficiently protected through
-   authentication, authorization, and integrity protection mechanisms.
-
-   Entities that are not sufficiently secure to operate directly on the
-   public Internet do exist and can be a significant cause of risk, for
-   example, if the remote control functions can be exercised on those
-   devices from anywhere on the Internet.
-
-   The monitoring of energy-related quantities of an entity as addressed
-   can be used to derive more information than just the received and
-   provided energy; therefore, monitored data requires protection.  This
-   protection includes authentication and authorization of entities
-   requesting access to monitored data as well as confidentiality
-   protection during transmission of monitored data.  Privacy of stored
-   data in an entity must be taken into account.  Monitored data may be
-   used as input to control, accounting, and other actions, so integrity
-   of transmitted information and authentication of the origin may be
-   needed.
-
-5.  IANA Considerations
-
-   This document has no IANA actions.
-
-6.  Acknowledgments
-
-   The contribution of Luis M.  Contreras to this document has been
-   supported by the Smart Networks and Services Joint Undertaking (SNS
-   JU) under the European Union's Horizon Europe research and innovation
-   projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant
-   Agreement no. 101139120).
-
-7.  Use Cases Living List
-
-   Consider 5g vs network slicing: 3GPP spec describing energy
-   efficiency KPIs. 3GPP TS 28.554.
-   Reference:https://datatracker.ietf.org/doc/rfc9543/ Connectivity from
-   radio side (trying to control the traffic/related work to CCAMP)
-   Marisol to add one use case: drift from data specifications...
-   (somehow link to the above) Energy Metric in E2E view
-
-8.  References
-
-8.1.  Normative References
-
-   [IEC.61850-7-4] International Electrotechnical Commission,
-   "Communication networks and systems for power utility automation --
-   Part 7-4: Basic communication structure -- Compatible logical node
-   classes and data object classes", March 2010.
-
-   [IEC.62053-21] International Electrotechnical Commission,
-   "Electricity metering equipment (a.c.) -- Particular requirements --
-   Part 21: Static meters for active energy (classes 1 and 2)", January
-   2003.
-
-   [IEC.62053-22] International Electrotechnical Commission,
-   "Electricity metering equipment (a.c.) -- Particular requirements --
-   Part 22: Static meters for active energy (classes 0,2 S and 0,5 S)",
-   January 2003.
-
-   [IEEE-100] IEEE, "The Authoritative Dictionary of IEEE Standards
-   Terms, IEEE 100, Seventh Edition", December 2000.
-
-   [IEEE-1621] Institute of Electrical and Electronics Engineers, "IEEE
-   1621-2004 - IEEE Standard for User Interface Elements in Power
-   Control of Electronic Devices Employed in Office/Consumer
-   Environments", 2004.
-
-   [ATIS-0600015.03.2013] ATIS, "ATIS-0600015.03.2013: Energy Efficiency
-   for Telecommunication Equipment: Methodology for Measurement and
-   Reporting for Router and Ethernet Switch Products", 2013.
-
-   [ETSI-ES-203-136] ETSI, "ETSI ES 203 136: Environmental Engineering
-   (EE); Measurement methods for energy efficiency of router and switch
-   equipment", 2017, <https://www.etsi.org/deliver/
-   etsi_es/203100_203199/203136/01.02.00_50/ es_203136v010200m.pdf>.
-
-   [ITUT-L.1310] ITU-T, "L.1310 : Energy efficiency metrics and
-   measurement methods for telecommunication equipment", 2020,
-   https://www.itu.int/rec/T-REC-L.1310/en (https://www.itu.int/rec/T-
-   REC-L.1310/en).
-
-8.2.  Informative References
-
-   [IEC.60050] International Electrotechnical Commission, "Electropedia:
-   The World's Online Electrotechnical Vocabulary", 2013,
-   http://www.electropedia.org/iev/iev.nsf/welcome?openform
-   (http://www.electropedia.org/iev/iev.nsf/welcome?openform).
-
-   [ITU-M.3400] International Telecommunication Union, "ITU-T
-   Recommendation M.3400 -- Series M: TMN and Network Maintenance:
-   International Transmission Systems, Telephone Circuits, Telegraphy,
-   Facsimile and Leased Circuits -- Telecommunications Management
-   Network - TMN management functions", February 2000.
 
 9.  Informative References
 
