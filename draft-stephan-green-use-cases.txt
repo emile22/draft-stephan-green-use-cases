@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 27 July 2025                                Cisco Systems, Inc.
+Expires: 28 July 2025                                Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                         23 January 2025
+                                                         24 January 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -61,7 +61,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 July 2025.
+   This Internet-Draft will expire on 28 July 2025.
 
 Copyright Notice
 
@@ -122,8 +122,7 @@ Table of Contents
    receive and provide electrical energy.
 
    In annex we recall the framework where the use cases can be put in
-   situation using three core functions: discovery, monitoring, and
-   control.
+   situation.
 
 2.  Use Cases
 
