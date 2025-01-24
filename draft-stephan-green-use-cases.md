@@ -105,7 +105,7 @@ This document groups use cases collected from operators and from discussions sin
 
 It provides a set of use cases for Energy efficiency Management of network devices. The scope is devices like switches, routers, servers and storage devices having an IP address providing a management interface. It includes their built-in components that receive and provide electrical energy.
 
-In annex we recall the framework where the use cases can be put in situation using three core functions: discovery, monitoring, and control.
+In annex we recall the framework where the use cases can be put in situation.
 
 # Use Cases
 
