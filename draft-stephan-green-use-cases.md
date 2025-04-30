@@ -326,6 +326,86 @@ o The total energy consumption changing trend over the time of the day, for all 
 o Energy efficiency changing trend over the time of the day for the whole network.
 With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
 
+## ISAC-enabled Energy-Aware Smart City Traffic Management
+
+### Use case description
+
+Integrated Sensing and Communications (ISAC) is emerging as a key
+enabler for next-generation wireless networks, integrating sensing
+and communication functionalities within a unified system.  By
+leveraging the same spectral, hardware, and computational resources,
+ISAC enhances network efficiency while enabling new capabilities such
+as high-resolution environment perception, object detection, and
+situational awareness.  This paradigm shift is particularly relevant
+for applications requiring both reliable connectivity and precise
+sensing, such as autonomous vehicles, industrial automation, and
+smart city deployments.  Given its strategic importance, ISAC has
+gained significant traction in standardization efforts.  The ETSI
+Industry Specification Group (ISG) on ISAC has been established to
+explore technical requirements and use cases, while 3GPP has
+initiated discussions on ISAC-related features within its ongoing
+research on future 6G systems.  Furthermore, research initiatives
+within the IEEE and IETF are investigating how ISAC can be integrated
+into network architectures, spectrum management, and protocol design,
+making it a critical area of development in the evolution of wireless
+networks.
+
+This use case involves deploying ISAC systems in a smart city to
+monitor and optimize vehicles' traffic flows while minimizing energy
+consumption of the mobile network.  The system integrates sensing
+technologies, such as radar and LIDAR, with communication networks to
+detect vehicle density, monitor road conditions, and communicate with
+autonomous vehicles or traffic lights.  By using ISAC, the system
+minimizes redundant infrastructure (e.g., separate sensors and
+communication equipment), thus reducing the overall carbon and energy
+footprint.
+
+### GREEN Specifics
+
+Energy Consumption Monitoring: Each ISAC component (e.g., roadside
+units, integrated sensors, and communication transceivers) is capable
+of reporting its energy consumption in real time to the centralized
+or distributed energy management system.
+
+Reconfiguration for Energy Efficiency: The system can dynamically
+switch between high-resolution sensing modes (e.g., during peak
+hours) and low-power modes (e.g., during low traffic periods).  The
+network can reconfigure traffic communication paths to prioritize
+routes or nodes that consume less power, leveraging energy-efficient
+communication protocols.
+
+Integration of Local and Global Energy Goals: The system can operate
+both locally (e.g., turning off specific roadside units in low-
+traffic areas) and globally (e.g., modifying traffic patterns across
+the city) to achieve defined energy consumption goals.
+
+### Requirements for GREEN
+
+1. Measurement Granularity:
+
+  - Ability to measure energy consumption per ISAC component (e.g., roadside unit, sensor, transceiver).
+  - Granular reporting per communication link or sensing mode (e.g., high-power radar mode vs. low-power mode).
+
+2. Power Control Mechanisms:
+
+  - Ability to switch components on/off or place them in sleep/standby mode when not in use.
+  - Support for dynamic adjustment of sensing resolution or communication bandwidth to balance energy savings and system performance.
+
+3. Reconfiguration and Adaptability:
+
+  - Support for hardware reconfiguration (e.g., adaptive sensing modes, transceiver settings) to optimize energy use.
+  - Mechanisms to steer traffic or adjust network routing based on global or local energy-saving objectives.
+
+4. Global Coordination:
+
+  - Capabilities for cross-domain coordination to enable global optimization (e.g., city-wide traffic rerouting or dynamic resource allocation across different regions).
+  - Ability to aggregate and analyze energy consumption data from all ISAC components to inform high-level decision-making.
+
+5. Energy-Aware Standards and Protocols:
+
+   - Communication protocols that minimize power usage while maintaining reliability.
+   - Interoperability standards for energy-aware reconfiguration across heterogeneous ISAC components and systems.
+
 # Security Considerations
 
 Resiliency is an implicit use case of energy efficiency management which comes with numerous security considerations :
