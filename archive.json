@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-04T02:07:17.619556+00:00",
+  "timestamp": "2025-05-06T01:58:34.152227+00:00",
   "repo": "emile22/draft-stephan-green-use-cases",
   "labels": [
     {
@@ -89,7 +89,7 @@
       "labels": [],
       "body": "adding Appendix II",
       "createdAt": "2025-04-03T11:08:23Z",
-      "updatedAt": "2025-04-03T11:08:23Z",
+      "updatedAt": "2025-05-05T03:04:54Z",
       "baseRepository": "emile22/draft-stephan-green-use-cases",
       "baseRefName": "main",
       "baseRefOid": "c53f3460d2d8d2e8bc8ce76800f588579d082865",
@@ -100,7 +100,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Since Framework is split out as one separate draft, it is nice to abandone this PR.",
+          "createdAt": "2025-05-05T03:04:53Z",
+          "updatedAt": "2025-05-05T03:04:53Z"
+        }
+      ],
       "reviews": []
     },
     {
