@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-13T02:00:41.692593+00:00",
+  "timestamp": "2025-05-15T01:58:03.126889+00:00",
   "repo": "emile22/draft-stephan-green-use-cases",
   "labels": [
     {
@@ -82,21 +82,21 @@
       "id": "PR_kwDONtgu8s6RPVz-",
       "title": "Update draft-stephan-green-use-cases.md",
       "url": "https://github.com/emile22/draft-stephan-green-use-cases/pull/2",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "marisolpalmero",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "adding Appendix II",
       "createdAt": "2025-04-03T11:08:23Z",
-      "updatedAt": "2025-05-05T03:04:54Z",
+      "updatedAt": "2025-05-13T20:39:04Z",
       "baseRepository": "emile22/draft-stephan-green-use-cases",
       "baseRefName": "main",
       "baseRefOid": "c53f3460d2d8d2e8bc8ce76800f588579d082865",
       "headRepository": "marisolpalmero/draft-stephan-green-use-cases",
       "headRefName": "main",
       "headRefOid": "d035d9f80fdef2d8b4c4d903cc42134a7185d424",
-      "closedAt": null,
+      "closedAt": "2025-05-13T20:38:38Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -107,6 +107,13 @@
           "body": "Since Framework is split out as one separate draft, it is nice to abandone this PR.",
           "createdAt": "2025-05-05T03:04:53Z",
           "updatedAt": "2025-05-05T03:04:53Z"
+        },
+        {
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "body": "abandoned as discussed",
+          "createdAt": "2025-05-13T20:39:02Z",
+          "updatedAt": "2025-05-13T20:39:02Z"
         }
       ],
       "reviews": []
@@ -116,26 +123,42 @@
       "id": "PR_kwDONtgu8s6UfJqW",
       "title": "Update draft-stephan-green-use-cases.md",
       "url": "https://github.com/emile22/draft-stephan-green-use-cases/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cjbc",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Added ISAC use case for consideration by document authors.",
       "createdAt": "2025-04-30T11:10:15Z",
-      "updatedAt": "2025-04-30T11:10:15Z",
+      "updatedAt": "2025-05-13T20:54:03Z",
       "baseRepository": "emile22/draft-stephan-green-use-cases",
       "baseRefName": "main",
       "baseRefOid": "c53f3460d2d8d2e8bc8ce76800f588579d082865",
       "headRepository": "cjbc/draft-stephan-green-use-cases",
       "headRefName": "patch-1",
       "headRefOid": "6f58bd8347a7fc29f03dbbc20fd077f3cfb9cd2e",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-05-13T20:54:03Z",
+      "mergedAt": "2025-05-13T20:54:03Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "071580da7abc9476ed2b16638d0f59b052874245"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDONtgu8s6pKbuS",
+          "commit": {
+            "abbreviatedOid": "6f58bd8"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "not suer that all these reqs are in green wg scope",
+          "createdAt": "2025-05-13T20:47:05Z",
+          "updatedAt": "2025-05-13T20:47:05Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
