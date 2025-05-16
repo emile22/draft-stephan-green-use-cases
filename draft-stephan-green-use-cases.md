@@ -406,6 +406,15 @@ the city) to achieve defined energy consumption goals.
    - Communication protocols that minimize power usage while maintaining reliability.
    - Interoperability standards for energy-aware reconfiguration across heterogeneous ISAC components and systems.
 
+## Double Accounting Open issue
+
+Energy consumption monitoring often includes metering at both upstream and downstream levels of power distribution. While this can provide granular visibility, it may also lead to double accounting if not carefully managed.
+
+A common case arises when energy is measured at the input of a Power Delivery Unit (PDU), and individually at each device powered by that PDU (e.g., servers, switches). Since the PDU input already reflects the downstream consumption, summing the per-device values with the PDU input results in redundant reporting.
+A similar issue occurs with Power over Ethernet (PoE) infrastructures when a network switch supply power directly to devices. If the total power consumption measured encompasses both the power delivered to the PoE switch and to the powered devices, this again results in double accounting.
+
+These 2 cases distort energy dashboards and indicators such as Power Usage Effectiveness (PUE).
+
 # Security Considerations
 
 Resiliency is an implicit use case of energy efficiency management which comes with numerous security considerations :
