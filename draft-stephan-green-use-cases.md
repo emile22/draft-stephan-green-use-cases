@@ -45,8 +45,8 @@ author:
     org: Telefonica
     email: luismiguel.contrerasmurillo@telefonica.com
   -
-    fullname: Carlos J. Bernanos Cano
-    org: tood
+    fullname: Carlos J. Bernardos
+    org: Universidad Carlos III de Madrid
     email: cjbc@it.uc3m.es
 
 normative:
