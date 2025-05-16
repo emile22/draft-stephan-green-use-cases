@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 14 November 2025                            Cisco Systems, Inc.
+Expires: 17 November 2025                            Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                             13 May 2025
+                                                             16 May 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -61,7 +61,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 November 2025.
+   This Internet-Draft will expire on 17 November 2025.
 
 Copyright Notice
 
@@ -102,6 +102,7 @@ Table of Contents
        2.12.1.  Use case description
        2.12.2.  GREEN Specifics
        2.12.3.  Requirements for GREEN
+     2.13. Double Accounting Open issue
    3.  Security Considerations
    4.  IANA Considerations
    5.  Acknowledgments
@@ -578,6 +579,26 @@ Table of Contents
 
        *  Interoperability standards for energy-aware reconfiguration
           across heterogeneous ISAC components and systems.
+
+2.13.  Double Accounting Open issue
+
+   Energy consumption monitoring often includes metering at both
+   upstream and downstream levels of power distribution.  While this can
+   provide granular visibility, it may also lead to double accounting if
+   not carefully managed.
+
+   A common case arises when energy is measured at the input of a Power
+   Delivery Unit (PDU), and individually at each device powered by that
+   PDU (e.g., servers, switches).  Since the PDU input already reflects
+   the downstream consumption, summing the per-device values with the
+   PDU input results in redundant reporting.  A similar issue occurs
+   with Power over Ethernet (PoE) infrastructures when a network switch
+   supply power directly to devices.  If the total power consumption
+   measured encompasses both the power delivered to the PoE switch and
+   to the powered devices, this again results in double accounting.
+
+   These 2 cases distort energy dashboards and indicators such as Power
+   Usage Effectiveness (PUE).
 
 3.  Security Considerations
 
