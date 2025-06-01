@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-25T02:09:26.503027+00:00",
+  "timestamp": "2025-06-01T02:26:12.070444+00:00",
   "repo": "emile22/draft-stephan-green-use-cases",
   "labels": [
     {
@@ -95,6 +95,22 @@
       "body": "need to document slicing use case",
       "createdAt": "2025-05-22T21:49:45Z",
       "updatedAt": "2025-05-22T21:49:45Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDONtgu8s641012",
+      "title": "UC Template",
+      "url": "https://github.com/emile22/draft-stephan-green-use-cases/issues/7",
+      "state": "OPEN",
+      "author": "emile22",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "'Custom' Carlos template and apply it UC by UC in separate PR",
+      "createdAt": "2025-05-29T18:18:50Z",
+      "updatedAt": "2025-05-29T18:18:50Z",
       "closedAt": null,
       "comments": []
     }
