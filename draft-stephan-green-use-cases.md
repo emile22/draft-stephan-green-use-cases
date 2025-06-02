@@ -522,7 +522,27 @@ The contribution of Luis M. Contreras to this document has been supported by the
    Facsimile and Leased Circuits -- Telecommunications Management
    Network - TMN management functions", February 2000.
 
-# Appendix
+# Appendix 1, Template preparation
 
-This appendix should be removed when the initial set of GREEN WG documents will be stable
+This appendix should be removed when the template will be stable. 
+
+It is based on the example from https://datatracker.ietf.org/doc/rfc9450/.
+
+## Use Case Description
+General description of the use case.
+
+  
+## GREEN WG Charter Specifics
+(if there are no GREEN specific aspects, then it is not a UC to be documented)
+For example, the use case involves components that can report on energy consumption and that might be reconfigured (on a local or global scale) to operate based on energy goals/limitations.
+### The Need for Energy Efficiency
+
+## Requirements for GREEN
+Examples (can be split into different categories to facilitate a summary at the end of the document):
+- Granularity of measurements should be per component, per line, per port…
+- Ability to switch on/off, put on sleep mode… components.
+- Ability to reconfigure hardware mode based on power savings (e.g., reduce reliability or speed).
+- Ability to operate globally (not constrained to just one device) based on power savings/goals (e.g., steer traffic using a different path that consumes less energy)
+
+
 
