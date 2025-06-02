@@ -5,7 +5,7 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 17 November 2025                            Cisco Systems, Inc.
+Expires: 4 December 2025                             Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
@@ -13,7 +13,7 @@ Expires: 17 November 2025                            Cisco Systems, Inc.
                                                               Telefonica
                                                          C. J. Bernardos
                                         Universidad Carlos III de Madrid
-                                                             16 May 2025
+                                                             2 June 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -63,7 +63,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 November 2025.
+   This Internet-Draft will expire on 4 December 2025.
 
 Copyright Notice
 
@@ -112,7 +112,10 @@ Table of Contents
    7.  References
      7.1.  Normative References
      7.2.  Informative References
-   8.  Appendix
+   8.  Appendix 1, Template preparation
+     8.1.  Use Case Description
+     8.2.  GREEN WG Charter Specifics
+     8.3.  Requirements for GREEN
    9.  Informative References
    Authors' Addresses
 
@@ -704,10 +707,35 @@ Table of Contents
    Facsimile and Leased Circuits -- Telecommunications Management
    Network - TMN management functions", February 2000.
 
-8.  Appendix
+8.  Appendix 1, Template preparation
 
-   This appendix should be removed when the initial set of GREEN WG
-   documents will be stable
+   This appendix should be removed when the template will be stable.
+
+   It is based on the example from https://datatracker.ietf.org/doc/
+   rfc9450/.
+
+8.1.  Use Case Description
+
+   General description of the use case.
+
+8.2.  GREEN WG Charter Specifics
+
+   (if there are no GREEN specific aspects, then it is not a UC to be
+   documented) For example, the use case involves components that can
+   report on energy consumption and that might be reconfigured (on a
+   local or global scale) to operate based on energy goals/limitations.
+   ### The Need for Energy Efficiency
+
+8.3.  Requirements for GREEN
+
+   Examples (can be split into different categories to facilitate a
+   summary at the end of the document): - Granularity of measurements
+   should be per component, per line, per port… - Ability to switch on/
+   off, put on sleep mode… components. - Ability to reconfigure hardware
+   mode based on power savings (e.g., reduce reliability or speed). -
+   Ability to operate globally (not constrained to just one device)
+   based on power savings/goals (e.g., steer traffic using a different
+   path that consumes less energy)
 
 9.  Informative References
 
