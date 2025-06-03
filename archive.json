@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-01T02:26:12.070444+00:00",
+  "timestamp": "2025-06-03T02:03:10.669855+00:00",
   "repo": "emile22/draft-stephan-green-use-cases",
   "labels": [
     {
@@ -74,13 +74,23 @@
       "state": "OPEN",
       "author": "marisolpalmero",
       "authorAssociation": "NONE",
-      "assignees": [],
+      "assignees": [
+        "marisolpalmero"
+      ],
       "labels": [],
       "body": "Clarify if the fixed network use case is within WG scope",
       "createdAt": "2025-05-22T21:48:35Z",
-      "updatedAt": "2025-05-22T21:48:35Z",
+      "updatedAt": "2025-06-02T08:10:58Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "marisolpalmero",
+          "authorAssociation": "NONE",
+          "body": "Marisol to review the notes from the interim meeting",
+          "createdAt": "2025-06-02T08:10:42Z",
+          "updatedAt": "2025-06-02T08:10:42Z"
+        }
+      ]
     },
     {
       "number": 6,
@@ -110,9 +120,17 @@
       "labels": [],
       "body": "'Custom' Carlos template and apply it UC by UC in separate PR",
       "createdAt": "2025-05-29T18:18:50Z",
-      "updatedAt": "2025-05-29T18:18:50Z",
+      "updatedAt": "2025-06-02T08:09:16Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "marisolpalmero",
+          "authorAssociation": "NONE",
+          "body": "Emile is going to suggest the template in the form of a PR",
+          "createdAt": "2025-06-02T08:09:16Z",
+          "updatedAt": "2025-06-02T08:09:16Z"
+        }
+      ]
     }
   ],
   "pulls": [
