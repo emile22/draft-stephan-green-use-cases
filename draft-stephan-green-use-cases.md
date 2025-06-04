@@ -155,7 +155,18 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 
 ## Selective reduction of energy consumption in network parts proportional to traffic levels
 
+### Use Case Description
 Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
+
+### GREEN WG Charter Specifics
+This use case fits within the GREEN WG’s objectives by emphasizing energy-aware operational adjustments across network infrastructure that optimize energy use based on traffic loads and the intelligent activation/deactivation of resources.
+
+### The Need for Energy Efficiency
+Reducing energy usage during during low-demand periods can lower operational costs and carbon emissions while also prolonging equipment lifespan.
+
+### Requirements for GREEN
+
+- Support for device and component-level sleep, standby, and hibernation modes.
 
 ## Reporting on Lifecycle Management
 
