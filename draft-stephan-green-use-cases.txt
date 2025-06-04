@@ -5,7 +5,7 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 4 December 2025                             Cisco Systems, Inc.
+Expires: 6 December 2025                             Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
@@ -13,7 +13,7 @@ Expires: 4 December 2025                             Cisco Systems, Inc.
                                                               Telefonica
                                                          C. J. Bernardos
                                         Universidad Carlos III de Madrid
-                                                             2 June 2025
+                                                             4 June 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -63,7 +63,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 December 2025.
+   This Internet-Draft will expire on 6 December 2025.
 
 Copyright Notice
 
@@ -86,6 +86,10 @@ Table of Contents
      2.1.  Incremental Application of the GREEN Framework
      2.2.  Selective reduction of energy consumption in network parts
             proportional to traffic levels
+       2.2.1.  Use Case Description
+       2.2.2.  GREEN WG Charter Specifics
+       2.2.3.  The Need for Energy Efficiency
+       2.2.4.  Requirements for GREEN
      2.3.  Reporting on Lifecycle Management
        2.3.1.  Carbon Reporting
        2.3.2.  Energy Mix
@@ -210,6 +214,8 @@ Table of Contents
 2.2.  Selective reduction of energy consumption in network parts
       proportional to traffic levels
 
+2.2.1.  Use Case Description
+
    Traffic levels in a network follow patterns reflecting the behavior
    of consumers.  Those patterns show periodicity in the terms of the
    traffic delivered, that can range from daily (from 00:00 to 23:59) to
@@ -222,6 +228,24 @@ Table of Contents
    Such decisions are expected to no impact on the service delivered to
    customers, and could be accompanied by traffic relocation and / or
    concentration in the network.
+
+2.2.2.  GREEN WG Charter Specifics
+
+   This use case fits within the GREEN WG’s objectives by emphasizing
+   energy-aware operational adjustments across network infrastructure
+   that optimize energy use based on traffic loads and the intelligent
+   activation/deactivation of resources.
+
+2.2.3.  The Need for Energy Efficiency
+
+   Reducing energy usage during during low-demand periods can lower
+   operational costs and carbon emissions while also prolonging
+   equipment lifespan.
+
+2.2.4.  Requirements for GREEN
+
+   *  Support for device and component-level sleep, standby, and
+      hibernation modes.
 
 2.3.  Reporting on Lifecycle Management
 
