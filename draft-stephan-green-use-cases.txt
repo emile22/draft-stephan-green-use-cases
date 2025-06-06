@@ -5,7 +5,7 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 6 December 2025                             Cisco Systems, Inc.
+Expires: 8 December 2025                             Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
@@ -13,7 +13,7 @@ Expires: 6 December 2025                             Cisco Systems, Inc.
                                                               Telefonica
                                                          C. J. Bernardos
                                         Universidad Carlos III de Madrid
-                                                             4 June 2025
+                                                             6 June 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -63,7 +63,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 December 2025.
+   This Internet-Draft will expire on 8 December 2025.
 
 Copyright Notice
 
@@ -84,6 +84,10 @@ Table of Contents
    1.  Introduction
    2.  Use Cases
      2.1.  Incremental Application of the GREEN Framework
+       2.1.1.  Use Case Description
+       2.1.2.  GREEN WG Charter Specifics
+       2.1.3.  The Need for Energy Efficiency
+       2.1.4.  Requirements for GREEN
      2.2.  Selective reduction of energy consumption in network parts
             proportional to traffic levels
        2.2.1.  Use Case Description
@@ -91,19 +95,38 @@ Table of Contents
        2.2.3.  The Need for Energy Efficiency
        2.2.4.  Requirements for GREEN
      2.3.  Reporting on Lifecycle Management
-       2.3.1.  Carbon Reporting
-       2.3.2.  Energy Mix
+       2.3.1.  Use Case Description
+       2.3.2.  Carbon Reporting
+       2.3.3.  Energy Mix
+       2.3.4.  GREEN WG Charter Specifics
+       2.3.5.  The Need for Energy Efficiency
+       2.3.6.  Requirements for GREEN
      2.4.  Real-time Energy Metering of Virtualised or Cloud-native
             Network Functions
+       2.4.1.  Use Case Description
+       2.4.2.  Requirements for GREEN
      2.5.  Indirect Energy Monitoring and control
+       2.5.1.  Use Case Description
+       2.5.2.  Requirements for GREEN
      2.6.  Consideration of other domains for obtention of end-to-end
             metrics
+       2.6.1.  Use Case Description
+       2.6.2.  Requirements for GREEN
      2.7.  Dynamic adjustment of network element throughput according
             to traffic levels in wireless transport networks
+       2.7.1.  Use Case Description
+       2.7.2.  Requirements for GREEN
      2.8.  Video streaming use case
+       2.8.1.  Use Case Description
+       2.8.2.  Requirements for GREEN
      2.9.  WLAN Network Energy Saving
+       2.9.1.  Use Case Description
+       2.9.2.  Requirements for GREEN
      2.10. Fixed Network Energy Saving
+       2.10.1.  Use Case Description
      2.11. Energy Efficiency Network Management
+       2.11.1.  Use Case Description
+       2.11.2.  Requirements for GREEN
      2.12. ISAC-enabled Energy-Aware Smart City Traffic Management
        2.12.1.  Use case description
        2.12.2.  GREEN Specifics
@@ -148,6 +171,8 @@ Table of Contents
 
 2.1.  Incremental Application of the GREEN Framework
 
+2.1.1.  Use Case Description
+
    This section describes an incremental example [legacy-path] of usage
    showing how a product, a service and a network can use the framework
    in different settings.
@@ -172,6 +197,15 @@ Table of Contents
    make a difference in a world striving for sustainability and help
    reduce the carbon footprint.  He is convince that he still had a part
    to play in making the digital world a greener place.
+
+   An legacy router, equipped with Ethernet ports and optical
+   interfaces, remained in operation within the network.  Despite its
+   dated design, there is ongoing interest in exploring ways to improve
+   its energy efficiency.  Efforts are considered to upgrade its blades
+   and to optimize its internal circuitry to reduce the overall power
+   consumption of the network.  It enables the improvement of the router
+   energy efficiency while reducing the global resource consumption of
+   the network.
 
    Device moving gradually to GREEN energy efficiency support:
 
@@ -211,6 +245,33 @@ Table of Contents
    (iii) network-wide energy efficiency solutions must include legacy
    devices and green-wg ready devices
 
+2.1.2.  GREEN WG Charter Specifics
+
+   This use case demonstrates how Energy Efficiency can be incrementally
+   applied and measured in legacy networks.
+
+2.1.3.  The Need for Energy Efficiency
+
+   Ensures that energy efficiency can be deployed, operated and measured
+   per components, without waiting for full infrastructure upgrades.
+
+2.1.4.  Requirements for GREEN
+
+   *  Baseline Measurement: Ability to establish reference energy usage
+      per device (from datasheets or monitoring).
+
+   *  Component-Level Upgradability: Support partial migration of device
+      subsystems to GREEN-aware models.
+
+   *  Legacy Compatibility: Ensure the framework can include legacy
+      equipment alongside GREEN-enabled devices.
+
+   *  Energy Saving Validation: Mechanisms to measure and verify actual
+      energy savings over time.
+
+   *  Protection from Overuse: Avoid frequent power cycling that may
+      damage sensitive components like lasers or connectors.
+
 2.2.  Selective reduction of energy consumption in network parts
       proportional to traffic levels
 
@@ -249,6 +310,8 @@ Table of Contents
 
 2.3.  Reporting on Lifecycle Management
 
+2.3.1.  Use Case Description
+
    Lifecycle information related to manufacturing energy costs,
    transport, recyclability, and end-of-life disposal impacts is part of
    what is called "embedded carbon."  This information is considered to
@@ -260,7 +323,7 @@ Table of Contents
    the ecodesign framework [(EU) 2024/1781] published in June by the
    European Commission.
 
-2.3.1.  Carbon Reporting
+2.3.2.  Carbon Reporting
 
    To report on carbon equivalents for global reporting, it is important
    to correlate the location where the specific entity/network element
@@ -269,7 +332,7 @@ Table of Contents
    electricity maps applications that reflect the carbon intensity of
    the electricity consumed, etc.
 
-2.3.2.  Energy Mix
+2.3.3.  Energy Mix
 
    Energy efficiency is not limited to reducing the energy consumption,
    it is common to include carbon free, solar energy, wind energy,
@@ -283,8 +346,22 @@ Table of Contents
    example battery, standby generator ...) there is a requirement to
    known exactly when a backup power is in used and which one is.
 
+2.3.4.  GREEN WG Charter Specifics
+
+   Capture lifecycle energy data and integrate it with operational
+   metrics.
+
+2.3.5.  The Need for Energy Efficiency
+
+   Considering energy from production to disposal supports the broader
+   goal of reducing total environmental impact.
+
+2.3.6.  Requirements for GREEN
+
 2.4.  Real-time Energy Metering of Virtualised or Cloud-native Network
       Functions
+
+2.4.1.  Use Case Description
 
    Facilitating more precise and real-time estimations of energy
    consumed by virtualised or cloud-native network functions.
@@ -293,7 +370,11 @@ Table of Contents
    for the efficient management and operation of next-generation mobile
    networks [GREEN_NGNM].
 
+2.4.2.  Requirements for GREEN
+
 2.5.  Indirect Energy Monitoring and control
+
+2.5.1.  Use Case Description
 
    There are cases where Energy Management for some devices need to
    report on other entities.  There are two major reasons for this.
@@ -318,7 +399,11 @@ Table of Contents
    and a PoE switch are common examples, if they have the capability to
    switch power on or off at their sockets or ports, respectively.
 
+2.5.2.  Requirements for GREEN
+
 2.6.  Consideration of other domains for obtention of end-to-end metrics
+
+2.6.1.  Use Case Description
 
    The technologies under the scope of IETF provide the necessary
    connectivity to other technological domains.  For the obtention of
@@ -346,8 +431,12 @@ Table of Contents
    end-to-end metric, the 3GPP metric should only consider the
    efficiency and consumption of the 3GPP-related technologies.
 
+2.6.2.  Requirements for GREEN
+
 2.7.  Dynamic adjustment of network element throughput according to
       traffic levels in wireless transport networks
+
+2.7.1.  Use Case Description
 
    Radio base stations are typically connected to the backbone network
    by means of fiber or wireless transport (e.g., microwave)
@@ -373,7 +462,11 @@ Table of Contents
    power to the observed traffic levels with some coarse granularity,
    but pursuing certain degrees of proportionality.
 
+2.7.2.  Requirements for GREEN
+
 2.8.  Video streaming use case
+
+2.8.1.  Use Case Description
 
    Video streaming is nowadays the major source of traffic observed in
    ISP networks, in a propotion of 70% or even higher.  Over-the-top
@@ -409,7 +502,11 @@ Table of Contents
    service.  It should be noted that another front for optimization is
    the one related to the deployment of cache servers in the network.
 
+2.8.2.  Requirements for GREEN
+
 2.9.  WLAN Network Energy Saving
+
+2.9.1.  Use Case Description
 
    In a WLAN network, The AP is usually powered by a PoE switch.  AP
    nodes are network devices with the largest number and consuming most
@@ -481,7 +578,11 @@ Table of Contents
 
                Figure 3: Wireless Resource Management on APs
 
+2.9.2.  Requirements for GREEN
+
 2.10.  Fixed Network Energy Saving
+
+2.10.1.  Use Case Description
 
    Traffic on the Tidal network has an obvious tidal period, including
    heavy-traffic periods and light-traffic periods: The time duration of
@@ -501,6 +602,8 @@ Table of Contents
 
 2.11.  Energy Efficiency Network Management
 
+2.11.1.  Use Case Description
+
    Network level Energy Efficiency allows network operators not only see
    real time energy consumption in the network devices of large scale
    network, but also allow you see o which network devices enable energy
@@ -511,6 +614,8 @@ Table of Contents
    consumption statistics data and energy efficiency statistics data,
    the network operators can know which part of the network need to be
    adjusted or optimized based on network status change.
+
+2.11.2.  Requirements for GREEN
 
 2.12.  ISAC-enabled Energy-Aware Smart City Traffic Management
 
