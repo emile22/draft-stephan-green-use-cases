@@ -118,6 +118,7 @@ This is a work in progress and additional use cases will be documented in next v
 
 ## Incremental Application of the GREEN Framework {#incremental-use-case}
 
+### Use Case Description
 This section describes an incremental example [legacy-path] of usage showing how a product, a service and a network can use the framework in different settings.
 
 This use case is the less trendy of all the use cases by far as its ambitious is limited to migration and coexistence, as usual. Nevertheless from a telco perspective, it is the centrality for 2 main reasons:
@@ -126,6 +127,8 @@ This use case is the less trendy of all the use cases by far as its ambitious is
 - to account the gain of the move one started;
 
 Once upon a time there was an very old legacy router named Rusty equipped with outdated ethernet and ugly optical interfaces. Despite his worn-out appearance, Rusty was determined to contribute to the energy efficiency effort. He dreamed of finding a way to optimize his old circuits and help reduce the power consumption of the network he had faithfully served for so many years. Though he was no longer in his prime, Rusty believed that even an old router like him could make a difference in a world striving for sustainability and help reduce the carbon footprint. He is convince that he still had a part to play in making the digital world a greener place.
+
+An  legacy router, equipped with Ethernet ports and optical interfaces, remained in operation within the network. Despite its dated design, there is ongoing interest in exploring ways to improve its energy efficiency. Efforts are considered to upgrade its blades and to optimize its internal circuitry to reduce the overall power consumption of the network. It enables the improvement of the router energy efficiency while reducing the global resource consumption of the network.
 
 Device moving gradually to GREEN energy efficiency support:
 
@@ -153,6 +156,19 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 
 (iii) network-wide energy efficiency solutions must include legacy devices and green-wg ready devices
 
+### GREEN WG Charter Specifics
+This use case demonstrates how Energy Efficiency can be incrementally applied and measured in legacy networks.
+
+### The Need for Energy Efficiency
+Ensures that energy efficiency can be deployed, operated and measured per components, without waiting for full infrastructure upgrades.
+
+### Requirements for GREEN
+- Baseline Measurement: Ability to establish reference energy usage per device (from datasheets or monitoring).
+- Component-Level Upgradability: Support partial migration of device subsystems to GREEN-aware models.
+- Legacy Compatibility: Ensure the framework can include legacy equipment alongside GREEN-enabled devices.
+- Energy Saving Validation: Mechanisms to measure and verify actual energy savings over time.
+- Protection from Overuse: Avoid frequent power cycling that may damage sensitive components like lasers or connectors.
+
 ## Selective reduction of energy consumption in network parts proportional to traffic levels
 
 ### Use Case Description
@@ -170,6 +186,7 @@ Reducing energy usage during during low-demand periods can lower operational cos
 
 ## Reporting on Lifecycle Management
 
+### Use Case Description
    Lifecycle information related to manufacturing energy costs, transport,
    recyclability, and end-of-life disposal impacts is part of what is
    called "embedded carbon." This information is considered to be an
@@ -197,14 +214,27 @@ The type of the sources of energy of the power is one criteria of efficiency.
 
 There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
 
+### GREEN WG Charter Specifics
+Capture lifecycle energy data and integrate it with operational metrics.
+
+### The Need for Energy Efficiency
+Considering energy from production to disposal supports the broader goal of reducing total environmental impact.
+
+### Requirements for GREEN
+
 ## Real-time Energy Metering of Virtualised or Cloud-native Network Functions
 
+### Use Case Description
 Facilitating more precise and real-time estimations of energy consumed by virtualised or cloud-native network functions.
 
 Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks [GREEN_NGNM].
 
+
+### Requirements for GREEN
+
 ## Indirect Energy Monitoring and control
 
+### Use Case Description
 There are cases where Energy Management for some devices need to report on other entities. There are two major
    reasons for this.
 
@@ -229,8 +259,12 @@ There are cases where Energy Management for some devices need to report on other
       capability to switch power on or off at their sockets or ports,
       respectively.
 
+
+### Requirements for GREEN
+
 ## Consideration of other domains for obtention of end-to-end metrics
 
+### Use Case Description
 The technologies under the scope of IETF provide the necessary connectivity to other technological domains. For the obtention of metrics end-to-end it would be required to combine or compose the metrics per each of those domains.
 
 An exemplary case is the one of a network slice service. The concept of network slice was initially defined by 3GPP {{TS23.501}}, and it has been further extended to the concerns of IETF {{?RFC9543}}.
@@ -239,24 +273,36 @@ In regards energy efficiency, 3GPP defines a number of energy-related key perfor
 
 Note that according to {{TS28.554}}, the Generic Network Slice EE is the performance of the network slice divided by the Network Slice EC. Same approach can be followed at IETF level. Note that for avoiding double counting the energy at IETF level in the calculation of the end-to-end metric, the 3GPP metric should only consider the efficiency and consumption of the 3GPP-related technologies.
 
+
+### Requirements for GREEN
+
 ## Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks
 
+### Use Case Description
 Radio base stations are typically connected to the backbone network by means of fiber or wireless transport (e.g., microwave) technologies. In the specific case of wireless transport, automation frameworks have been defined {{ONF-MW}}{{?RFC8432}}{{mWT025}} for their control and management.
 
 One of the parameters subject of automated control is the power of the radio links. The relevance of that capability is that the power can be adjusted accordingly to the traffic observed. Wireless transport networks are typically planned to support the maximum traffic capacity in their area of aggregation, that is, the traffic peak. With that input, the number of radio links in the network element and the corresponding power per radio link (for supporting a given modulation and link length in the worst weather conditions) are configured. This is done to avoid any kind of traffic loss in the worst operational situation. However, such operational needs are sporadic, giving room for optimization during normal operational circumstances and/or low traffic periods.
 
 Power-related parameters are for instance defined in {{?RFC8561}}. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.
 
+
+### Requirements for GREEN
+
 ## Video streaming use case
 
+### Use Case Description
 Video streaming is nowadays the major source of traffic observed in ISP networks, in a propotion of 70% or even higher. Over-the-top distribution of streaming traffic is typically done by delivering a unicast flow per end user for the content of its interest.In consequence, during the hours of higher demand, the total traffic in the network is proportional to the concurrence of users consuming the video streaming service. The amount of traffic is also dependent of the resolution of the encoded video (the higher the resolution, the higher the bit rate per video flow), which tends to be higher as long as the users devices support such higher resolutions.
 
 The consequence of both the growth in the number of flows to be supported simultaneously, and the higher bit rate per flow, is that the nework elements in the path between the source of the video and the user have to be dimensioned accordingly. This implies the continuous upgrade of those network elements in terms of capacity, with the need of deploying high-capacity network elements and components. Apart from the fact that this process is shortening the lifetime of network elements, the need of high capacity interfaces also increase the energy consumption (despite the effort of manufacturers in creating more efficient network element platforms). Note that nowadays there is no actual possibility of activating energy consumption proportionality (in regards the delivered traffic) to such network elements.
 
 As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.
 
+
+### Requirements for GREEN
+
 ## WLAN Network Energy Saving
 
+### Use Case Description
 In a WLAN network, The AP is usually powered by a PoE switch.
 AP nodes are network devices with the largest number and consuming most of energy. Therefore, the working status of the AP is the core of the energy saving solution.
 
@@ -324,8 +370,12 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
 ~~~~
 {: #wireless-resource-management title="Wireless Resource Management on APs"}
 
+
+### Requirements for GREEN
+
 ## Fixed Network Energy Saving
 
+### Use Case Description
 Traffic on the Tidal network has an obvious tidal period, including heavy-traffic periods and light-traffic periods: The time duration of heavy traffic load and light traffic load are clearly distinguished.
 The switching time between the heavy-traffic period and the light-traffic period is quite fixed and cyclic.
 In a tidal network, some network devices can be shut down or sleep during low-traffic periods to save energy.
@@ -334,12 +384,16 @@ In addition, the routers can adjust the number of working network processor core
 
 ## Energy Efficiency Network Management
 
+### Use Case Description
 Network level Energy Efficiency allows network operators not only see real time energy consumption in the network devices of large scale network, but also
 allow you see
 o which network devices enable energy saving, which devices not,which are legacy ones,
 o The total energy consumption changing trend over the time of the day, for all network devices,
 o Energy efficiency changing trend over the time of the day for the whole network.
 With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
+
+
+### Requirements for GREEN
 
 ## ISAC-enabled Energy-Aware Smart City Traffic Management
 
