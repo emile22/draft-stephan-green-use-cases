@@ -540,7 +540,8 @@ A similar issue occurs with Power over Ethernet (PoE) infrastructures when a net
 These 2 cases distort energy dashboards and indicators such as Power Usage Effectiveness (PUE).
 
 ### GREEN WG Charter Specifics
-include the grid network picture in the monitoring
+Unlike most of the WGs, the GREEN WG purpose sums the constraints of data networks and grid/off-grid networks, independantly of the location of the network domain in the architecture (aka edge, core...):
+- include the grid network picture in networks operation
 
 ### The Need for Energy Efficiency
 // TODO.
@@ -548,25 +549,36 @@ include the grid network picture in the monitoring
 ### Requirements for GREEN WG
 The monitoring must not count twice the power that passthru devices and components monitored, including legacy elements.
 
-## Resiliency 
+## Energy Efficiency Under Power Shortage
 
 ### Use case description
 
-Efficiency usage of energy during shortage: aka during backup periods.
+This use case focuses on network devices (e.g., routers, switches, access points) that must maintain essential connectivity during power shortages.
+Telecom locations use different power backups levels (as example battery, standby generator ...). Devices may have access to one or more backup power sources such as onboard batteries, PoE fallback, or centralized UPS systems. When a power shortage occurs, the network device transitions from grid power to available backup sources and must prioritize operational resilience over typical energy optimization strategies. Unlike behavior in a normally powered state, the focus here is not on minimizing energy consumption per se, but on sustaining essential operation with limited energy and prepare to worse situations and more constrained powered state fallbacks. These behaviors increase the device’s ability to operate longer under backup power, ensuring availability of essential services during outages.
 
+Data networks and grid networks resiliency are closely interleaved during power shortage. It is a race between the speed of the operations to restore the grid network and the availability of mobile connectivity for power grid repair teams because of the impairment of operational visibility and response coordination.
+
+Network constraints differ in sparse or dense situations but shortage impacts change accordingly. This is becoming crucial and not limited to sparse environments where stable power supply is well known to not be guaranteed: it applies during each infamous climate phenomenoms, including in cities' utilities which operations are  coupled to the simoultaneous availability of both power and persistent data communication.
+
+This interdependency is especially acute in smart city environments, where transportation systems, public safety infrastructure, environmental sensors, and utility operations are tightly coupled to the simboth the power grid and persistent data communication.
 
 ### GREEN WG Charter Specifics
-// TODO.
+Unlike most of the WGs, the GREEN WG purpose sums the constraints of data networks and grid/off-grid networks, independantly of the location of the network domain in the architecture (aka edge, core...):
+- Improved networks resiliency by making energy constraints an input into the network's operations.
 
 ### The Need for Energy Efficiency
-// TODO.
+Energy efficiency under power shortage conditions is fundamentally different from routine energy optimization. In this context, energy is a finite and rapidly depleting resource, not just an environmental concern or cost factor:
+- Optimize backup power usage for resilience
+- Maintain critical networking capabilities during power shortage events
+- Maximize operational uptime using fallback power sources
 
 ### Requirements for GREEN WG
-// TODO.
+- Awareness of backup systems (e.g., batteries, generators).
+- Awareness of hierarchical fallback to more constrained powered state.
 
 # Security Considerations
 
-Resiliency is an implicit use case of energy efficiency management which comes with numerous security considerations :
+Energy efficiency management comes with numerous security considerations :
 
    Controlling Power State and power supply of entities are considered
    highly sensitive actions, since they can significantly affect the
