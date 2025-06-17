@@ -162,7 +162,7 @@ This use case demonstrates how Energy Efficiency can be incrementally applied an
 ### The Need for Energy Efficiency
 Ensures that energy efficiency can be deployed, operated and measured per components, without waiting for full infrastructure upgrades.
 
-### Requirements for GREEN
+### Requirements for GREEN WG
 - Baseline Measurement: Ability to establish reference energy usage per device (from datasheets or monitoring).
 - Component-Level Upgradability: Support partial migration of device subsystems to GREEN-aware models.
 - Legacy Compatibility: Ensure the framework can include legacy equipment alongside GREEN-enabled devices.
@@ -180,9 +180,10 @@ This use case fits within the GREEN WG’s objectives by emphasizing energy-awar
 ### The Need for Energy Efficiency
 Reducing energy usage during during low-demand periods can lower operational costs and carbon emissions while also prolonging equipment lifespan.
 
-### Requirements for GREEN
+### Requirements for GREEN WG
 
 - Support for device and component-level sleep, standby, and hibernation modes.
+- Component-level control (e.g., ports, modules).
 
 ## Reporting on Lifecycle Management
 
@@ -220,17 +221,25 @@ Capture lifecycle energy data and integrate it with operational metrics.
 ### The Need for Energy Efficiency
 Considering energy from production to disposal supports the broader goal of reducing total environmental impact.
 
-### Requirements for GREEN
+### Requirements for GREEN WG
+- Awareness of backup systems (e.g., batteries, generators).
+- Data ingestion from vendor databases or datasheets.
 
 ## Real-time Energy Metering of Virtualised or Cloud-native Network Functions
 
 ### Use Case Description
-Facilitating more precise and real-time estimations of energy consumed by virtualised or cloud-native network functions.
 
+Cloud-native and virtualized functions require precise real-time energy measurements to manage their dynamic workloads and infrastructure efficiently.
 Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks [GREEN_NGNM].
 
+### GREEN WG Charter Specifics
+// TODO.
 
-### Requirements for GREEN
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 ## Indirect Energy Monitoring and control
 
@@ -259,8 +268,14 @@ There are cases where Energy Management for some devices need to report on other
       capability to switch power on or off at their sockets or ports,
       respectively.
 
+### GREEN WG Charter Specifics
+// TODO.
 
-### Requirements for GREEN
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 ## Consideration of other domains for obtention of end-to-end metrics
 
@@ -273,8 +288,14 @@ In regards energy efficiency, 3GPP defines a number of energy-related key perfor
 
 Note that according to {{TS28.554}}, the Generic Network Slice EE is the performance of the network slice divided by the Network Slice EC. Same approach can be followed at IETF level. Note that for avoiding double counting the energy at IETF level in the calculation of the end-to-end metric, the 3GPP metric should only consider the efficiency and consumption of the 3GPP-related technologies.
 
+### GREEN WG Charter Specifics
+// TODO.
 
-### Requirements for GREEN
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 ## Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks
 
@@ -285,8 +306,14 @@ One of the parameters subject of automated control is the power of the radio lin
 
 Power-related parameters are for instance defined in {{?RFC8561}}. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.
 
+### GREEN WG Charter Specifics
+// TODO.
 
-### Requirements for GREEN
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 ## Video streaming use case
 
@@ -297,8 +324,14 @@ The consequence of both the growth in the number of flows to be supported simult
 
 As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.
 
+### GREEN WG Charter Specifics
+// TODO.
 
-### Requirements for GREEN
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 ## WLAN Network Energy Saving
 
@@ -370,8 +403,14 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
 ~~~~
 {: #wireless-resource-management title="Wireless Resource Management on APs"}
 
+### GREEN WG Charter Specifics
+// TODO.
 
-### Requirements for GREEN
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 ## Fixed Network Energy Saving
 
@@ -381,6 +420,15 @@ The switching time between the heavy-traffic period and the light-traffic period
 In a tidal network, some network devices can be shut down or sleep during low-traffic periods to save energy.
 In the metro or backbone network, the routers support various different speed interfaces, e.g., the gigabit level to 10GE/50GE, or 100G to 400G. Routers might choose to adjust speed of the interface or downgrade from high speed interface to low speed interface based on network traffic load changes to save the energy.
 In addition, the routers can adjust the number of working network processor cores and clock frequency of chipsets and the number of SerDes buses based on network traffic load changes to save the energy.
+
+### GREEN WG Charter Specifics
+// TODO.
+
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 ## Energy Efficiency Network Management
 
@@ -392,8 +440,14 @@ o The total energy consumption changing trend over the time of the day, for all 
 o Energy efficiency changing trend over the time of the day for the whole network.
 With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
 
+### GREEN WG Charter Specifics
+// TODO.
 
-### Requirements for GREEN
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 ## ISAC-enabled Energy-Aware Smart City Traffic Management
 
@@ -429,7 +483,7 @@ minimizes redundant infrastructure (e.g., separate sensors and
 communication equipment), thus reducing the overall carbon and energy
 footprint.
 
-### GREEN Specifics
+### GREEN WG Specifics
 
 Energy Consumption Monitoring: Each ISAC component (e.g., roadside
 units, integrated sensors, and communication transceivers) is capable
@@ -448,7 +502,7 @@ both locally (e.g., turning off specific roadside units in low-
 traffic areas) and globally (e.g., modifying traffic patterns across
 the city) to achieve defined energy consumption goals.
 
-### Requirements for GREEN
+### Requirements for GREEN WG
 
 1. Measurement Granularity:
 
@@ -477,12 +531,38 @@ the city) to achieve defined energy consumption goals.
 
 ## Double Accounting Open issue
 
+### Use case description
 Energy consumption monitoring often includes metering at both upstream and downstream levels of power distribution. While this can provide granular visibility, it may also lead to double accounting if not carefully managed.
 
 A common case arises when energy is measured at the input of a Power Delivery Unit (PDU), and individually at each device powered by that PDU (e.g., servers, switches). Since the PDU input already reflects the downstream consumption, summing the per-device values with the PDU input results in redundant reporting.
 A similar issue occurs with Power over Ethernet (PoE) infrastructures when a network switch supply power directly to devices. If the total power consumption measured encompasses both the power delivered to the PoE switch and to the powered devices, this again results in double accounting.
 
 These 2 cases distort energy dashboards and indicators such as Power Usage Effectiveness (PUE).
+
+### GREEN WG Charter Specifics
+include the grid network picture in the monitoring
+
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+The monitoring must not count twice the power that passthru devices and components monitored, including legacy elements.
+
+## Resiliency 
+
+### Use case description
+
+Efficiency usage of energy during shortage: aka during backup periods.
+
+
+### GREEN WG Charter Specifics
+// TODO.
+
+### The Need for Energy Efficiency
+// TODO.
+
+### Requirements for GREEN WG
+// TODO.
 
 # Security Considerations
 
