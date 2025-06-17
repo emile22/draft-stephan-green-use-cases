@@ -5,7 +5,7 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 8 December 2025                             Cisco Systems, Inc.
+Expires: 19 December 2025                            Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
@@ -13,7 +13,7 @@ Expires: 8 December 2025                             Cisco Systems, Inc.
                                                               Telefonica
                                                          C. J. Bernardos
                                         Universidad Carlos III de Madrid
-                                                             6 June 2025
+                                                            17 June 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -63,7 +63,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 December 2025.
+   This Internet-Draft will expire on 19 December 2025.
 
 Copyright Notice
 
@@ -87,51 +87,77 @@ Table of Contents
        2.1.1.  Use Case Description
        2.1.2.  GREEN WG Charter Specifics
        2.1.3.  The Need for Energy Efficiency
-       2.1.4.  Requirements for GREEN
+       2.1.4.  Requirements for GREEN WG
      2.2.  Selective reduction of energy consumption in network parts
             proportional to traffic levels
        2.2.1.  Use Case Description
        2.2.2.  GREEN WG Charter Specifics
        2.2.3.  The Need for Energy Efficiency
-       2.2.4.  Requirements for GREEN
+       2.2.4.  Requirements for GREEN WG
      2.3.  Reporting on Lifecycle Management
        2.3.1.  Use Case Description
        2.3.2.  Carbon Reporting
        2.3.3.  Energy Mix
        2.3.4.  GREEN WG Charter Specifics
        2.3.5.  The Need for Energy Efficiency
-       2.3.6.  Requirements for GREEN
+       2.3.6.  Requirements for GREEN WG
      2.4.  Real-time Energy Metering of Virtualised or Cloud-native
             Network Functions
        2.4.1.  Use Case Description
-       2.4.2.  Requirements for GREEN
+       2.4.2.  GREEN WG Charter Specifics
+       2.4.3.  The Need for Energy Efficiency
+       2.4.4.  Requirements for GREEN WG
      2.5.  Indirect Energy Monitoring and control
        2.5.1.  Use Case Description
-       2.5.2.  Requirements for GREEN
+       2.5.2.  GREEN WG Charter Specifics
+       2.5.3.  The Need for Energy Efficiency
+       2.5.4.  Requirements for GREEN WG
      2.6.  Consideration of other domains for obtention of end-to-end
             metrics
        2.6.1.  Use Case Description
-       2.6.2.  Requirements for GREEN
+       2.6.2.  GREEN WG Charter Specifics
+       2.6.3.  The Need for Energy Efficiency
+       2.6.4.  Requirements for GREEN WG
      2.7.  Dynamic adjustment of network element throughput according
             to traffic levels in wireless transport networks
        2.7.1.  Use Case Description
-       2.7.2.  Requirements for GREEN
+       2.7.2.  GREEN WG Charter Specifics
+       2.7.3.  The Need for Energy Efficiency
+       2.7.4.  Requirements for GREEN WG
      2.8.  Video streaming use case
        2.8.1.  Use Case Description
-       2.8.2.  Requirements for GREEN
+       2.8.2.  GREEN WG Charter Specifics
+       2.8.3.  The Need for Energy Efficiency
+       2.8.4.  Requirements for GREEN WG
      2.9.  WLAN Network Energy Saving
        2.9.1.  Use Case Description
-       2.9.2.  Requirements for GREEN
+       2.9.2.  GREEN WG Charter Specifics
+       2.9.3.  The Need for Energy Efficiency
+       2.9.4.  Requirements for GREEN WG
      2.10. Fixed Network Energy Saving
        2.10.1.  Use Case Description
+       2.10.2.  GREEN WG Charter Specifics
+       2.10.3.  The Need for Energy Efficiency
+       2.10.4.  Requirements for GREEN WG
      2.11. Energy Efficiency Network Management
        2.11.1.  Use Case Description
-       2.11.2.  Requirements for GREEN
+       2.11.2.  GREEN WG Charter Specifics
+       2.11.3.  The Need for Energy Efficiency
+       2.11.4.  Requirements for GREEN WG
      2.12. ISAC-enabled Energy-Aware Smart City Traffic Management
        2.12.1.  Use case description
-       2.12.2.  GREEN Specifics
-       2.12.3.  Requirements for GREEN
+       2.12.2.  GREEN WG Specifics
+       2.12.3.  Requirements for GREEN WG
      2.13. Double Accounting Open issue
+       2.13.1.  Use case description
+       2.13.2.  GREEN WG Charter Specifics
+       2.13.3.  The Need for Energy Efficiency
+       2.13.4.  Requirements for GREEN WG
+     2.14. Energy Efficiency Under Power Shortage
+       2.14.1.  Use case description
+       2.14.2.  GREEN WG Charter Specifics
+       2.14.3.  The Need for Energy Efficiency
+       2.14.4.  Requirements for GREEN WG
    3.  Security Considerations
    4.  IANA Considerations
    5.  Acknowledgments
@@ -255,7 +281,7 @@ Table of Contents
    Ensures that energy efficiency can be deployed, operated and measured
    per components, without waiting for full infrastructure upgrades.
 
-2.1.4.  Requirements for GREEN
+2.1.4.  Requirements for GREEN WG
 
    *  Baseline Measurement: Ability to establish reference energy usage
       per device (from datasheets or monitoring).
@@ -303,10 +329,12 @@ Table of Contents
    operational costs and carbon emissions while also prolonging
    equipment lifespan.
 
-2.2.4.  Requirements for GREEN
+2.2.4.  Requirements for GREEN WG
 
    *  Support for device and component-level sleep, standby, and
       hibernation modes.
+
+   *  Component-level control (e.g., ports, modules).
 
 2.3.  Reporting on Lifecycle Management
 
@@ -356,21 +384,34 @@ Table of Contents
    Considering energy from production to disposal supports the broader
    goal of reducing total environmental impact.
 
-2.3.6.  Requirements for GREEN
+2.3.6.  Requirements for GREEN WG
+
+   *  Awareness of backup systems (e.g., batteries, generators).
+
+   *  Data ingestion from vendor databases or datasheets.
 
 2.4.  Real-time Energy Metering of Virtualised or Cloud-native Network
       Functions
 
 2.4.1.  Use Case Description
 
-   Facilitating more precise and real-time estimations of energy
-   consumed by virtualised or cloud-native network functions.
+   Cloud-native and virtualized functions require precise real-time
+   energy measurements to manage their dynamic workloads and
+   infrastructure efficiently.  Effective metering of virtualized
+   network infrastructure is critical for the efficient management and
+   operation of next-generation mobile networks [GREEN_NGNM].
 
-   Effective metering of virtualized network infrastructure is critical
-   for the efficient management and operation of next-generation mobile
-   networks [GREEN_NGNM].
+2.4.2.  GREEN WG Charter Specifics
 
-2.4.2.  Requirements for GREEN
+   // TODO.
+
+2.4.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.4.4.  Requirements for GREEN WG
+
+   // TODO.
 
 2.5.  Indirect Energy Monitoring and control
 
@@ -399,7 +440,17 @@ Table of Contents
    and a PoE switch are common examples, if they have the capability to
    switch power on or off at their sockets or ports, respectively.
 
-2.5.2.  Requirements for GREEN
+2.5.2.  GREEN WG Charter Specifics
+
+   // TODO.
+
+2.5.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.5.4.  Requirements for GREEN WG
+
+   // TODO.
 
 2.6.  Consideration of other domains for obtention of end-to-end metrics
 
@@ -431,7 +482,17 @@ Table of Contents
    end-to-end metric, the 3GPP metric should only consider the
    efficiency and consumption of the 3GPP-related technologies.
 
-2.6.2.  Requirements for GREEN
+2.6.2.  GREEN WG Charter Specifics
+
+   // TODO.
+
+2.6.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.6.4.  Requirements for GREEN WG
+
+   // TODO.
 
 2.7.  Dynamic adjustment of network element throughput according to
       traffic levels in wireless transport networks
@@ -462,7 +523,17 @@ Table of Contents
    power to the observed traffic levels with some coarse granularity,
    but pursuing certain degrees of proportionality.
 
-2.7.2.  Requirements for GREEN
+2.7.2.  GREEN WG Charter Specifics
+
+   // TODO.
+
+2.7.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.7.4.  Requirements for GREEN WG
+
+   // TODO.
 
 2.8.  Video streaming use case
 
@@ -502,7 +573,17 @@ Table of Contents
    service.  It should be noted that another front for optimization is
    the one related to the deployment of cache servers in the network.
 
-2.8.2.  Requirements for GREEN
+2.8.2.  GREEN WG Charter Specifics
+
+   // TODO.
+
+2.8.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.8.4.  Requirements for GREEN WG
+
+   // TODO.
 
 2.9.  WLAN Network Energy Saving
 
@@ -578,7 +659,17 @@ Table of Contents
 
                Figure 3: Wireless Resource Management on APs
 
-2.9.2.  Requirements for GREEN
+2.9.2.  GREEN WG Charter Specifics
+
+   // TODO.
+
+2.9.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.9.4.  Requirements for GREEN WG
+
+   // TODO.
 
 2.10.  Fixed Network Energy Saving
 
@@ -600,6 +691,18 @@ Table of Contents
    SerDes buses based on network traffic load changes to save the
    energy.
 
+2.10.2.  GREEN WG Charter Specifics
+
+   // TODO.
+
+2.10.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.10.4.  Requirements for GREEN WG
+
+   // TODO.
+
 2.11.  Energy Efficiency Network Management
 
 2.11.1.  Use Case Description
@@ -615,7 +718,17 @@ Table of Contents
    the network operators can know which part of the network need to be
    adjusted or optimized based on network status change.
 
-2.11.2.  Requirements for GREEN
+2.11.2.  GREEN WG Charter Specifics
+
+   // TODO.
+
+2.11.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.11.4.  Requirements for GREEN WG
+
+   // TODO.
 
 2.12.  ISAC-enabled Energy-Aware Smart City Traffic Management
 
@@ -651,7 +764,7 @@ Table of Contents
    communication equipment), thus reducing the overall carbon and energy
    footprint.
 
-2.12.2.  GREEN Specifics
+2.12.2.  GREEN WG Specifics
 
    Energy Consumption Monitoring: Each ISAC component (e.g., roadside
    units, integrated sensors, and communication transceivers) is capable
@@ -670,7 +783,7 @@ Table of Contents
    traffic areas) and globally (e.g., modifying traffic patterns across
    the city) to achieve defined energy consumption goals.
 
-2.12.3.  Requirements for GREEN
+2.12.3.  Requirements for GREEN WG
 
    1.  Measurement Granularity:
 
@@ -716,6 +829,8 @@ Table of Contents
 
 2.13.  Double Accounting Open issue
 
+2.13.1.  Use case description
+
    Energy consumption monitoring often includes metering at both
    upstream and downstream levels of power distribution.  While this can
    provide granular visibility, it may also lead to double accounting if
@@ -734,10 +849,89 @@ Table of Contents
    These 2 cases distort energy dashboards and indicators such as Power
    Usage Effectiveness (PUE).
 
+2.13.2.  GREEN WG Charter Specifics
+
+   Unlike most of the WGs, the GREEN WG purpose sums the constraints of
+   data networks and grid/off-grid networks, independantly of the
+   location of the network domain in the architecture (aka edge,
+   core...): - include the grid network picture in networks operation
+
+2.13.3.  The Need for Energy Efficiency
+
+   // TODO.
+
+2.13.4.  Requirements for GREEN WG
+
+   The monitoring must not count twice the power that passthru devices
+   and components monitored, including legacy elements.
+
+2.14.  Energy Efficiency Under Power Shortage
+
+2.14.1.  Use case description
+
+   This use case focuses on network devices (e.g., routers, switches,
+   access points) that must maintain essential connectivity during power
+   shortages.  Telecom locations use different power backups levels (as
+   example battery, standby generator ...).  Devices may have access to
+   one or more backup power sources such as onboard batteries, PoE
+   fallback, or centralized UPS systems.  When a power shortage occurs,
+   the network device transitions from grid power to available backup
+   sources and must prioritize operational resilience over typical
+   energy optimization strategies.  Unlike behavior in a normally
+   powered state, the focus here is not on minimizing energy consumption
+   per se, but on sustaining essential operation with limited energy and
+   prepare to worse situations and more constrained powered state
+   fallbacks.  These behaviors increase the device’s ability to operate
+   longer under backup power, ensuring availability of essential
+   services during outages.
+
+   Data networks and grid networks resiliency are closely interleaved
+   during power shortage.  It is a race between the speed of the
+   operations to restore the grid network and the availability of mobile
+   connectivity for power grid repair teams because of the impairment of
+   operational visibility and response coordination.
+
+   Network constraints differ in sparse or dense situations but shortage
+   impacts change accordingly.  This is becoming crucial and not limited
+   to sparse environments where stable power supply is well known to not
+   be guaranteed: it applies during each infamous climate phenomenoms,
+   including in cities' utilities which operations are coupled to the
+   simoultaneous availability of both power and persistent data
+   communication.
+
+   This interdependency is especially acute in smart city environments,
+   where transportation systems, public safety infrastructure,
+   environmental sensors, and utility operations are tightly coupled to
+   the simboth the power grid and persistent data communication.
+
+2.14.2.  GREEN WG Charter Specifics
+
+   Unlike most of the WGs, the GREEN WG purpose sums the constraints of
+   data networks and grid/off-grid networks, independantly of the
+   location of the network domain in the architecture (aka edge,
+   core...): - Improved networks resiliency by making energy constraints
+   an input into the network's operations.
+
+2.14.3.  The Need for Energy Efficiency
+
+   Energy efficiency under power shortage conditions is fundamentally
+   different from routine energy optimization.  In this context, energy
+   is a finite and rapidly depleting resource, not just an environmental
+   concern or cost factor: - Optimize backup power usage for resilience
+   - Maintain critical networking capabilities during power shortage
+   events - Maximize operational uptime using fallback power sources
+
+2.14.4.  Requirements for GREEN WG
+
+   *  Awareness of backup systems (e.g., batteries, generators).
+
+   *  Awareness of hierarchical fallback to more constrained powered
+      state.
+
 3.  Security Considerations
 
-   Resiliency is an implicit use case of energy efficiency management
-   which comes with numerous security considerations :
+   Energy efficiency management comes with numerous security
+   considerations :
 
    Controlling Power State and power supply of entities are considered
    highly sensitive actions, since they can significantly affect the
