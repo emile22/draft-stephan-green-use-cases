@@ -124,13 +124,19 @@ This section describes an incremental example [legacy-path] of usage showing how
 This use case is the less trendy of all the use cases by far as its ambitious is limited to migration and coexistence, as usual. Nevertheless from a telco perspective, it is the centrality for 2 main reasons:
 
 - to start immediatly the move to energy efficiency using legacy devices;
-- to account the gain of the move one started;
+- to account the gain of energy efficiency during incremental deployment of energy efficient network components;
 
-Once upon a time there was an very old legacy router named Rusty equipped with outdated ethernet and ugly optical interfaces. Despite his worn-out appearance, Rusty was determined to contribute to the energy efficiency effort. He dreamed of finding a way to optimize his old circuits and help reduce the power consumption of the network he had faithfully served for so many years. Though he was no longer in his prime, Rusty believed that even an old router like him could make a difference in a world striving for sustainability and help reduce the carbon footprint. He is convince that he still had a part to play in making the digital world a greener place.
+Legacy routers, equipped with traditional Ethernet ports and optical interfaces will continue to operate within the network. As part of broader sustainability and energy efficiency goals, there is interest in exploring the incremental integration of such devices into energy efficiency framework deployments.
 
-An  legacy router, equipped with Ethernet ports and optical interfaces, remained in operation within the network. Despite its dated design, there is ongoing interest in exploring ways to improve its energy efficiency. Efforts are considered to upgrade its blades and to optimize its internal circuitry to reduce the overall power consumption of the network. It enables the improvement of the router energy efficiency while reducing the global resource consumption of the network.
+Two directions are considered:
 
-Device moving gradually to GREEN energy efficiency support:
+- Improving energy efficiency of legacy devices through targeted upgrades—such as replacing line cards, optimizing firmware behavior, or reconfiguring interface usage based on operational demand.
+
+- Including legacy devices in early phases of energy-aware system deployment, ensuring that improvements are not limited only to new hardware generations.
+
+Legacy devices can still contribute to reducing overall power consumption and lowering resource usage and associated environmental impact. Supporting these incremental improvements helps bridge the gap between existing infrastructure and modern energy-aware network strategies.
+
+Device moving gradually to GREEN energy efficiency supports:
 
 - step 1 "baseline" : establishing a reference point of typical energy usage, which is crucial for identifying inefficiencies and measuring improvements over time.
   At this step the controler use only the (c) part of the framework. It is collected from the datasheet.
@@ -558,9 +564,7 @@ Telecom locations use different power backups levels (as example battery, standb
 
 Data networks and grid networks resiliency are closely interleaved during power shortage. It is a race between the speed of the operations to restore the grid network and the availability of mobile connectivity for power grid repair teams because of the impairment of operational visibility and response coordination.
 
-Network constraints differ in sparse or dense situations but shortage impacts change accordingly. This is becoming crucial and not limited to sparse environments where stable power supply is well known to not be guaranteed: it applies during each infamous climate phenomenoms, including in cities' utilities which operations are  coupled to the simoultaneous availability of both power and persistent data communication.
-
-This interdependency is especially acute in smart city environments, where transportation systems, public safety infrastructure, environmental sensors, and utility operations are tightly coupled to the simboth the power grid and persistent data communication.
+Network constraints differ in sparse or dense situations but shortage impacts change accordingly. This is becoming crucial and not limited to sparse environments where stable power supply is well known to not be guaranteed: it applies to dense cities' utilities which operations are coupled to the simoultaneous availability of both power and persistent data communication and compute at the edge.
 
 ### GREEN WG Charter Specifics
 Unlike most of the WGs, the GREEN WG purpose sums the constraints of data networks and grid/off-grid networks, independantly of the location of the network domain in the architecture (aka edge, core...):
