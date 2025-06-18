@@ -156,12 +156,6 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 
 - step 4 "network level"
 
-(i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)
-
-(ii) the gain must be measurable
-
-(iii) network-wide energy efficiency solutions must include legacy devices and green-wg ready devices
-
 ### GREEN WG Charter Specifics
 This use case demonstrates how Energy Efficiency can be incrementally applied and measured in legacy networks.
 
