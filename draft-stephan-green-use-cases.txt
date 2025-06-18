@@ -267,14 +267,6 @@ Table of Contents
 
    *  step 4 "network level"
 
-   (i) Avoid a power-on/power-off frequency to break component parts
-   (aka laser, power parts, wire connectors ...)
-
-   (ii) the gain must be measurable
-
-   (iii) network-wide energy efficiency solutions must include legacy
-   devices and green-wg ready devices
-
 2.1.2.  GREEN WG Charter Specifics
 
    This use case demonstrates how Energy Efficiency can be incrementally
