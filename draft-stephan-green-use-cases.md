@@ -415,39 +415,52 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
 ## Fixed Network Energy Saving
 
 ### Use Case Description
-Traffic on the Tidal network has an obvious tidal period, including heavy-traffic periods and light-traffic periods: The time duration of heavy traffic load and light traffic load are clearly distinguished.
-The switching time between the heavy-traffic period and the light-traffic period is quite fixed and cyclic.
-In a tidal network, some network devices can be shut down or sleep during low-traffic periods to save energy.
-In the metro or backbone network, the routers support various different speed interfaces, e.g., the gigabit level to 10GE/50GE, or 100G to 400G. Routers might choose to adjust speed of the interface or downgrade from high speed interface to low speed interface based on network traffic load changes to save the energy.
-In addition, the routers can adjust the number of working network processor cores and clock frequency of chipsets and the number of SerDes buses based on network traffic load changes to save the energy.
+In many fixed networks, particularly those at metro or backbone level, traffic patterns follow a predictable tidal cycle - with clearly defined high-traffic and low-traffic periods. These fluctuations provide opportunities for dynamic energy-saving mechanisms. During low-traffic periods, certain network components can be deactivated or put into sleep mode. Additionally, routers equipped with interfaces of varying speeds (e.g., from 1G to 400G) can dynamically adjust interface speeds, deactivate unused ports, or scale down internal resources such as processor cores, chipset clock frequencies, or SerDes lanes, depending on traffic demand.
 
 ### GREEN WG Charter Specifics
-// TODO.
+
+The GREEN working group can contribute by defining standard mechanisms and protocols to:
+- Monitor traffic load in a standardized and interoperable manner.
+- Communicate energy-saving intents across network elements (e.g., turning off links or reducing interface speeds).
+- Signal state transitions (e.g., from active to low-power states) reliably, taking into account the need for fast reactivation during traffic bursts.
+- Ensure compatibility with QoS and network availability requirements.
 
 ### The Need for Energy Efficiency
 // TODO.
 
 ### Requirements for GREEN WG
-// TODO.
+
+- Standardized definitions and telemetry models for identifying tidal traffic patterns and low-utilization windows.
+- Protocol support for energy-aware dynamic reconfiguration (e.g., speed adjustment, core deactivation).
+- Trade-offs between energy savings and network latency/performance.
+- Mechanisms to synchronize energy-saving decisions across multiple devices (e.g., coordinated interface downshifts).
+- Fail-safe or fallback procedures to ensure robustness in case of unexpected traffic surges.
 
 ## Energy Efficiency Network Management
 
 ### Use Case Description
-Network level Energy Efficiency allows network operators not only see real time energy consumption in the network devices of large scale network, but also
-allow you see
-o which network devices enable energy saving, which devices not,which are legacy ones,
-o The total energy consumption changing trend over the time of the day, for all network devices,
-o Energy efficiency changing trend over the time of the day for the whole network.
-With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
+
+Modern network operators need comprehensive visibility into the energy consumption and efficiency of their infrastructure. This includes real-time and historical statistics of power usage per device, identification of devices participating in energy-saving modes, differentiation between energy-optimized and legacy devices, and aggregated views of energy trends across the entire network. Such visibility enables more informed decisions about network adjustments and optimizations that align with energy efficiency goals.
 
 ### GREEN WG Charter Specifics
-// TODO.
+
+The GREEN WG has a role in developing interoperable models and mechanisms for:
+- Real-time telemetry and historical analysis of energy metrics.
+- Mapping energy efficiency indicators to network topology and traffic load.
+- Identifying energy-saving capabilities of devices (e.g., support for interface power scaling, sleep modes).
+- Integration with existing network management and orchestration systems.
+- Encouraging adoption of GREEN-compliant energy observability in vendor equipment.
 
 ### The Need for Energy Efficiency
 // TODO.
 
 ### Requirements for GREEN WG
-// TODO.
+
+- Standardized YANG models or data formats for energy metrics and efficiency reporting.
+- Methods to correlate energy usage with traffic load and service demands.
+- Interfaces for exposing energy capabilities and statuses of devices in a vendor-neutral way.
+- Security and privacy implications of exposing energy-related telemetry.
+- Guidelines for presenting energy insights to operators in a way that supports actionable decisions.
 
 ## ISAC-enabled Energy-Aware Smart City Traffic Management
 
