@@ -290,13 +290,14 @@ In regards energy efficiency, 3GPP defines a number of energy-related key perfor
 Note that according to {{TS28.554}}, the Generic Network Slice EE is the performance of the network slice divided by the Network Slice EC. Same approach can be followed at IETF level. Note that for avoiding double counting the energy at IETF level in the calculation of the end-to-end metric, the 3GPP metric should only consider the efficiency and consumption of the 3GPP-related technologies.
 
 ### GREEN WG Charter Specifics
-// TODO.
+cross-domain measurement alignment.
 
 ### The Need for Energy Efficiency
-// TODO.
+Cross-domain energy visibility is essential for services spanning multiple infrastructure providers and technologies.
 
 ### Requirements for GREEN WG
-// TODO.
+- Avoidance of double accounting.
+- Metric mapping and transformation.
 
 ## Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks
 
@@ -308,10 +309,10 @@ One of the parameters subject of automated control is the power of the radio lin
 Power-related parameters are for instance defined in {{?RFC8561}}. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.
 
 ### GREEN WG Charter Specifics
-// TODO.
+This aligns with the GREEN WG goals of enabling dynamic and context-aware energy optimization at the transport layer.
 
 ### The Need for Energy Efficiency
-// TODO.
+Wireless links configured for peak traffic are often underutilized, wasting energy. Adjusting power to match demand can substantially reduce consumption.
 
 ### Requirements for GREEN WG
 // TODO.
@@ -326,13 +327,14 @@ The consequence of both the growth in the number of flows to be supported simult
 As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.
 
 ### GREEN WG Charter Specifics
-// TODO.
+Video streaming represents a large portion of network traffic. Multicast techniques, adaptive streaming, and strategic caching can reduce traffic duplication and improve energy efficiency.
 
 ### The Need for Energy Efficiency
-// TODO.
+Reducing redundant unicast traffic and improving caching strategies reduces backbone and access network energy consumption.
 
 ### Requirements for GREEN WG
-// TODO.
+- Support for multicast-aware energy metrics.
+- Cache server placement optimization.
 
 ## WLAN Network Energy Saving
 
