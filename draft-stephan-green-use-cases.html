@@ -1051,11 +1051,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Use Cases for Energy Efficiency</td>
-<td class="right">June 2025</td>
+<td class="right">July 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Stephan, et al.</td>
-<td class="center">Expires 20 December 2025</td>
+<td class="center">Expires 6 January 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1068,12 +1068,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-stephan-green-use-cases-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-06-18" class="published">18 June 2025</time>
+<time datetime="2025-07-05" class="published">5 July 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-12-20">20 December 2025</time></dd>
+<dd class="expires"><time datetime="2026-01-06">6 January 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1145,7 +1145,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 20 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 6 January 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2059,11 +2059,7 @@ AP nodes are network devices with the largest number and consuming most of energ
           <h4 id="name-use-case-description-10">
 <a href="#section-2.10.1" class="section-number selfRef">2.10.1. </a><a href="#name-use-case-description-10" class="section-name selfRef">Use Case Description</a>
           </h4>
-<p id="section-2.10.1-1">Traffic on the Tidal network has an obvious tidal period, including heavy-traffic periods and light-traffic periods: The time duration of heavy traffic load and light traffic load are clearly distinguished.
-The switching time between the heavy-traffic period and the light-traffic period is quite fixed and cyclic.
-In a tidal network, some network devices can be shut down or sleep during low-traffic periods to save energy.
-In the metro or backbone network, the routers support various different speed interfaces, e.g., the gigabit level to 10GE/50GE, or 100G to 400G. Routers might choose to adjust speed of the interface or downgrade from high speed interface to low speed interface based on network traffic load changes to save the energy.
-In addition, the routers can adjust the number of working network processor cores and clock frequency of chipsets and the number of SerDes buses based on network traffic load changes to save the energy.<a href="#section-2.10.1-1" class="pilcrow">¶</a></p>
+<p id="section-2.10.1-1">In many fixed networks, particularly those at metro or backbone level, traffic patterns follow a predictable tidal cycle - with clearly defined high-traffic and low-traffic periods. These fluctuations provide opportunities for dynamic energy-saving mechanisms. During low-traffic periods, certain network components can be deactivated or put into sleep mode. Additionally, routers equipped with interfaces of varying speeds (e.g., from 1G to 400G) can dynamically adjust interface speeds, deactivate unused ports, or scale down internal resources such as processor cores, chipset clock frequencies, or SerDes lanes, depending on traffic demand.<a href="#section-2.10.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="green-wg-charter-specifics-9">
@@ -2071,7 +2067,11 @@ In addition, the routers can adjust the number of working network processor core
           <h4 id="name-green-wg-charter-specifics-10">
 <a href="#section-2.10.2" class="section-number selfRef">2.10.2. </a><a href="#name-green-wg-charter-specifics-10" class="section-name selfRef">GREEN WG Charter Specifics</a>
           </h4>
-<p id="section-2.10.2-1">// TODO.<a href="#section-2.10.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.10.2-1">The GREEN working group can contribute by defining standard mechanisms and protocols to:
+- Monitor traffic load in a standardized and interoperable manner.
+- Communicate energy-saving intents across network elements (e.g., turning off links or reducing interface speeds).
+- Signal state transitions (e.g., from active to low-power states) reliably, taking into account the need for fast reactivation during traffic bursts.
+- Ensure compatibility with QoS and network availability requirements.<a href="#section-2.10.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="the-need-for-energy-efficiency-9">
@@ -2087,7 +2087,23 @@ In addition, the routers can adjust the number of working network processor core
           <h4 id="name-requirements-for-green-wg-10">
 <a href="#section-2.10.4" class="section-number selfRef">2.10.4. </a><a href="#name-requirements-for-green-wg-10" class="section-name selfRef">Requirements for GREEN WG</a>
           </h4>
-<p id="section-2.10.4-1">// TODO.<a href="#section-2.10.4-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2.10.4-1.1">
+              <p id="section-2.10.4-1.1.1">Standardized definitions and telemetry models for identifying tidal traffic patterns and low-utilization windows.<a href="#section-2.10.4-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-2.10.4-1.2">
+              <p id="section-2.10.4-1.2.1">Protocol support for energy-aware dynamic reconfiguration (e.g., speed adjustment, core deactivation).<a href="#section-2.10.4-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-2.10.4-1.3">
+              <p id="section-2.10.4-1.3.1">Trade-offs between energy savings and network latency/performance.<a href="#section-2.10.4-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-2.10.4-1.4">
+              <p id="section-2.10.4-1.4.1">Mechanisms to synchronize energy-saving decisions across multiple devices (e.g., coordinated interface downshifts).<a href="#section-2.10.4-1.4.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-2.10.4-1.5">
+              <p id="section-2.10.4-1.5.1">Fail-safe or fallback procedures to ensure robustness in case of unexpected traffic surges.<a href="#section-2.10.4-1.5.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 </section>
@@ -2102,12 +2118,7 @@ In addition, the routers can adjust the number of working network processor core
           <h4 id="name-use-case-description-11">
 <a href="#section-2.11.1" class="section-number selfRef">2.11.1. </a><a href="#name-use-case-description-11" class="section-name selfRef">Use Case Description</a>
           </h4>
-<p id="section-2.11.1-1">Network level Energy Efficiency allows network operators not only see real time energy consumption in the network devices of large scale network, but also
-allow you see
-o which network devices enable energy saving, which devices not,which are legacy ones,
-o The total energy consumption changing trend over the time of the day, for all network devices,
-o Energy efficiency changing trend over the time of the day for the whole network.
-With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.<a href="#section-2.11.1-1" class="pilcrow">¶</a></p>
+<p id="section-2.11.1-1">Modern network operators need comprehensive visibility into the energy consumption and efficiency of their infrastructure. This includes real-time and historical statistics of power usage per device, identification of devices participating in energy-saving modes, differentiation between energy-optimized and legacy devices, and aggregated views of energy trends across the entire network. Such visibility enables more informed decisions about network adjustments and optimizations that align with energy efficiency goals.<a href="#section-2.11.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="green-wg-charter-specifics-10">
@@ -2115,7 +2126,12 @@ With the better observability to energy consumption statistics data and energy e
           <h4 id="name-green-wg-charter-specifics-11">
 <a href="#section-2.11.2" class="section-number selfRef">2.11.2. </a><a href="#name-green-wg-charter-specifics-11" class="section-name selfRef">GREEN WG Charter Specifics</a>
           </h4>
-<p id="section-2.11.2-1">// TODO.<a href="#section-2.11.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.11.2-1">The GREEN WG has a role in developing interoperable models and mechanisms for:
+- Real-time telemetry and historical analysis of energy metrics.
+- Mapping energy efficiency indicators to network topology and traffic load.
+- Identifying energy-saving capabilities of devices (e.g., support for interface power scaling, sleep modes).
+- Integration with existing network management and orchestration systems.
+- Encouraging adoption of GREEN-compliant energy observability in vendor equipment.<a href="#section-2.11.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="the-need-for-energy-efficiency-10">
@@ -2131,7 +2147,23 @@ With the better observability to energy consumption statistics data and energy e
           <h4 id="name-requirements-for-green-wg-11">
 <a href="#section-2.11.4" class="section-number selfRef">2.11.4. </a><a href="#name-requirements-for-green-wg-11" class="section-name selfRef">Requirements for GREEN WG</a>
           </h4>
-<p id="section-2.11.4-1">// TODO.<a href="#section-2.11.4-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2.11.4-1.1">
+              <p id="section-2.11.4-1.1.1">Standardized YANG models or data formats for energy metrics and efficiency reporting.<a href="#section-2.11.4-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-2.11.4-1.2">
+              <p id="section-2.11.4-1.2.1">Methods to correlate energy usage with traffic load and service demands.<a href="#section-2.11.4-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-2.11.4-1.3">
+              <p id="section-2.11.4-1.3.1">Interfaces for exposing energy capabilities and statuses of devices in a vendor-neutral way.<a href="#section-2.11.4-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-2.11.4-1.4">
+              <p id="section-2.11.4-1.4.1">Security and privacy implications of exposing energy-related telemetry.<a href="#section-2.11.4-1.4.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-2.11.4-1.5">
+              <p id="section-2.11.4-1.5.1">Guidelines for presenting energy insights to operators in a way that supports actionable decisions.<a href="#section-2.11.4-1.5.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 </section>
