@@ -233,10 +233,10 @@ Cloud-native and virtualized functions require precise real-time energy measurem
 Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks [GREEN_NGNM].
 
 ### GREEN WG Charter Specifics
-// TODO.
+Meter and manage energy at both hardware and software layers.
 
 ### The Need for Energy Efficiency
-// TODO.
+Granular and real-time insights into energy use enable optimization of virtualized workloads, leading to reduced energy footprints.
 
 ### Requirements for GREEN WG
 // TODO.
@@ -269,13 +269,14 @@ There are cases where Energy Management for some devices need to report on other
       respectively.
 
 ### GREEN WG Charter Specifics
-// TODO.
+inclusion of legacy or non-instrumented devices.
 
 ### The Need for Energy Efficiency
-// TODO.
+Energy monitoring across the network, even for devices that lack built-in sensors.
 
 ### Requirements for GREEN WG
-// TODO.
+- Indirect control mechanisms.
+- Integration with external databases or datasheets.
 
 ## Consideration of other domains for obtention of end-to-end metrics
 
