@@ -484,15 +484,18 @@ Table of Contents
 
 2.6.2.  GREEN WG Charter Specifics
 
-   // TODO.
+   cross-domain measurement alignment.
 
 2.6.3.  The Need for Energy Efficiency
 
-   // TODO.
+   Cross-domain energy visibility is essential for services spanning
+   multiple infrastructure providers and technologies.
 
 2.6.4.  Requirements for GREEN WG
 
-   // TODO.
+   *  Avoidance of double accounting.
+
+   *  Metric mapping and transformation.
 
 2.7.  Dynamic adjustment of network element throughput according to
       traffic levels in wireless transport networks
@@ -525,11 +528,14 @@ Table of Contents
 
 2.7.2.  GREEN WG Charter Specifics
 
-   // TODO.
+   This aligns with the GREEN WG goals of enabling dynamic and context-
+   aware energy optimization at the transport layer.
 
 2.7.3.  The Need for Energy Efficiency
 
-   // TODO.
+   Wireless links configured for peak traffic are often underutilized,
+   wasting energy.  Adjusting power to match demand can substantially
+   reduce consumption.
 
 2.7.4.  Requirements for GREEN WG
 
@@ -575,15 +581,20 @@ Table of Contents
 
 2.8.2.  GREEN WG Charter Specifics
 
-   // TODO.
+   Video streaming represents a large portion of network traffic.
+   Multicast techniques, adaptive streaming, and strategic caching can
+   reduce traffic duplication and improve energy efficiency.
 
 2.8.3.  The Need for Energy Efficiency
 
-   // TODO.
+   Reducing redundant unicast traffic and improving caching strategies
+   reduces backbone and access network energy consumption.
 
 2.8.4.  Requirements for GREEN WG
 
-   // TODO.
+   *  Support for multicast-aware energy metrics.
+
+   *  Cache server placement optimization.
 
 2.9.  WLAN Network Energy Saving
 
