@@ -399,11 +399,12 @@ Table of Contents
 
 2.4.2.  GREEN WG Charter Specifics
 
-   // TODO.
+   Meter and manage energy at both hardware and software layers.
 
 2.4.3.  The Need for Energy Efficiency
 
-   // TODO.
+   Granular and real-time insights into energy use enable optimization
+   of virtualized workloads, leading to reduced energy footprints.
 
 2.4.4.  Requirements for GREEN WG
 
@@ -438,15 +439,18 @@ Table of Contents
 
 2.5.2.  GREEN WG Charter Specifics
 
-   // TODO.
+   inclusion of legacy or non-instrumented devices.
 
 2.5.3.  The Need for Energy Efficiency
 
-   // TODO.
+   Energy monitoring across the network, even for devices that lack
+   built-in sensors.
 
 2.5.4.  Requirements for GREEN WG
 
-   // TODO.
+   *  Indirect control mechanisms.
+
+   *  Integration with external databases or datasheets.
 
 2.6.  Consideration of other domains for obtention of end-to-end metrics
 
