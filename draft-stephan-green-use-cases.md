@@ -339,15 +339,19 @@ Reducing redundant unicast traffic and improving caching strategies reduces back
 ## WLAN Network Energy Saving
 
 ### Use Case Description
-In a WLAN network, The AP is usually powered by a PoE switch.
-AP nodes are network devices with the largest number and consuming most of energy. Therefore, the working status of the AP is the core of the energy saving solution.
+In a WLAN network, Access Points(APs) are typically powered by Power over Ethernet (PoE) switches and represent a substantial portion of the energy consumed by edge network devices due to their high density and round-the-clock operation.
 
-The working status of the AP can be break down into 3 modes as follows:
-   PoE power-off mode: In this mode, the PoE switch shuts down the port and stops supplying power to the AP. The AP does not consume power at all. When the AP wakes up, the port provides power again. In this mode, it usually takes a few minutes for the AP to recover.
-   Hibernation mode: Only low power consumption is used to protect key hardware such as the CPU, and other components are shut down.
-   Low power consumption mode: Compared with the hibernation mode, the low power consumption mode maintains a certain communication capability. For example, the AP retains only the 2.4 GHz band and disables other radio bands.
+This use case introduces a multi-mode approach for AP energy saving:
 
-In energy saving deployment, after the surrounding energy saving APs are shut down, the Working AP automatically adjusts their transmit power to increase the coverage of the entire area at specific energy saving period. In such case, energy saving APs can freely choose to switch to any mode we described above.
+* PoE Power-Off Mode: The PoE switch disables the port, completely cutting power to the AP. No energy is consumed, though recovery takes several minutes when power is restored.
+
+* Hibernation Mode: The AP powers down most components, preserving minimal CPU functionality to allow faster reactivation.
+
+* Low Power Mode: The AP disables some radios (e.g., 5GHz), retaining minimal operation (e.g., 2.4GHz) for reduced but persistent service.
+
+To maintain coverage and service quality, surrounding APs dynamically adjust their transmit power when some APs enter energy-saving states. Energy-saving schedules may be time-based (e.g., during off-hours) or traffic-aware (low utilization periods).
+
+Grouping APs by location enables coordinated energy-saving plans, minimizing disruption while maximizing cumulative energy reduction.
 
 
 ~~~~
@@ -407,13 +411,37 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
 {: #wireless-resource-management title="Wireless Resource Management on APs"}
 
 ### GREEN WG Charter Specifics
-// TODO.
+
+This use case aligns with the GREEN WG’s charter by:
+
+- Illustrating real-world scenarios where energy efficiency mechanisms (discovery, monitoring, control) apply to IP-managed devices.
+
+- Providing a localized but scalable use case that fits into broader energy-aware network management frameworks.
+
+-Addressing interoperability and observability across energy states and reporting mechanisms, including energy mix awareness.
 
 ### The Need for Energy Efficiency
-// TODO.
+
+Given the number of deployed APs in enterprise and campus networks, their continuous operation contributes significantly to energy consumption. Many of these environments experience well-defined periods of inactivity (e.g., nighttime, weekends), during which full AP operation is unnecessary.
+
+Reducing AP energy consumption during these periods, while maintaining sufficient coverage and quality of service, presents an effective opportunity for energy savings. Applying coordinated power-state transitions across AP groups enables measurable improvements with minimal operational impact.
+
 
 ### Requirements for GREEN WG
-// TODO.
+
+To support WLAN Network Energy Saving, the GREEN WG should consider:
+
+- Defining power state transition models and standard energy mode nomenclature for APs (e.g., OFF, HIBERNATE, LOW-POWER, ACTIVE).
+
+- Specifying APIs or YANG models for monitoring and controlling AP power modes via PoE switches or WLAN controllers.
+
+- Enabling reporting of per-mode energy consumption, transitions over time, and cumulative energy savings.
+
+- Ensuring support for scheduled and dynamic (traffic-aware) control policies.
+
+- Allowing integration with broader network monitoring frameworks for energy efficiency analysis at the local and network-wide level.
+
+- Considering implications for resiliency, coverage trade-offs, and restart delays in power-off scenarios.
 
 ## Fixed Network Energy Saving
 
