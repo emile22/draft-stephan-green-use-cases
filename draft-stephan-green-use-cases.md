@@ -30,8 +30,8 @@ author:
     email: emile.stephan@orange.com
   -
     fullname: Marisol Palmero
-    org: Cisco Systems, Inc.
-    email: mpalmero@cisco.com
+    org: 
+    email: marisol.ietf@gmail.com
   -
     fullname: Benoit Claise
     org: Huawei
