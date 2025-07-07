@@ -693,9 +693,7 @@ The contribution of Luis M. Contreras to this document has been supported by the
    Facsimile and Leased Circuits -- Telecommunications Management
    Network - TMN management functions", February 2000.
 
-<<<<<<< HEAD
-# Appendix I
-=======
+
 # Appendix 1, Template preparation
 >>>>>>> f3bcd81151b2b6a51efe5589fcd6ce0031d9cc9b
 
@@ -720,7 +718,6 @@ Examples (can be split into different categories to facilitate a summary at the 
 
 
 
-<<<<<<< HEAD
 (a)              (b)              (c)
 Inventory        Monitor       +- DataSheets/DataBase and/or via API
 Of identity      Energy        |  Metadata and other device/component
