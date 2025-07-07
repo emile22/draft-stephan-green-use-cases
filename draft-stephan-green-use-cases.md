@@ -315,7 +315,8 @@ This aligns with the GREEN WG goals of enabling dynamic and context-aware energy
 Wireless links configured for peak traffic are often underutilized, wasting energy. Adjusting power to match demand can substantially reduce consumption.
 
 ### Requirements for GREEN WG
-// TODO.
+- Adapt energy consumption to traffic change.
+- Dynamic energy efficiency control and optimization.
 
 ## Video streaming use case
 
@@ -343,7 +344,8 @@ In a WLAN network, The AP is usually powered by a PoE switch.
 AP nodes are network devices with the largest number and consuming most of energy. Therefore, the working status of the AP is the core of the energy saving solution.
 
 The working status of the AP can be break down into 3 modes as follows:
-   PoE power-off mode: In this mode, the PoE switch shuts down the port and stops supplying power to the AP. The AP does not consume power at all. When the AP wakes up, the port provides power again. In this mode, it usually takes a few minutes for the AP to recover.
+   PoE power-off mode: In this mode, the PoE switch shuts down the port and stops supplying power to the AP. The AP does not consume power at all. When the AP 
+   wakes up, the port provides power again. In this mode, it usually takes a few minutes for the AP to recover.
    Hibernation mode: Only low power consumption is used to protect key hardware such as the CPU, and other components are shut down.
    Low power consumption mode: Compared with the hibernation mode, the low power consumption mode maintains a certain communication capability. For example, the AP retains only the 2.4 GHz band and disables other radio bands.
 
@@ -407,13 +409,15 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
 {: #wireless-resource-management title="Wireless Resource Management on APs"}
 
 ### GREEN WG Charter Specifics
-// TODO.
+Enable measuring and reporting of energy usage through metrics and attributes and allow operators to optimize energy usage.
 
 ### The Need for Energy Efficiency
-// TODO.
+AP nodes as network devices with the largest number consume large amount of energy.
 
 ### Requirements for GREEN WG
-// TODO.
+- Energy saving mode switching based on network condition changes
+- Allow network devices shutdown to save energy
+- Allow working network devices transmit more power to increase the coverage of the entire area
 
 ## Fixed Network Energy Saving
 
@@ -429,7 +433,7 @@ The GREEN working group can contribute by defining standard mechanisms and proto
 - Ensure compatibility with QoS and network availability requirements.
 
 ### The Need for Energy Efficiency
-// TODO.
+Network devices at metro or backbone network consume large amount of energy.
 
 ### Requirements for GREEN WG
 
@@ -626,10 +630,10 @@ The contribution of Luis M. Contreras to this document has been supported by the
 
 # Use Cases Living List
 
-   Consider 5g vs network slicing: 3GPP spec describing energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
-   Connectivity from radio side (trying to control the traffic/related work to CCAMP)
-   Marisol to add one use case: drift from data specifications... (somehow link to the above)
-   Energy Metric in E2E view
+Consider 5g vs network slicing: 3GPP spec describing energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
+Connectivity from radio side (trying to control the traffic/related work to CCAMP)
+Marisol to add one use case: drift from data specifications... (somehow link to the above)
+Energy Metric in E2E view
 
 # References
 
@@ -703,16 +707,24 @@ It is based on the example from https://datatracker.ietf.org/doc/rfc9450/.
 General description of the use case.
 
 ## GREEN WG Charter Specifics
+
 (if there are no GREEN specific aspects, then it is not a UC to be documented)
 For example, the use case involves components that can report on energy consumption and that might be reconfigured (on a local or global scale) to operate based on energy goals/limitations.
+
 ### The Need for Energy Efficiency
 
 ## Requirements for GREEN
+
 Examples (can be split into different categories to facilitate a summary at the end of the document):
-- Granularity of measurements should be per component, per line, per port…
+
+- Granularity of measurements should be per component, per line, per port.
+
 - Ability to switch on/off, put on sleep mode… components.
+
 - Ability to reconfigure hardware mode based on power savings (e.g., reduce reliability or speed).
-- Ability to operate globally (not constrained to just one device) based on power savings/goals (e.g., steer traffic using a different path that consumes less energy)
+
+- Ability to operate globally (not constrained to just one device) based on power savings/goals
+  (e.g., steer traffic using a different path that consumes less energy).
 
 
 
