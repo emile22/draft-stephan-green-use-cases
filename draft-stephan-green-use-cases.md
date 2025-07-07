@@ -695,7 +695,6 @@ The contribution of Luis M. Contreras to this document has been supported by the
 
 
 # Appendix 1, Template preparation
->>>>>>> f3bcd81151b2b6a51efe5589fcd6ce0031d9cc9b
 
 This appendix should be removed when the template will be stable.
 
@@ -840,5 +839,4 @@ The decision to define the framework now, rather than later, is driven by:
 
 
 In conclusion, establishing the framework for energy efficiency management now is strategic and timely, leveraging the current momentum of use cases and requirements to drive meaningful progress in energy efficiency management. Delaying its development could result in missed opportunities for immediate benefits, increased costs, and challenges in adapting to future technological and regulatory landscapes.
-=======
->>>>>>> f3bcd81151b2b6a51efe5589fcd6ce0031d9cc9b
+
