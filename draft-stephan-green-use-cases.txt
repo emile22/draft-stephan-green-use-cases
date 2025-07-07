@@ -547,7 +547,9 @@ Table of Contents
 
 2.7.4.  Requirements for GREEN WG
 
-   // TODO.
+   *  Adapt energy consumption to traffic change.
+
+   *  Dynamic energy efficiency control and optimization.
 
 2.8.  Video streaming use case
 
@@ -680,15 +682,22 @@ Table of Contents
 
 2.9.2.  GREEN WG Charter Specifics
 
-   // TODO.
+   Enable measuring and reporting of energy usage through metrics and
+   attributes and allow operators to optimize energy usage.
 
 2.9.3.  The Need for Energy Efficiency
 
-   // TODO.
+   AP nodes as network devices with the largest number consume large
+   amount of energy.
 
 2.9.4.  Requirements for GREEN WG
 
-   // TODO.
+   *  Energy saving mode switching based on network condition changes
+
+   *  Allow network devices shutdown to save energy
+
+   *  Allow working network devices transmit more power to increase the
+      coverage of the entire area
 
 2.10.  Fixed Network Energy Saving
 
@@ -718,7 +727,8 @@ Table of Contents
 
 2.10.3.  The Need for Energy Efficiency
 
-   // TODO.
+   Network devices at metro or backbone network consume large amount of
+   energy.
 
 2.10.4.  Requirements for GREEN WG
 
@@ -1099,13 +1109,19 @@ Table of Contents
 8.3.  Requirements for GREEN
 
    Examples (can be split into different categories to facilitate a
-   summary at the end of the document): - Granularity of measurements
-   should be per component, per line, per port… - Ability to switch on/
-   off, put on sleep mode… components. - Ability to reconfigure hardware
-   mode based on power savings (e.g., reduce reliability or speed). -
-   Ability to operate globally (not constrained to just one device)
-   based on power savings/goals (e.g., steer traffic using a different
-   path that consumes less energy)
+   summary at the end of the document):
+
+   *  Granularity of measurements should be per component, per line, per
+      port.
+
+   *  Ability to switch on/off, put on sleep mode… components.
+
+   *  Ability to reconfigure hardware mode based on power savings (e.g.,
+      reduce reliability or speed).
+
+   *  Ability to operate globally (not constrained to just one device)
+      based on power savings/goals (e.g., steer traffic using a
+      different path that consumes less energy).
 
   (a)              (b)              (c)
   Inventory        Monitor       +- DataSheets/DataBase and/or via API
