@@ -5,7 +5,7 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 6 January 2026                              Cisco Systems, Inc.
+Expires: 8 January 2026                                       Individual
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
@@ -13,7 +13,7 @@ Expires: 6 January 2026                              Cisco Systems, Inc.
                                                               Telefonica
                                                          C. J. Bernardos
                                         Universidad Carlos III de Madrid
-                                                             5 July 2025
+                                                             7 July 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -63,7 +63,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 January 2026.
+   This Internet-Draft will expire on 8 January 2026.
 
 Copyright Notice
 
@@ -165,11 +165,19 @@ Table of Contents
    7.  References
      7.1.  Normative References
      7.2.  Informative References
-   8.  Appendix 1, Template preparation
+   8.  Appendix I: Template preparation
      8.1.  Use Case Description
      8.2.  GREEN WG Charter Specifics
+       8.2.1.  The Need for Energy Efficiency
      8.3.  Requirements for GREEN
-   9.  Informative References
+   9.  Appendix II: Necessity and Impact of a Framework for Energy
+           Efficiency Management
+     9.1.  Framework Necessity
+     9.2.  Use Cases Calling for a Framework
+     9.3.  Impact on Energy Metrics
+     9.4.  Current Device Readiness
+     9.5.  Why Now?
+   10. Informative References
    Authors' Addresses
 
 1.  Introduction
@@ -1068,7 +1076,7 @@ Table of Contents
    Facsimile and Leased Circuits -- Telecommunications Management
    Network - TMN management functions", February 2000.
 
-8.  Appendix 1, Template preparation
+8.  Appendix I: Template preparation
 
    This appendix should be removed when the template will be stable.
 
@@ -1085,7 +1093,8 @@ Table of Contents
    documented) For example, the use case involves components that can
    report on energy consumption and that might be reconfigured (on a
    local or global scale) to operate based on energy goals/limitations.
-   ### The Need for Energy Efficiency
+
+8.2.1.  The Need for Energy Efficiency
 
 8.3.  Requirements for GREEN
 
@@ -1098,7 +1107,207 @@ Table of Contents
    based on power savings/goals (e.g., steer traffic using a different
    path that consumes less energy)
 
-9.  Informative References
+  (a)              (b)              (c)
+  Inventory        Monitor       +- DataSheets/DataBase and/or via API
+  Of identity      Energy        |  Metadata and other device/component
+  and Capability   Efficiency    |  /network related information:
+       ^               ^         |
+       |               |         |  .Power/Energy related metrics
+       |               |         |  .information
+       |               |         |  .origin of Energy Mix
+       |               |         |  .carbon aware based on location
+       |               |         |
+       |               |         |
+       |               |         |
+       |               |         v
+  +--------------------------------------------------------------------+
+  |                   *                                                |
+  |     (2) controller   (collection, compute and aggregate?)          |
+  |                                                                    |
+  +--------------------------------------------------------------------+
+               ^              ^                   ^ |
+    (d)        |  (e)         |  (f)              | |(g)
+    Inventory  |  Monitor     |  GREEN WG:        | |GREEN WG: Control
+    Capability |  Traffic     |  Monitor power    | |(Energy saving
+               |  & power     |  Proportion,      | |Functionality
+               |  consumption |  Energy efficiency| |Localized mgmt/
+               |              |  ratio, etc)      | |network wide mgmt)
+               |              |                   | |
+               |              |                   | |
+               |              |                   | v
+  +--------------------------------------------------------------------+
+  |                                            *                       |
+  |                  (1) Device/Component Level                        |
+  |                                                                    |
+  | +---------+  +-----------+  +----------------+  +----------------+ |
+  | | (I)     |  | (II)      |  | (III)          |  | (IV)           | |
+  | | Network |  | Device    |  | Legacy Network |  | 'Attached'(PoE | |
+  | | Device  |  | Component |  | Device         |  | kind) Device   | |
+  | |         |  |           |  |                |  |                | |
+  | +---------+  +-----------+  +----------------+  +----------------+ |
+  +--------------------------------------------------------------------+
+
+  (*) Energy Efficiency Management Function is implemented inside the
+  device or in a controller
+
+               Figure 4: Framework discussed during the BoF
+
+   The main elements in the framework are as follows:
+
+   (a),(d) Discovery and Inventory
+
+   (b),(c) GREEN Metrics
+
+   (b),(f) Monitor energy efficiency
+
+   (e) Monitor power consumption and traffic (IPPM WG throughput,
+   traffic load, etc)
+
+   (g) Control Energy Saving
+
+9.  Appendix II: Necessity and Impact of a Framework for Energy
+    Efficiency Management
+
+   This appendix outlines the necessity of defining a framework for
+   energy efficiency management within the GREEN Working Group's current
+   phase.  Establishing a framework now is crucial for standardizing
+   processes, optimizing energy usage, and ensuring interoperability
+   across network devices.  Immediate action enables the industry to
+   achieve cost savings, meet regulatory requirements, and maintain
+   competitiveness.  By utilizing insights from existing use cases, the
+   framework can deliver actionable metrics and support ongoing
+   innovation, positioning the industry to effectively manage future
+   energy challenges.
+
+9.1.  Framework Necessity
+
+   Analyzing use cases such as the "Incremental Application of the GREEN
+   Framework" reveals the critical need for a structured approach to
+   transitioning network devices towards energy-efficient operations.
+   The framework is essential for:
+
+   *  *Standardization*: Ensuring consistent practices across different
+      devices and network segments to facilitate interoperability.
+
+   *  *Efficient Energy Management*: Providing guidelines to identify
+      inefficiencies and implement improvements.
+
+   *  *Scalability*: Offering solutions that accommodate growing network
+      demands and complexity.
+
+   *  *Cost Reduction*: Optimizing energy usage to lower operational
+      costs and extend equipment lifecycles.
+
+   *  *Competitiveness*: Enabling organizations to maintain a
+      competitive edge through enhanced sustainability.
+
+   *  *Environmental Impact*: Supporting broader sustainability
+      initiatives by reducing carbon footprints.
+
+   *  *Simplified Implementation*: Streamlining the deployment of
+      energy-efficient measures to minimize service disruptions.
+
+   *  *Security*: Protecting sensitive operations related to power
+      states and consumption.
+
+9.2.  Use Cases Calling for a Framework
+
+   Multiple use cases underscore the need for a framework, including:
+
+   *  *Incremental Application of the GREEN Framework*
+
+   *  *Selective Reduction of Energy Consumption in Network Parts*
+
+   *  *Real-time Energy Metering of Virtualized or Cloud-native Network
+      Functions*
+
+   *  *Indirect Energy Monitoring and Control*
+
+   *  *Consideration of Other Domains for Obtention of End-to-End
+      Metrics*
+
+   *  *Dynamic Adjustment of Network Element Throughput*
+
+   *  *Video Streaming Use Case*
+
+   *  *WLAN Network Energy Saving*
+
+   *  *Fixed Network Energy Saving*
+
+   *  *Energy Efficiency Network Management*
+
+   These use cases highlight diverse aspects of energy management that
+   require a cohesive framework for effective implementation.
+
+9.3.  Impact on Energy Metrics
+
+   The framework will significantly enhance the creation of energy
+   metrics with actionable insights by:
+
+   *  *Standardizing Metrics*: Establishing consistent measurement
+      protocols for energy consumption and efficiency.
+
+   *  *Enhancing Data Collection*: Facilitating comprehensive monitoring
+      and data aggregation across devices.
+
+   *  *Supporting Real-time Monitoring*: Enabling dynamic tracking and
+      immediate optimization of energy usage.
+
+   *  *Integration Across Devices*: Ensuring interoperability for
+      network-wide data analysis.
+
+   *  *Providing Actionable Insights*: Translating raw data into
+      meaningful information for decision-making.
+
+9.4.  Current Device Readiness
+
+   While many modern networking devices have basic energy monitoring
+   capabilities, these are often proprietary.  The framework will define
+   requirements to enhance these capabilities, enabling standardized
+   metric production and meaningful data contributions for energy
+   management goals.
+
+9.5.  Why Now?
+
+   The decision to define the framework now, rather than later, is
+   driven by:
+
+   *  *Immediate Benefits*: Start realizing cost savings, reduced carbon
+      footprints, and improved efficiencies.
+
+   *  *Rapid Technological Advancements*: Aligning the framework with
+      current technologies to prevent obsolescence.
+
+   *  *Increasing Energy Demands*: Mitigating the impact of growing
+      energy consumption on costs and sustainability.
+
+   *  *Regulatory Pressure*: Preparing for compliance with existing and
+      anticipated sustainability regulations.
+
+   *  *Competitive Advantage*: Positioning organizations as leaders in
+      sustainability and innovation.
+
+   *  *Foundational Work Ready*: Building on the use cases and
+      requirements established in Phase I.
+
+   *  *Proactive Risk Management*: Minimizing risks associated with
+      energy costs and environmental factors.
+
+   *  *Facilitate Future Innovations*: Creating a platform for
+      continuous improvements and adaptations.
+
+   *  *Stakeholder Engagement*: Ensuring diverse perspectives are
+      reflected for broader adoption.
+
+   In conclusion, establishing the framework for energy efficiency
+   management now is strategic and timely, leveraging the current
+   momentum of use cases and requirements to drive meaningful progress
+   in energy efficiency management.  Delaying its development could
+   result in missed opportunities for immediate benefits, increased
+   costs, and challenges in adapting to future technological and
+   regulatory landscapes.
+
+10.  Informative References
 
    [GREEN-BOF]
               "BOF proposal for GREEN WG Creation", 10 May 2024,
@@ -1163,8 +1372,8 @@ Authors' Addresses
 
 
    Marisol Palmero
-   Cisco Systems, Inc.
-   Email: mpalmero@cisco.com
+   Individual
+   Email: marisol.ietf@gmail.com
 
 
    Benoit Claise
