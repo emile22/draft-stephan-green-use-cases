@@ -231,7 +231,7 @@ Table of Contents
    Two directions are considered:
 
    *  Improving energy efficiency of legacy devices through targeted
-      upgrades—such as replacing line cards, optimizing firmware
+      upgrades such as replacing line cards, optimizing firmware
       behavior, or reconfiguring interface usage based on operational
       demand.
 
@@ -322,7 +322,7 @@ Table of Contents
 
 2.2.2.  GREEN WG Charter Specifics
 
-   This use case fits within the GREEN WG’s objectives by emphasizing
+   This use case fits within the GREEN WG's objectives by emphasizing
    energy-aware operational adjustments across network infrastructure
    that optimize energy use based on traffic loads and the intelligent
    activation/deactivation of resources.
@@ -943,7 +943,7 @@ Table of Contents
    powered state, the focus here is not on minimizing energy consumption
    per se, but on sustaining essential operation with limited energy and
    prepare to worse situations and more constrained powered state
-   fallbacks.  These behaviors increase the device’s ability to operate
+   fallbacks.  These behaviors increase the device's ability to operate
    longer under backup power, ensuring availability of essential
    services during outages.
 
@@ -1051,27 +1051,9 @@ Table of Contents
    Part 22: Static meters for active energy (classes 0,2 S and 0,5 S)",
    January 2003.
 
-   [IEEE-100] IEEE, "The Authoritative Dictionary of IEEE Standards
-   Terms, IEEE 100, Seventh Edition", December 2000.
-
-   [IEEE-1621] Institute of Electrical and Electronics Engineers, "IEEE
-   1621-2004 - IEEE Standard for User Interface Elements in Power
-   Control of Electronic Devices Employed in Office/Consumer
-   Environments", 2004.
-
    [ATIS-0600015.03.2013] ATIS, "ATIS-0600015.03.2013: Energy Efficiency
    for Telecommunication Equipment: Methodology for Measurement and
    Reporting for Router and Ethernet Switch Products", 2013.
-
-   [ETSI-ES-203-136] ETSI, "ETSI ES 203 136: Environmental Engineering
-   (EE); Measurement methods for energy efficiency of router and switch
-   equipment", 2017, <https://www.etsi.org/deliver/
-   etsi_es/203100_203199/203136/01.02.00_50/ es_203136v010200m.pdf>.
-
-   [ITUT-L.1310] ITU-T, "L.1310 : Energy efficiency metrics and
-   measurement methods for telecommunication equipment", 2020,
-   https://www.itu.int/rec/T-REC-L.1310/en (https://www.itu.int/rec/T-
-   REC-L.1310/en).
 
 7.2.  Informative References
 
@@ -1079,12 +1061,6 @@ Table of Contents
    The World's Online Electrotechnical Vocabulary", 2013,
    http://www.electropedia.org/iev/iev.nsf/welcome?openform
    (http://www.electropedia.org/iev/iev.nsf/welcome?openform).
-
-   [ITU-M.3400] International Telecommunication Union, "ITU-T
-   Recommendation M.3400 -- Series M: TMN and Network Maintenance:
-   International Transmission Systems, Telephone Circuits, Telegraphy,
-   Facsimile and Leased Circuits -- Telecommunications Management
-   Network - TMN management functions", February 2000.
 
 8.  Appendix I: Template preparation
 
@@ -1114,7 +1090,7 @@ Table of Contents
    *  Granularity of measurements should be per component, per line, per
       port.
 
-   *  Ability to switch on/off, put on sleep mode… components.
+   *  Ability to switch on/off, put on sleep mode' components.
 
    *  Ability to reconfigure hardware mode based on power savings (e.g.,
       reduce reliability or speed).
@@ -1325,10 +1301,6 @@ Table of Contents
 
 10.  Informative References
 
-   [GREEN-BOF]
-              "BOF proposal for GREEN WG Creation", 10 May 2024,
-              <https://github.com/marisolpalmero/GREEN-bof>.
-
    [GREEN_NGNM]
               "NGMN Alliance, GREEN FUTURE NETWORKS: METERING IN
               VIRTUALISED RAN INFRASTRUCTURE", n.d.,
@@ -1346,11 +1318,6 @@ Table of Contents
    [ONF-MW]   "ONF TR-532, Microwave Information Model, version 2.0.",
               31 January 2024.
 
-   [operators-inputs]
-              "Input from Operators to GREEN BoF", 20 July 2024,
-              <https://datatracker.ietf.org/meeting/120/materials/
-              slides-120-green-input-from-operators-to-green-bof-01>.
-
    [RFC8432]  Ahlberg, J., Ed., Ye, M., Ed., Li, X., Contreras, LM., and
               CJ. Bernardos, "A Framework for Management and Control of
               Microwave and Millimeter Wave Interface Parameters",
@@ -1367,11 +1334,6 @@ Table of Contents
               Framework for Network Slices in Networks Built from IETF
               Technologies", RFC 9543, DOI 10.17487/RFC9543, March 2024,
               <https://www.rfc-editor.org/rfc/rfc9543>.
-
-   [sustainability-insights]
-              "Sustainability Insights", 7 May 2024,
-              <https://datatracker.ietf.org/doc/html/draft-almprs-
-              sustainability-insights>.
 
    [TS23.501] "3GPP TS 23.501, System architecture for the 5G System
               (5GS), 17.6.0.", 22 September 2022.
