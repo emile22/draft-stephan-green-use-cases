@@ -30,7 +30,7 @@ author:
     email: emile.stephan@orange.com
   -
     fullname: Marisol Palmero
-    org:
+    org: Individual
     email: marisol.ietf@gmail.com
   -
     fullname: Benoit Claise
