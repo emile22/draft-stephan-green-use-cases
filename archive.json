@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-03T02:03:10.669855+00:00",
+  "timestamp": "2025-07-08T02:05:54.142514+00:00",
   "repo": "emile22/draft-stephan-green-use-cases",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDONtgu8s6324RM",
       "title": "Clean-up and structure improvement",
       "url": "https://github.com/emile22/draft-stephan-green-use-cases/issues/4",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "marisolpalmero",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Carlos and Mahesh mentioned the need to restructure and clean the draft. Track proposed improvements.\n\nActions:\n\nClarify structure: intro, applicability to GREEN, within WG charter\n\nRemove redundancy\n\nAdd explicit link to GREEN objectives",
       "createdAt": "2025-05-22T21:47:47Z",
-      "updatedAt": "2025-05-22T21:47:47Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-07T12:56:48Z",
+      "closedAt": "2025-07-07T12:56:48Z",
       "comments": []
     },
     {
@@ -71,21 +71,21 @@
       "id": "I_kwDONtgu8s6324iz",
       "title": "Fixed network use case within charter?",
       "url": "https://github.com/emile22/draft-stephan-green-use-cases/issues/5",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "marisolpalmero",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [
         "marisolpalmero"
       ],
       "labels": [],
       "body": "Clarify if the fixed network use case is within WG scope",
       "createdAt": "2025-05-22T21:48:35Z",
-      "updatedAt": "2025-06-02T08:10:58Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-07T07:20:42Z",
+      "closedAt": "2025-07-07T07:20:42Z",
       "comments": [
         {
           "author": "marisolpalmero",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Marisol to review the notes from the interim meeting",
           "createdAt": "2025-06-02T08:10:42Z",
           "updatedAt": "2025-06-02T08:10:42Z"
@@ -97,15 +97,15 @@
       "id": "I_kwDONtgu8s6324-8",
       "title": "From mailer: use case slicing",
       "url": "https://github.com/emile22/draft-stephan-green-use-cases/issues/6",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "marisolpalmero",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "need to document slicing use case",
       "createdAt": "2025-05-22T21:49:45Z",
-      "updatedAt": "2025-05-22T21:49:45Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-07T07:21:05Z",
+      "closedAt": "2025-07-07T07:21:05Z",
       "comments": []
     },
     {
@@ -113,24 +113,40 @@
       "id": "I_kwDONtgu8s641012",
       "title": "UC Template",
       "url": "https://github.com/emile22/draft-stephan-green-use-cases/issues/7",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "emile22",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "'Custom' Carlos template and apply it UC by UC in separate PR",
       "createdAt": "2025-05-29T18:18:50Z",
-      "updatedAt": "2025-06-02T08:09:16Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-06T21:02:03Z",
+      "closedAt": "2025-07-06T21:02:03Z",
       "comments": [
         {
           "author": "marisolpalmero",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Emile is going to suggest the template in the form of a PR",
           "createdAt": "2025-06-02T08:09:16Z",
           "updatedAt": "2025-06-02T08:09:16Z"
         }
       ]
+    },
+    {
+      "number": 10,
+      "id": "I_kwDONtgu8s6_WOF-",
+      "title": "appendix II ## Use Cases Calling for a Framework",
+      "url": "https://github.com/emile22/draft-stephan-green-use-cases/issues/10",
+      "state": "OPEN",
+      "author": "emile22",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "appendix II, ## Use Cases Calling for a Framework\n\nwe have to describe  per UC the aspect of the framework needed",
+      "createdAt": "2025-07-07T21:15:58Z",
+      "updatedAt": "2025-07-07T21:15:58Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -239,6 +255,131 @@
           "body": "not suer that all these reqs are in green wg scope",
           "createdAt": "2025-05-13T20:47:05Z",
           "updatedAt": "2025-05-13T20:47:05Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDONtgu8s6dnhfG",
+      "title": "adding to 2.9 use case",
+      "url": "https://github.com/emile22/draft-stephan-green-use-cases/pull/8",
+      "state": "MERGED",
+      "author": "marisolpalmero",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-07-06T07:40:09Z",
+      "updatedAt": "2025-07-07T12:59:00Z",
+      "baseRepository": "emile22/draft-stephan-green-use-cases",
+      "baseRefName": "main",
+      "baseRefOid": "f3bcd81151b2b6a51efe5589fcd6ce0031d9cc9b",
+      "headRepository": "marisolpalmero/draft-stephan-green-use-cases",
+      "headRefName": "main",
+      "headRefOid": "c53984ae5272767088e6f2eeb4afb16cc901f786",
+      "closedAt": "2025-07-07T12:59:00Z",
+      "mergedAt": "2025-07-07T12:59:00Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "915add176e786bb84ad52fea2d7085544dff8dec"
+      },
+      "comments": [
+        {
+          "author": "marisolpalmero",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@emile22 Can you see this PR?",
+          "createdAt": "2025-07-07T08:28:32Z",
+          "updatedAt": "2025-07-07T08:28:49Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDONtgu8s6yUZ5X",
+          "commit": {
+            "abbreviatedOid": "d035d9f"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-06T21:21:52Z",
+          "updatedAt": "2025-07-06T21:21:52Z",
+          "comments": [
+            {
+              "originalPosition": 31,
+              "body": "which element of the framework listed above is essential to each UC listed here ?",
+              "createdAt": "2025-07-06T21:21:52Z",
+              "updatedAt": "2025-07-06T21:21:53Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDONtgu8s6ycNtr",
+          "commit": {
+            "abbreviatedOid": "c53984a"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-07T12:58:44Z",
+          "updatedAt": "2025-07-07T12:58:44Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDONtgu8s6dt9LB",
+      "title": "Update section 2.9 and 2.10",
+      "url": "https://github.com/emile22/draft-stephan-green-use-cases/pull/9",
+      "state": "MERGED",
+      "author": "billwuqin",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-07-07T09:25:30Z",
+      "updatedAt": "2025-07-07T13:03:09Z",
+      "baseRepository": "emile22/draft-stephan-green-use-cases",
+      "baseRefName": "main",
+      "baseRefOid": "f3bcd81151b2b6a51efe5589fcd6ce0031d9cc9b",
+      "headRepository": "emile22/draft-stephan-green-use-cases",
+      "headRefName": "billwuqin-patch-1",
+      "headRefOid": "3790d173ce8f2b5cef6c81b19f5139e392585714",
+      "closedAt": "2025-07-07T13:03:09Z",
+      "mergedAt": "2025-07-07T13:03:09Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "090af670d32560fa309ce57a7fc9a627d9d40b40"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDONtgu8s6ycQyE",
+          "commit": {
+            "abbreviatedOid": "3790d17"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-07T13:01:57Z",
+          "updatedAt": "2025-07-07T13:01:57Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDONtgu8s6ycRxG",
+          "commit": {
+            "abbreviatedOid": "3790d17"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-07T13:02:55Z",
+          "updatedAt": "2025-07-07T13:02:55Z",
           "comments": []
         }
       ]
