@@ -620,25 +620,6 @@ Energy efficiency under power shortage conditions is fundamentally different fro
 - Awareness of backup systems (e.g., batteries, generators).
 - Awareness of hierarchical fallback to more constrained powered state.
 
-## Energy-Aware Management of Data Center Networks with High East-West Traffic
-
-### Use Case Description
-Modern data centers are characterized by a significant volume of East-West traffic driven by applications like cloud computing, microservices, and big data analytics. This traffic requires high-bandwidth, low-latency interconnects between servers and storage, which can consume a significant amount of energy. This use case focuses on dynamically managing the energy consumption of data center networks based on the volume and characteristics of East-West traffic. Strategies include dynamically adjusting link speeds, putting unused ports into low-power modes, and optimizing traffic routing to minimize energy consumption. The use case will also analyse the interconnection network elements and energy consumption based on the topology used.
-
-### GREEN WG Charter Specifics
-This use case aligns with the GREEN WG's objectives by promoting energy-aware operational adjustments and the development of standardized energy management mechanisms for network infrastructure. It highlights the need for metrics and models to accurately assess the energy consumption of East-West traffic.
-
-### The Need for Energy Efficiency
-Reducing the energy footprint of data center networks is critical for lowering operational costs, reducing carbon emissions, and improving the sustainability of IT infrastructure. As East-West traffic continues to grow, efficient energy management becomes increasingly important. The need for optimized cooling methods is also critical.
-
-### Requirements for GREEN WG
-- East-West Traffic Monitoring: Standardized mechanisms for monitoring the volume, type, and characteristics of East-West traffic.
-- Dynamic Power Management: YANG models or other data formats for controlling the power states of network interfaces, switches, and other data center network components.
-- Traffic Steering for Energy Efficiency: Mechanisms for dynamically routing traffic based on energy consumption considerations.
-- Integration with Data Center Management Systems: Interfaces for integrating energy management data and control functions with existing data center management systems.
-- Topological discovery: to better allocate resources and optimize circuits' utilization.
-
-
 ## Energy-Efficient Management of Distributed AI Training Workloads
 
 ### Use Case Description
@@ -651,8 +632,9 @@ This use case contributes to the GREEN WG's goals by addressing the energy effic
 AI training is a computationally intensive task that consumes a significant amount of energy. Optimizing the energy efficiency of distributed AI training workloads can reduce costs, improve sustainability, and enable more widespread adoption of AI technologies. There is an impact not only for the network consumption, rather than the compute consumption.
 
 ### Requirements for GREEN WG
+- East-West Traffic Monitoring: Standardized mechanisms for monitoring the volume, type, and characteristics of East-West traffic.
 - Workload Characterization: Standardized methods for characterizing the energy consumption profile of AI training workloads.
-Energy-Aware Scheduling: APIs for scheduling training jobs based on energy prices, grid conditions, and other energy-related factors.
+- Energy-Aware Scheduling: APIs for scheduling training jobs based on energy prices, grid conditions, and other energy-related factors.
 - Data Compression and Optimization: Techniques for reducing the volume of data transferred during distributed training.
 - Dynamic Resource Allocation: Mechanisms for dynamically adjusting the number of active nodes based on training progress and energy availability.
 - Resource co-location, so the data used for processing can be as close as possible to the data crunching machines.
