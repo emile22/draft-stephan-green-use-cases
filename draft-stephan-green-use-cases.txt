@@ -5,7 +5,7 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 6 April 2026                                         Individual
+Expires: 8 April 2026                                         Individual
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
@@ -13,7 +13,7 @@ Expires: 6 April 2026                                         Individual
                                                               Telefonica
                                                          C. J. Bernardos
                                         Universidad Carlos III de Madrid
-                                                          3 October 2025
+                                                          5 October 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -63,7 +63,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 April 2026.
+   This Internet-Draft will expire on 8 April 2026.
 
 Copyright Notice
 
@@ -160,18 +160,12 @@ Table of Contents
        2.14.2.  GREEN WG Charter Specifics
        2.14.3.  The Need for Energy Efficiency
        2.14.4.  Requirements for GREEN WG
-     2.15. Energy-Aware Management of Data Center Networks with High
-            East-West Traffic
+     2.15. Energy-Efficient Management of Distributed AI Training
+            Workloads
        2.15.1.  Use Case Description
        2.15.2.  GREEN WG Charter Specifics
        2.15.3.  The Need for Energy Efficiency
        2.15.4.  Requirements for GREEN WG
-     2.16. Energy-Efficient Management of Distributed AI Training
-            Workloads
-       2.16.1.  Use Case Description
-       2.16.2.  GREEN WG Charter Specifics
-       2.16.3.  The Need for Energy Efficiency
-       2.16.4.  Requirements for GREEN WG
    3.  Security Considerations
    4.  IANA Considerations
    5.  Acknowledgments
@@ -1061,63 +1055,9 @@ Table of Contents
    *  Awareness of hierarchical fallback to more constrained powered
       state.
 
-2.15.  Energy-Aware Management of Data Center Networks with High East-
-       West Traffic
+2.15.  Energy-Efficient Management of Distributed AI Training Workloads
 
 2.15.1.  Use Case Description
-
-   Modern data centers are characterized by a significant volume of
-   East-West traffic driven by applications like cloud computing,
-   microservices, and big data analytics.  This traffic requires high-
-   bandwidth, low-latency interconnects between servers and storage,
-   which can consume a significant amount of energy.  This use case
-   focuses on dynamically managing the energy consumption of data center
-   networks based on the volume and characteristics of East-West
-   traffic.  Strategies include dynamically adjusting link speeds,
-   putting unused ports into low-power modes, and optimizing traffic
-   routing to minimize energy consumption.  The use case will also
-   analyse the interconnection network elements and energy consumption
-   based on the topology used.
-
-2.15.2.  GREEN WG Charter Specifics
-
-   This use case aligns with the GREEN WG's objectives by promoting
-   energy-aware operational adjustments and the development of
-   standardized energy management mechanisms for network infrastructure.
-   It highlights the need for metrics and models to accurately assess
-   the energy consumption of East-West traffic.
-
-2.15.3.  The Need for Energy Efficiency
-
-   Reducing the energy footprint of data center networks is critical for
-   lowering operational costs, reducing carbon emissions, and improving
-   the sustainability of IT infrastructure.  As East-West traffic
-   continues to grow, efficient energy management becomes increasingly
-   important.  The need for optimized cooling methods is also critical.
-
-2.15.4.  Requirements for GREEN WG
-
-   *  East-West Traffic Monitoring: Standardized mechanisms for
-      monitoring the volume, type, and characteristics of East-West
-      traffic.
-
-   *  Dynamic Power Management: YANG models or other data formats for
-      controlling the power states of network interfaces, switches, and
-      other data center network components.
-
-   *  Traffic Steering for Energy Efficiency: Mechanisms for dynamically
-      routing traffic based on energy consumption considerations.
-
-   *  Integration with Data Center Management Systems: Interfaces for
-      integrating energy management data and control functions with
-      existing data center management systems.
-
-   *  Topological discovery: to better allocate resources and optimize
-      circuits' utilization.
-
-2.16.  Energy-Efficient Management of Distributed AI Training Workloads
-
-2.16.1.  Use Case Description
 
    Training large AI models requires distributed computing across
    multiple servers or GPUs.  This distributed training generates
@@ -1131,14 +1071,14 @@ Table of Contents
    training progress.  It is also critical to have a cross-domain view
    of the end to end flow to address power consumption holistically.
 
-2.16.2.  GREEN WG Charter Specifics
+2.15.2.  GREEN WG Charter Specifics
 
    This use case contributes to the GREEN WG's goals by addressing the
    energy efficiency of emerging workloads and exploring the use of
    dynamic resource allocation to minimize energy consumption.  It calls
    for energy-aware scheduling and optimization techniques.
 
-2.16.3.  The Need for Energy Efficiency
+2.15.3.  The Need for Energy Efficiency
 
    AI training is a computationally intensive task that consumes a
    significant amount of energy.  Optimizing the energy efficiency of
@@ -1147,12 +1087,18 @@ Table of Contents
    technologies.  There is an impact not only for the network
    consumption, rather than the compute consumption.
 
-2.16.4.  Requirements for GREEN WG
+2.15.4.  Requirements for GREEN WG
+
+   *  East-West Traffic Monitoring: Standardized mechanisms for
+      monitoring the volume, type, and characteristics of East-West
+      traffic.
 
    *  Workload Characterization: Standardized methods for characterizing
-      the energy consumption profile of AI training workloads.  Energy-
-      Aware Scheduling: APIs for scheduling training jobs based on
-      energy prices, grid conditions, and other energy-related factors.
+      the energy consumption profile of AI training workloads.
+
+   *  Energy-Aware Scheduling: APIs for scheduling training jobs based
+      on energy prices, grid conditions, and other energy-related
+      factors.
 
    *  Data Compression and Optimization: Techniques for reducing the
       volume of data transferred during distributed training.
