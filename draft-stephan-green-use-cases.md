@@ -529,6 +529,8 @@ minimizes redundant infrastructure (e.g., separate sensors and
 communication equipment), thus reducing the overall carbon and energy
 footprint.
 
+On the other hand, such an infrastructure will have to adapt its energy optimization policies to sensing applications: critical functions (e.g., threat detection) must run continuously, while others should activate depending on the context.
+
 ### GREEN WG Specifics
 
 Energy Consumption Monitoring: Each ISAC component (e.g., roadside
