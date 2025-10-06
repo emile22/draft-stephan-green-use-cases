@@ -5,7 +5,7 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 8 April 2026                                         Individual
+Expires: 9 April 2026                                         Individual
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
@@ -13,7 +13,7 @@ Expires: 8 April 2026                                         Individual
                                                               Telefonica
                                                          C. J. Bernardos
                                         Universidad Carlos III de Madrid
-                                                          5 October 2025
+                                                          6 October 2025
 
 
                Use Cases for Energy Efficiency Management
@@ -63,7 +63,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 April 2026.
+   This Internet-Draft will expire on 9 April 2026.
 
 Copyright Notice
 
@@ -896,6 +896,11 @@ Table of Contents
    minimizes redundant infrastructure (e.g., separate sensors and
    communication equipment), thus reducing the overall carbon and energy
    footprint.
+
+   On the other hand, such an infrastructure will have to adapt its
+   energy optimization policies to sensing applications: critical
+   functions (e.g., threat detection) must run continuously, while
+   others should activate depending on the context.
 
 2.12.2.  GREEN WG Specifics
 
