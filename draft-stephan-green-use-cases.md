@@ -453,7 +453,7 @@ traffic periods. These fluctuations provide opportunities for dynamic energy-sav
 or put into sleep mode. Additionally, routers equipped with interfaces of varying speeds (e.g., from 1G to 400G) can dynamically adjust interface speeds, deactivate
 unused ports, or scale down internal resources such as processor cores, chipset clock frequencies, or SerDes lanes, depending on traffic demand.
 
-In many fixed networks, particularly those at metro or backbone level, traffic patterns may follow a predictable tidal cycle 
+In many fixed networks, particularly those at metro or backbone level, traffic patterns may follow a predictable tidal cycle
 - with clearly defined high-traffic and low-traffic periods, or may follow unbalanced traffic load
 - with clearly identified high-load and idle network elements.
 These fluctuations provide opportunities for dynamic energy-saving mechanisms. During low-traffic periods or unbalanced traffic load periods, the low traffic could be migrated and aggregated, certain network components can be deactivated or put into sleep mode.  Additionally, routers equipped with interfaces of varying speeds (e.g., from 1G to 400G) can periods dynamically adjust interface speeds, deactivate unused ports, or scale down internal resources such as processor cores, chipset clock frequencies, or SerDes lanes, depending on traffic demand.
