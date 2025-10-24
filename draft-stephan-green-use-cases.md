@@ -448,7 +448,15 @@ AP nodes as network devices with the largest number consume large amount of ener
 ## Fixed Network Energy Saving
 
 ### Use Case Description
-In many fixed networks, particularly those at metro or backbone level, traffic patterns follow a predictable tidal cycle - with clearly defined high-traffic and low-traffic periods. These fluctuations provide opportunities for dynamic energy-saving mechanisms. During low-traffic periods, certain network components can be deactivated or put into sleep mode. Additionally, routers equipped with interfaces of varying speeds (e.g., from 1G to 400G) can dynamically adjust interface speeds, deactivate unused ports, or scale down internal resources such as processor cores, chipset clock frequencies, or SerDes lanes, depending on traffic demand.
+In many fixed networks, particularly those at metro or backbone level, traffic patterns follow a predictable tidal cycle - with clearly defined high-traffic and low-
+traffic periods. These fluctuations provide opportunities for dynamic energy-saving mechanisms. During low-traffic periods, certain network components can be deactivated
+or put into sleep mode. Additionally, routers equipped with interfaces of varying speeds (e.g., from 1G to 400G) can dynamically adjust interface speeds, deactivate
+unused ports, or scale down internal resources such as processor cores, chipset clock frequencies, or SerDes lanes, depending on traffic demand.
+
+In many fixed networks, particularly those at metro or backbone level, traffic patterns may follow a predictable tidal cycle
+- with clearly defined high-traffic and low-traffic periods, or may follow unbalanced traffic load
+- with clearly identified high-load and idle network elements.
+These fluctuations provide opportunities for dynamic energy-saving mechanisms. During low-traffic periods or unbalanced traffic load periods, the low traffic could be migrated and aggregated, certain network components can be deactivated or put into sleep mode.  Additionally, routers equipped with interfaces of varying speeds (e.g., from 1G to 400G) can periods dynamically adjust interface speeds, deactivate unused ports, or scale down internal resources such as processor cores, chipset clock frequencies, or SerDes lanes, depending on traffic demand.
 
 ### GREEN WG Charter Specifics
 
@@ -464,6 +472,7 @@ Network devices at metro or backbone network consume large amount of energy.
 ### Requirements for GREEN WG
 
 - Standardized definitions and telemetry models for identifying tidal traffic patterns and low-utilization windows.
+- Standardized AI/ML models for traffic prediction using historical data, capturing both long-term regularities and short-term bursts.
 - Protocol support for energy-aware dynamic reconfiguration (e.g., speed adjustment, core deactivation).
 - Trade-offs between energy savings and network latency/performance.
 - Mechanisms to synchronize energy-saving decisions across multiple devices (e.g., coordinated interface downshifts).
@@ -641,37 +650,27 @@ AI training is a computationally intensive task that consumes a significant amou
 - Dynamic Resource Allocation: Mechanisms for dynamically adjusting the number of active nodes based on training progress and energy availability.
 - Resource co-location, so the data used for processing can be as close as possible to the data crunching machines.
 
-## Network-level Energy Saving in Transport Network
+## Network-level Cross Layer Energy Saving
 
 ### Use Case Description
-This use case addresses energy optimization within the transport network, which serves as the underlay to the IP network's overlay. As the carrier of integrated services (e.g., TDM/IP) over physical infrastructures like optical fiber and optical wavelengths, the transport network is designed for guaranteed connectivity, with relatively rigid resource allocation. This design creates a fundamental challenge of a mismatch between dynamic traffic and static infrastructure. Consequently, energy consumption does not scale proportionally with fluctuating traffic demands, and resources cannot be allocated precisely across multiple layers.
-
-On the one hand, this use case focuses on network-level optimization through multi-layer energy saving management. This is achieved via a dynamic, centralized scheme where a controller learns and analyzes real-time network traffic data. Leveraging AI/ML for traffic prediction, the controller identifies high-load and idle network elements and formulates energy-saving strategies, such as traffic migration to balance device loads, enabling the system to power down a subset of resources network-wide and reduce operating power. This centralized approach enables a holistic view, optimizing resources across the transport layers (L0/L1/L2) while ensuring the stability and performance of the overlying IP network (L3). This allows some resources of the high-load elements to enter a sleep or lower-power state, thereby reducing overall energy consumption.
-
-On the other hand, the use case integrates SLA-aware across multiple layers into energy saving to provide differentiated service assurance. This allows for the network-wide orchestration of transport network energy conservation by aligning it with service priority. Energy saving factors can be integrated into service assurance, aiming to achieve differentiated energy saving without affecting the quality of service. For general-grade services, energy-saving strategies can allow devices to enter deep sleep mode to maximize power reduction. For high-reliability premium services, a light sleep mode can be used to ensure instant wake-up with zero service impact, thereby maintaining high quality of service.
+For the carrier of integrated services (e.g., TDM/IP) using physical infrastructures like optical fiber and optical wavelengths, the transport network functions as the
+underlay to the IP network as the overlay. Here the transport network is designed for guaranteed connectivity, with relatively rigid resource allocation while the IP
+network supports flexible traffic on runtime. the technology difference creates the challenge of "dynamic traffic vs. static infrastructure".
+In the section 2.10, fixed network energy saving use case describes that during low-traffic periods or unbalanced traffic load periods, certain network components can be
+deactivated or put into sleep mode. Imagine when an IP line card is shutdown, it not only affects the link in the overlying IP layer (L3) but also the link in the
+transport layer (L0/L1/L2), network-level cross-layer energy saving management can enable a holistic optimization of resources across layers while ensuring the overall
+service QoS. This allows some resources across layers to enter a sleep or lower-power state, thereby reducing overall energy consumption.
 
 ### GREEN WG Charter Specifics
-- Multi-layer energy management: This use case highlights the interaction between the transport network underlay (L0-L2) and the IP overlay (L3). The WG can define how energy-saving actions in the transport layer are safely coordinated with the overlay to maintain service continuity, which is a critical aspect of cross-layer optimization.
-
-- Energy management related to service assurance: Energy efficiency factors can be considered in processes during service provisioning, in combination with the client's SLA and available underlying hard isolation resources.
+- Multi-layer energy management: This use case highlights the interaction between the transport network underlay (L0-L2) and the IP overlay (L3). The GREEN WG can define
+  how energy-saving actions are safely coordinated across layers to maintain service continuity, which is a critical aspect of cross-layer optimization.
 
 ### The Need for Energy Efficiency
-The energy consumption of transport networks is significant, accounting for a substantial portion of an operator's total power usage. This inefficiency comes from the inherent conflict between the dynamic traffic and the static infrastructure, where rigid resource allocation for guaranteed connectivity leads to wasted energy during low-demand periods. Reducing energy usage during these periods can lower operational costs and prolong equipment lifespan.
+When talking about network-level energy saving, It's inevitable to face the challenge of "dynamic traffic vs. static infrastructure" and deal with different network
+layers.
 
 ### Requirements for GREEN WG
-To support this use case, the GREEN WG should consider the following requirements, grouped by the responsible entity:
-
-1. Controller Requirements:
-- The ability to display energy consumption per transport network element at a specified time granularity.
-- The ability to perform accurate network-level traffic prediction using historical data, capturing both long-term regularities and short-term bursts.
-- The capability to generate GREEN optimization strategies, such as traffic migration methods, based on traffic forecasts.
-- The capability to consider energy efficiency factors in multi-layer resource allocation during the service assurance lifecycle.
-- The ability to manage the reserved resources of devices based on the ring logical connection.
-
-2. Device Requirements:
-- The ability to dynamically switch the power state of its components according to the traffic load.
-- Capable of millisecond-level instantaneous wake-up from sleep mode, ensuring hitless service switching.
-
+- Mechanisms to coordinate energy-saving decisions across multiple layers(e.g., coordination between IP layer and Transport layer).
 
 # Security Considerations
 
