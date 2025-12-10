@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # Needed to push to backup branch
+      contents: write
 
     steps:
       - name: "Checkout repository (full history)"
@@ -28,10 +28,11 @@ jobs:
           else
             echo "backups-branch does not exist, creating orphan branch"
             git checkout --orphan backups-branch
-            # Remove all tracked and untracked files from the working tree
-            git rm -rf . || true
-            rm -rf ./*
-            rm -rf ./.??*
+
+            echo "Cleaning working directory but KEEPING .git/"
+            find . -mindepth 1 -maxdepth 1 \
+              ! -name '.git' \
+              -exec rm -rf {} +
           fi
 
       - name: "Fetch latest main branch"
