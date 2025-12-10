@@ -1,0 +1,71 @@
+name: "Manual Backup main -> backups-branch"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: "Checkout repository (full history)"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "Create backup folder name"
+        id: vars
+        run: echo "BACKUP_DIR=backups/backup-$(date +'%Y%m%d-%H%M%S')" >> "$GITHUB_OUTPUT"
+
+      - name: "Switch to backups-branch (create if missing)"
+        run: |
+          if git show-ref --verify --quiet refs/heads/backups-branch; then
+            echo "backups-branch exists, checking out"
+            git checkout backups-branch
+          else
+            echo "backups-branch does not exist, creating orphan branch"
+            git checkout --orphan backups-branch
+
+            echo "Cleaning working directory but KEEPING .git/"
+            find . -mindepth 1 -maxdepth 1 \
+              ! -name '.git' \
+              -exec rm -rf {} +
+          fi
+
+      - name: "Fetch latest main branch"
+        run: |
+          git fetch origin main
+          git branch -f main origin/main
+
+      - name: "Export main branch into temp directory"
+        run: |
+          TMP_DIR=$(mktemp -d)
+          echo "Using temp dir: $TMP_DIR"
+          git archive origin/main | tar -x -C "$TMP_DIR"
+
+          mkdir -p "${{ steps.vars.outputs.BACKUP_DIR }}"
+
+          rsync -av \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='backups/' \
+            --exclude='*.log' \
+            --exclude='*.tmp' \
+            --exclude='*.swp' \
+            --exclude='node_modules/' \
+            --exclude='dist/' \
+            --exclude='build/' \
+            "$TMP_DIR"/ "${{ steps.vars.outputs.BACKUP_DIR }}/"
+
+      - name: "Commit and push backup to backups-branch"
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add backups
+          git commit -m "Backup of main created on $(date)" || echo "No changes to commit"
+
+          git push origin backups-branch
