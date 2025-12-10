@@ -1,0 +1,41 @@
+name: Backup Root Manually
+
+on:
+  workflow_dispatch:   # Lancement manuel
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate backup folder name
+        id: vars
+        run: |
+          DATE=$(date +"%Y-%m-%d")
+          BACKUP_DIR="backups/repo_backup_$DATE"
+          echo "backup_dir=$BACKUP_DIR" >> $GITHUB_OUTPUT
+
+      - name: Create backup directory
+        run: |
+          mkdir -p "${{ steps.vars.outputs.backup_dir }}"
+
+          # Activer les patterns avancés de Bash
+          shopt -s extglob
+
+          # Copier tout sauf backups*
+          cp -r !(backups*) "${{ steps.vars.outputs.backup_dir }}/"
+
+      - name: Commit backup
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Backup full repo: ${{ steps.vars.outputs.backup_dir }}" || echo "Nothing to commit"
+
+      - name: Push backup
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
