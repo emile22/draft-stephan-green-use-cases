@@ -1,4 +1,4 @@
-name: "Quick Test Error"
+name: "branch Test Error"
 
 on:
   workflow_dispatch:
@@ -10,5 +10,4 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v3
       - name: "Echo message"
-        run: echo "This will fail"
-       run: echo "Bad indentation here"  # <-- deliberate YAML error
+        run: echo "from branch, this should not fail"
