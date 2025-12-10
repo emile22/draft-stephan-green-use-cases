@@ -1,4 +1,4 @@
-name: "action test in main"
+name: "dummy action in main"
 
 on:
   workflow_dispatch:
