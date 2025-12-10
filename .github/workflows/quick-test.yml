@@ -1,12 +1,14 @@
-name: Test Workflow
+name: Quick Test Error
 
 on:
   workflow_dispatch:
-
-toto
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Workflow detected!"
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Echo message
+        run: echo "This will fail"
+       run: echo "Bad indentation here"  # <-- deliberate YAML error
