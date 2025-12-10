@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  foo:
     runs-on: ubuntu-latest
     steps:
       - name: "Echo message for action test"
