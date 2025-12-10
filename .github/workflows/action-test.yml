@@ -1,0 +1,11 @@
+name: "action test in main"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Echo message for action test"
+        run: echo "action test in main works"
