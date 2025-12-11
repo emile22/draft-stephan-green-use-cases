@@ -2,8 +2,8 @@
 
 This is the working area for the individual Internet-Draft, "draft-stephan-green-use-cases".
 
-* [Editor's Copy](https://emile22.github.io/draft-stephan-green-use-cases/#go.draft-todo-yourname-protocol.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-stephan-green-use-cases)
+* [Editor's Copy](https://emile22.github.io/draft-stephan-green-use-cases/#go.draft-stephan-green-use-cases.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-green-use-cases)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-stephan-green-use-cases)
 * [Compare Editor's Copy to Individual Draft](https://emile22.github.io/draft-stephan-green-use-cases/#go.draft-stephan-green-use-cases.diff)
 
