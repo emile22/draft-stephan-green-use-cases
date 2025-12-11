@@ -17,8 +17,8 @@ venue:
   type: "Working Group"
   mail: "green@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/green/"
-  github: "emile22/draft-stephan-green-use-cases"
-  latest: "https://emile22.github.io/draft-stephan-green-use-cases/draft-ietf-green-use-cases.html"
+  github: "emile22/draft-ietf-green-use-cases"
+  latest: "https://emile22.github.io/draft-ietf-green-use-cases/draft-ietf-green-use-cases.html"
 
 v: 3
 
@@ -84,7 +84,7 @@ This document groups use cases for Energy efficiency Management of network devic
 
 Discussion Venues
 
-Source of this draft and an issue tracker can be found at https://github.com/emile22/draft-stephan-green-use-cases
+Source of this draft and an issue tracker can be found at https://github.com/emile22/draft-ietf-green-use-cases
 
 --- middle
 
