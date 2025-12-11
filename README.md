@@ -1,17 +1,17 @@
-# draft-stephan-green-use-cases
+# draft-ietf-green-use-cases
 
-This is the working area for the individual Internet-Draft, "draft-stephan-green-use-cases".
+This is the working area for the individual Internet-Draft, "draft-ietf-green-use-cases".
 
-* [Editor's Copy](https://emile22.github.io/draft-stephan-green-use-cases/#go.draft-ietf-green-use-cases.html)
+* [Editor's Copy](https://emile22.github.io/draft-ietf-green-use-cases/#go.draft-ietf-green-use-cases.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-green-use-cases)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-stephan-green-use-cases)
-* [Compare Editor's Copy to Individual Draft](https://emile22.github.io/draft-stephan-green-use-cases/#go.draft-ietf-green-use-cases.diff)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-ietf-green-use-cases)
+* [Compare Editor's Copy to Individual Draft](https://emile22.github.io/draft-ietf-green-use-cases/#go.draft-ietf-green-use-cases.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/emile22/draft-stephan-green-use-cases/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/emile22/draft-ietf-green-use-cases/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
