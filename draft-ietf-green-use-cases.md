@@ -1,7 +1,7 @@
 ---
 title: "Use Cases for Energy Efficiency Management"
 abbrev: "Use Cases for Energy Efficiency"
-docname: draft-stephan-green-use-cases-latest
+docname: draft-ietf-green-use-cases-latest
 category: info
 stand_alone: true
 
@@ -18,7 +18,7 @@ venue:
   mail: "green@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/green/"
   github: "emile22/draft-stephan-green-use-cases"
-  latest: "https://emile22.github.io/draft-stephan-green-use-cases/draft-stephan-green-use-cases.html"
+  latest: "https://emile22.github.io/draft-stephan-green-use-cases/draft-ietf-green-use-cases.html"
 
 v: 3
 
